@@ -1,0 +1,71 @@
+{
+	// Place your UtahMarchingHub workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"template": {
+		"scope": "html",
+		"prefix": ["html","template","page"],
+		"body": [
+			"<!DOCTYPE html>",
+			"<!--[if lt IE 7]>      <html class=\"no-js lt-ie9 lt-ie8 lt-ie7\"> <![endif]-->",
+			"<!--[if IE 7]>         <html class=\"no-js lt-ie9 lt-ie8\"> <![endif]-->",
+			"<!--[if IE 8]>         <html class=\"no-js lt-ie9\"> <![endif]-->",
+			"<!--[if gt IE 8]>      <html class=\"no-js\"> <!--<![endif]-->",
+			"<html>",
+			"",
+			"<head>",
+			"    <meta charset=\"utf-8\">",
+			"    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
+			"    <title>${1:Utah Marching Hub}</title>",
+			"    <meta name=\"description\" content=\"$2\">",
+			"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+			"    <link href=\"$3\" rel=\"stylesheet\" type=\"text/css\" />",
+			"</head>",
+			"",
+			"<script src=\"https://code.jquery.com/jquery-3.3.1.js\" integrity=\"sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=\"",
+			"    crossorigin=\"anonymous\">",
+			"    </script>",
+			"<script>",
+			"    $(function () {",
+			"        $(\"#header\").load(\"header.html\");",
+			"        $(\"#footer\").load(\"footer.html\");",
+			"    });",
+			"</script>",
+			"",
+			"<div id=\"header\"></div>",
+			"",
+			"<body>",
+			"    <!--[if lt IE 7]>",
+			"        <p class=\"browsehappy\">You are using an <strong>outdated</strong> browser. Please <a href=\"#\">upgrade your browser</a> to improve your experience.</p>",
+			"    <![endif]-->",
+			"",
+			"<!-- PUT BODY HERE -->",
+			"    <h1 class=\"block\">",
+			"    $4",
+			"",
+			"<!-- END BODY  -->",
+			"</body>",
+			""	,
+			"<div id=\"footer\"></div>",
+			"",
+			"",
+			"</html>",
+			""
+		],
+		"description": "A template for each page on the site."
+	}
+}
