@@ -1,18 +1,184 @@
 {
-    "year":2021,
-    "class":"5a",
-    "school":"Lehi",
-    "event":"state",
-    "date":"10/5/21",
-    "scores": {
-        "MEnsemble": 22.825,
-        "MEffect": 23.10, 
-        "MScore": 45.925, 
-        "VEnsemble": 14.613, 
-        "VEffect": 16.275, 
-        "VScore": 30.888, 
-        "Percussion": 4.00, 
-        "Guard": 4.30, 
-        "score": 85.113
-    }
+    "Scores": [
+        {
+            "year": 2021,
+            "class": "5A",
+            "school": "Test",
+            "event": "State",
+            "date": "10/5/21",
+            "score": {
+                "MEnsemble": 22.825,
+                "MEffect": 23.1,
+                "MScore": 45.925,
+                "VEnsemble": 14.613,
+                "VEffect": 16.275,
+                "VScore": 30.888,
+                "Percussion": 4.0,
+                "Guard": 4.3,
+                "score": 85.113
+            }
+        },
+        {
+            "year": 2021,
+            "class": "5A",
+            "school": "Lehi",
+            "event": "State",
+            "date": "10/5/21",
+            "score": {
+                "MEnsemble": 22.825,
+                "MEffect": 23.1,
+                "MScore": 45.925,
+                "VEnsemble": 14.613,
+                "VEffect": 16.275,
+                "VScore": 30.888,
+                "Percussion": 4.0,
+                "Guard": 4.3,
+                "score": 85.113
+            }
+        },
+        {
+            "year": 2021,
+            "class": "5A",
+            "school": "Maple Mountain",
+            "event": "State",
+            "date": "10/5/21",
+            "score": {
+                "MEnsemble": 23.513,
+                "MEffect": 22.688,
+                "MScore": 46.2,
+                "VEnsemble": 13.825,
+                "VEffect": 16.188,
+                "VScore": 30.013,
+                "Percussion": 4.475,
+                "Guard": 4.1,
+                "score": 84.788
+            }
+        },
+        {
+            "year": 2021,
+            "class": "5A",
+            "school": "Cedar Valley",
+            "event": "State",
+            "date": "10/5/21",
+            "score": {
+                "MEnsemble": 22.963,
+                "MEffect": 23.65,
+                "MScore": 46.613,
+                "VEnsemble": 14.963,
+                "VEffect": 14.788,
+                "VScore": 29.75,
+                "Percussion": 4.225,
+                "Guard": 3.95,
+                "score": 84.538
+            }
+        },
+        {
+            "year": 2021,
+            "class": "5A",
+            "school": "Brighton",
+            "event": "State",
+            "date": "10/5/21",
+            "score": {
+                "MEnsemble": 22.138,
+                "MEffect": 22.275,
+                "MScore": 44.413,
+                "VEnsemble": 14.175,
+                "VEffect": 15.05,
+                "VScore": 29.225,
+                "Percussion": 4.3,
+                "Guard": 3.85,
+                "score": 81.788
+            }
+        },
+        {
+            "year": 2021,
+            "class": "5A",
+            "school": "Alta",
+            "event": "State",
+            "date": "10/5/21",
+            "score": {
+                "MEnsemble": 21.863,
+                "MEffect": 21.038,
+                "MScore": 42.9,
+                "VEnsemble": 13.475,
+                "VEffect": 13.3,
+                "VScore": 26.775,
+                "Percussion": 3.9,
+                "Guard": 3.75,
+                "score": 77.325
+            }
+        },
+        {
+            "year": 2021,
+            "class": "5A",
+            "school": "Timpview",
+            "event": "State",
+            "date": "10/5/21",
+            "score": {
+                "MEnsemble": 19.113,
+                "MEffect": 21.175,
+                "MScore": 40.288,
+                "VEnsemble": 12.95,
+                "VEffect": 14.875,
+                "VScore": 27.825,
+                "Percussion": 4.275,
+                "Guard": 4.05,
+                "score": 76.438
+            }
+        },
+        {
+            "year": 2021,
+            "class": "5A",
+            "school": "Springville",
+            "event": "State",
+            "date": "10/5/21",
+            "score": {
+                "MEnsemble": 19.525,
+                "MEffect": 20.625,
+                "MScore": 40.15,
+                "VEnsemble": 13.213,
+                "VEffect": 13.388,
+                "VScore": 26.6,
+                "Percussion": 4.25,
+                "Guard": 3.8,
+                "score": 74.8
+            }
+        },
+        {
+            "year": 2021,
+            "class": "5A",
+            "school": "Tooele",
+            "event": "State",
+            "date": "10/5/21",
+            "score": {
+                "MEnsemble": 18.288,
+                "MEffect": 19.319,
+                "MScore": 37.606,
+                "VEnsemble": 13.65,
+                "VEffect": 12.075,
+                "VScore": 25.725,
+                "Percussion": 3.675,
+                "Guard": 3.425,
+                "score": 70.431
+            }
+        },
+        {
+            "year": 2021,
+            "class": "5A",
+            "school": "Kelly Walsh",
+            "event": "State",
+            "date": "10/5/21",
+            "score": {
+                "MEnsemble": 18.975,
+                "MEffect": 17.05,
+                "MScore": 36.025,
+                "VEnsemble": 12.775,
+                "VEffect": 10.763,
+                "VScore": 23.538,
+                "Percussion": 3.475,
+                "Guard": 2.975,
+                "score": 66.013
+            }
+        }
+    ]
 }
