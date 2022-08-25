@@ -1,0 +1,18 @@
+{
+    "year":2021,
+    "class":"5a",
+    "school":"Lehi",
+    "event":"state",
+    "date":"10/5/21",
+    "scores": {
+        "MEnsemble": 22.825,
+        "MEffect": 23.10, 
+        "MScore": 45.925, 
+        "VEnsemble": 14.613, 
+        "VEffect": 16.275, 
+        "VScore": 30.888, 
+        "Percussion": 4.00, 
+        "Guard": 4.30, 
+        "score": 85.113
+    }
+}
