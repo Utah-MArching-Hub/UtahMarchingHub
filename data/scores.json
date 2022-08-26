@@ -1,30 +1,12 @@
 {
     "Scores": [
         {
-            "year": 2021,
-            "class": "5A",
-            "school": "Lehi",
-            "event": "State",
-            "date": "10/5/21",
-            "score": {
-                "MEnsemble": 22.825,
-                "MEffect": 23.1,
-                "MScore": 45.925,
-                "VEnsemble": 14.613,
-                "VEffect": 16.275,
-                "VScore": 30.888,
-                "Percussion": 4.0,
-                "Guard": 4.3,
-                "score": 85.113
-            }
-        },
-        {
-            "year": 2021,
-            "class": "5A",
+            "year": "2021",
+            "class": "5ao",
             "school": "Maple Mountain",
-            "event": "State",
-            "date": "10/5/21",
-            "score": {
+            "event": "timp",
+            "date": "10/30/2021",
+            "scores": {
                 "MEnsemble": 23.513,
                 "MEffect": 22.688,
                 "MScore": 46.2,
@@ -37,12 +19,12 @@
             }
         },
         {
-            "year": 2021,
-            "class": "5A",
+            "year": "2021",
+            "class": "5ao",
             "school": "Cedar Valley",
-            "event": "State",
-            "date": "10/5/21",
-            "score": {
+            "event": "timp",
+            "date": "10/30/2021",
+            "scores": {
                 "MEnsemble": 22.963,
                 "MEffect": 23.65,
                 "MScore": 46.613,
@@ -55,12 +37,12 @@
             }
         },
         {
-            "year": 2021,
-            "class": "5A",
+            "year": "2021",
+            "class": "5ao",
             "school": "Brighton",
-            "event": "State",
-            "date": "10/5/21",
-            "score": {
+            "event": "timp",
+            "date": "10/30/2021",
+            "scores": {
                 "MEnsemble": 22.138,
                 "MEffect": 22.275,
                 "MScore": 44.413,
@@ -73,12 +55,12 @@
             }
         },
         {
-            "year": 2021,
-            "class": "5A",
+            "year": "2021",
+            "class": "5ao",
             "school": "Alta",
-            "event": "State",
-            "date": "10/5/21",
-            "score": {
+            "event": "timp",
+            "date": "10/30/2021",
+            "scores": {
                 "MEnsemble": 21.863,
                 "MEffect": 21.038,
                 "MScore": 42.9,
@@ -91,12 +73,12 @@
             }
         },
         {
-            "year": 2021,
-            "class": "5A",
+            "year": "2021",
+            "class": "5ao",
             "school": "Timpview",
-            "event": "State",
-            "date": "10/5/21",
-            "score": {
+            "event": "timp",
+            "date": "10/30/2021",
+            "scores": {
                 "MEnsemble": 19.113,
                 "MEffect": 21.175,
                 "MScore": 40.288,
@@ -109,12 +91,12 @@
             }
         },
         {
-            "year": 2021,
-            "class": "5A",
+            "year": "2021",
+            "class": "5ao",
             "school": "Springville",
-            "event": "State",
-            "date": "10/5/21",
-            "score": {
+            "event": "timp",
+            "date": "10/30/2021",
+            "scores": {
                 "MEnsemble": 19.525,
                 "MEffect": 20.625,
                 "MScore": 40.15,
@@ -127,12 +109,12 @@
             }
         },
         {
-            "year": 2021,
-            "class": "5A",
+            "year": "2021",
+            "class": "5ao",
             "school": "Tooele",
-            "event": "State",
-            "date": "10/5/21",
-            "score": {
+            "event": "timp",
+            "date": "10/30/2021",
+            "scores": {
                 "MEnsemble": 18.288,
                 "MEffect": 19.319,
                 "MScore": 37.606,
@@ -145,12 +127,12 @@
             }
         },
         {
-            "year": 2021,
-            "class": "5A",
+            "year": "2021",
+            "class": "5ao",
             "school": "Kelly Walsh",
-            "event": "State",
-            "date": "10/5/21",
-            "score": {
+            "event": "timp",
+            "date": "10/30/2021",
+            "scores": {
                 "MEnsemble": 18.975,
                 "MEffect": 17.05,
                 "MScore": 36.025,
@@ -160,6 +142,24 @@
                 "Percussion": 3.475,
                 "Guard": 2.975,
                 "score": 66.013
+            }
+        },
+        {
+            "year": "2021",
+            "class": "5ao",
+            "school": "Lehi",
+            "event": "timp",
+            "date": "10/30/2021",
+            "scores": {
+                "MEnsemble": 22.825,
+                "MEffect": 23.1,
+                "MScore": 45.925,
+                "VEnsemble": 14.613,
+                "VEffect": 16.275,
+                "VScore": 30.888,
+                "Percussion": 4.0,
+                "Guard": 4.3,
+                "score": 85.113
             }
         }
     ]
