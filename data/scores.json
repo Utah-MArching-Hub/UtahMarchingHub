@@ -3,24 +3,6 @@
         {
             "year": 2021,
             "class": "5A",
-            "school": "Test",
-            "event": "State",
-            "date": "10/5/21",
-            "score": {
-                "MEnsemble": 22.825,
-                "MEffect": 23.1,
-                "MScore": 45.925,
-                "VEnsemble": 14.613,
-                "VEffect": 16.275,
-                "VScore": 30.888,
-                "Percussion": 4.0,
-                "Guard": 4.3,
-                "score": 85.113
-            }
-        },
-        {
-            "year": 2021,
-            "class": "5A",
             "school": "Lehi",
             "event": "State",
             "date": "10/5/21",
