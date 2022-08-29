@@ -21,7 +21,9 @@
 		"prefix": ["user", "credit", "school"],
 		"body": [
 			"<div class=\"user\">",
-			"    <img src=\"$1\" class=\"user-icon\"></img>",
+			"    <a target=\"_blank\" href=\"https://github.com/$2\" class=\"user-icon\">",
+			"        <img src=\"$1\"></img>",
+			"    </a>",
 			"    <a target=\"_blank\" class=\"user-link\" href=\"https://github.com/$2\">$2</a>",
 			"    <div class=\"socials\">",
 			"        <a target=\"_blank\" href=\"https://github.com/$2/\" class=\"github\"></a>",

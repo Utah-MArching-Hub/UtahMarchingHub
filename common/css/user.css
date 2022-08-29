@@ -29,6 +29,10 @@
     grid-row-end: 3;
 }
 
+.user .user-icon img {
+    width: 80px;
+}
+
 .user .user-link {
     text-decoration: none;
     display: flex;
