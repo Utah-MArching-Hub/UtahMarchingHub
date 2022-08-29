@@ -35,7 +35,17 @@
 
 <!-- PUT BODY HERE -->
 <button class="button" onclick="urlkey()">get</button>
-<button class="button" onclick="updateurl('year',2022)">push</button>
+<select name="year" onmousedown="this.value='';" onchange="updateurl('year',this.value);">
+	<option value=2020>2020</option>
+	<option value=2021>2021</option>
+	<option value=2022>2022</option>
+</select>
+<select name="event" onmousedown="this.value='';" onchange="updateurl('event',this.value);">
+	<option value='timp'>Mnt Timpanogos</option>
+	<option value='davis'>Davis Cup</option>
+	<option value='state'>Redrock State</option>
+	<option value='nebo'>nebo invintational</option>
+</select>
 
 
 <!-- END BODY  -->

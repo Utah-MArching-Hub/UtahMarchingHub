@@ -18,8 +18,6 @@ function urlkey() {
 
 function updateurl(key,value) {
   var queryParams = new URLSearchParams(window.location.search);
-  alert (queryParams)
   queryParams.set(key, value);
-  alert (queryParams)
   history.replaceState(null, null, "?"+queryParams.toString());
 }
