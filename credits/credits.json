@@ -16,11 +16,11 @@
     
     "ego-lay_atman-bay" : {
         "icon" : "https://ego-lay-atman-bay.github.io/assets/profile%20pic.png",
-        "url" : "https://github.com/ego-lay-atman-bay",
+        "url" : "https://github.com/ego-lay-atman-bay/",
         "socials" : [
             ["github" , "ego-lay-atman-bay"],
             ["site" , "https://ego-lay-atman-bay.github.io/"],
-            ["youtube" , "https://www.youtube.com/channel/UCs0PITfwvtaUgKaa5E_V42A"],
+            ["youtube" , ["c", "egolayatmanbay"]],
             ["twitch" , "EgoLayAtmanBay"],
             ["twitter" , "egoLay_atmanBay"],
             ["reddit" , "ego-lay_atman-bay"]

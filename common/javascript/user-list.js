@@ -2,15 +2,24 @@ function loadUsers(path) {
     function getsocial(social, username) {
         var url = ''
         if (social == 'github') {
-            url = 'https://github.com/' + username
+            url = 'https://github.com/' + username + '/'
         } else if (social == 'twitch') {
-            url = 'https://twitch.tv/' + username
+            url = 'https://twitch.tv/' + username + '/'
         } else if (social == 'twitter') {
-            url = 'https://twitter.com/' + username
+            url = 'https://twitter.com/' + username + '/'
         } else if (social == 'instagram') {
-            url = 'https://instagram.com/' + username
+            url = 'https://instagram.com/' + username + '/'
         } else if (social == 'reddit') {
-            url = 'https://www.reddit.com/user/' + username
+            url = 'https://www.reddit.com/user/' + username + '/'
+        } else if (social == 'youtube') {
+            if (typeof username == 'string') {
+                channel = 'channel/' + username
+            } else if (['c','custom'].includes(username[0])) {
+                channel = username[1]
+            } else if (['id', 'channel'].includes(username[0])) {
+                channel = 'channel/' + username[1]
+            }
+            url = 'https://youtube.com/' + channel + '/'
         } else {
             url = username
         }
