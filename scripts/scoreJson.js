@@ -21,3 +21,13 @@ function updateurl(key,value) {
   queryParams.set(key, value);
   history.replaceState(null, null, "?"+queryParams.toString());
 }
+
+function jsonQ(json=scores) {
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+    let year = params.year;
+    let event = params.event;
+    let clas = params.class;
+    alert(json)
+}
