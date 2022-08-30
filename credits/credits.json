@@ -1,0 +1,39 @@
+
+{
+    "StoneCommander" : {
+        "icon" : "https://avatars.githubusercontent.com/u/67015041?v=4",
+        "url" : "https://github.com/StoneCommander",
+        "socials" : {
+            "github" : "StoneCommander",
+            "site" : "",
+            "youtube" : "",
+            "twitch" : "",
+            "twitter" : "",
+            "instagram" : ""
+        }
+    },
+    
+    "ego-lay_atman-bay" : {
+        "icon" : "https://ego-lay-atman-bay.github.io/assets/profile%20pic.png",
+        "url" : "https://github.com/ego-lay-atman-bay",
+        "socials" : {
+            "github" : "ego-lay-atman-bay",
+            "site" : "https://ego-lay-atman-bay.github.io/",
+            "youtube" : "https://www.youtube.com/channel/UCs0PITfwvtaUgKaa5E_V42A",
+            "twitch" : "EgoLayAtmanBay",
+            "twitter" : "egoLay_atmanBay"
+        }
+    },
+    "ThatPancakeGuy" : {
+        "icon" : "https://avatars.githubusercontent.com/u/73004689?v=4",
+        "url" : "https://github.com/ThatPancakeGuy",
+        "socials" : {
+            "github" : "ThatPancakeGuy",
+            "site" : "",
+            "youtube" : "",
+            "twitch" : "",
+            "twitter" : "",
+            "instagram" : ""
+        }
+    }
+}

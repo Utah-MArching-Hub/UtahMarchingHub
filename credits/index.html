@@ -19,6 +19,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous">
     </script>
+<script src="/common/javascript/user-list.js"></script>
 <script>
     $(function () {
         $("#header").load("/header.html");
@@ -38,57 +39,14 @@
         <h1 class="credits-h1">Credits</h1>
         <p>People who contributed to this website</p>
 
-        <div class="users">
-            <div class="user">
-                <a target="_blank" href="https://github.com/StoneCommander" class="user-icon">
-                    <img src="https://avatars.githubusercontent.com/u/67015041?v=4"></img>
-                </a>
-                <a target="_blank" class="user-link" href="https://github.com/StoneCommander">StoneCommander</a>
-                <div class="socials">
-                    <a target="_blank" href="https://github.com/StoneCommander/" class="github"></a>
-                    <!-- <a target="_blank" href="" class="site"></a>
-                    <a target="_blank" href="https://youtube.com/" class="youtube"></a>
-                    <a target="_blank" href="https://twitch.tv/" class="twitch"></a>
-                    <a target="_blank" href="https://twitter.com/" class="twitter"></a>
-                    <a target="_blank" href="https://instagram.com" class="instagram"></a> -->
-                </div>
-            </div>
-
-            <div class="user">
-                <a target="_blank" href="https://github.com/ego-lay-atman-bay" class="user-icon">
-                    <img src="https://ego-lay-atman-bay.github.io/assets/profile%20pic.png"></img>
-                </a>
-                <a target="_blank" class="user-link" href="https://github.com/ego-lay-atman-bay/">ego-lay-atman-bay</a>
-                <div class="socials">
-                    <a target="_blank" href="https://github.com/ego-lay=atman-bay/" class="github"></a>
-                    <a target="_blank" href="https://ego-lay-atman-bay.github.io/" class="site"></a>
-                    <a target="_blank" href="https://www.youtube.com/channel/UCs0PITfwvtaUgKaa5E_V42A" class="youtube"></a>
-                    <a target="_blank" href="https://twitch.tv/egolayatmanbay" class="twitch"></a>
-                    <a target="_blank" href="https://twitter.com/egolay_atmanbay/" class="twitter"></a>
-                </div>
-            </div>
-
-            <div class="user">
-                <a target="_blank" href="https://github.com/ThatPancakeGuy" class="user-icon">
-                    <img src="https://avatars.githubusercontent.com/u/73004689?v=4"></img>
-                </a>
-                <a target="_blank" class="user-link" href="https://github.com/ThatPancakeGuy">ThatPancakeGuy</a>
-                <div class="socials">
-                    <a target="_blank" href="https://github.com/ThatPancakeGuy/" class="github"></a>
-                    <!-- <a target="_blank" href="" class="site"></a>
-                    <a target="_blank" href="https://youtube.com/" class="youtube"></a>
-                    <a target="_blank" href="https://twitch.tv/" class="twitch"></a>
-                    <a target="_blank" href="https://twitter.com/" class="twitter"></a>
-                    <a target="_blank" href="https://instagram.com" class="instagram"></a> -->
-                </div>
-            </div>
-
-        </div>
+        <div class="users"></div>
     </div>
     
 
 <!-- END BODY  -->
 </body>
+<!-- for some reason it has to be under the users div -->
+<script>loadUsers('credits.json')</script>
 
 <div id="footer"></div>
 
