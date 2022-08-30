@@ -46,7 +46,27 @@
 	<option value='state'>Redrock State</option>
 	<option value='nebo'>nebo invintational</option>
 </select>
-<button class="button" onclick="jsonQ()">get</button>
+<select name="clas" onmousedown="this.value='';" onchange="updateurl('clas',this.value);">
+	<option value='5ao'>5A open</option>
+	<option value='5as'>5A schoolastic</option>
+</select>
+<button class="button" onclick="getScores()">get</button>
+<div class="scores">
+	<table>
+		<tr class="tbl-header">
+			<th onclick="sortTable(0,this)">Band</th>
+			<th onclick="sortTable(1,this)">Music Ensemble</th>
+			<th onclick="sortTable(2,this)">Music Effect</th>
+			<th onclick="sortTable(3,this)">Music</th>
+			<th onclick="sortTable(4,this)">Visual Ensemble</th>
+			<th onclick="sortTable(5,this)">Visual Effect</th>
+			<th onclick="sortTable(6,this)">Visual</th>
+			<th onclick="sortTable(7,this)">Percussion</th>
+			<th onclick="sortTable(8,this)">Guard</th>
+			<th onclick="sortTable(9,this)">Total</th>
+		  </tr>
+	</table>
+</div>
 
 
 <!-- END BODY  -->
