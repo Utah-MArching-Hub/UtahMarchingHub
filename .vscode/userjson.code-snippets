@@ -30,9 +30,9 @@
 			"        [\"twitch\" , \"$5\"],",
 			"        [\"twitter\" , \"$6\"],",
 			"        [\"instagram\" , \"$7\"],",
-			"        [\"reddit\" , \"$8\"],",
+			"        [\"reddit\" , \"$8\"]",
 			"    ]",
-			"}${0:,}",
+			"}$0",
 		],
 		"description": "Section of json for the credits page or schools page. To not include a social link, just leave the value blank."
 	}
