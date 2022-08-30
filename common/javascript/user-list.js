@@ -1,4 +1,4 @@
-function loadUsers(path) {
+function loadUsers(path, id) {
     function getsocial(social, username) {
         var url = ''
         if (social == 'github') {
@@ -32,7 +32,19 @@ function loadUsers(path) {
     socialclasses = ['github', 'youtube', 'twitch', 'twitter', 'instagram', 'reddit']
 
     document = Document;
-    userslist = document.getElementsByClassName('users')[0];
+
+    classlist = document.getElementsByClassName('users')
+    if (id) {
+        for (element in classlist) {
+            if (classlist[element].id == id) {
+                userslist = classlist[element]
+                break
+            }
+            throw new Error('Could not find element with id: ' + id);
+        }
+    } else {
+        userslist = classlist[0];
+    }
     $.getJSON(path, function(json) {
         console.log(json);
         for (user in json) {
