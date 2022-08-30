@@ -60,7 +60,7 @@ function loadUsers(path) {
             socialdiv.classList.add('socials')
             
             for (social in socials) {
-                if (!socials[social][1] == '') {
+                if (!socials[social][1] == '' && !(typeof socials[social][1] != 'string' && socials[social][1].includes(''))) {
                     var socialLink = document.createElement('a')
                     socialLink.setAttribute('target', '_blank')
                     socialLink.setAttribute('href', getsocial(socials[social][0],socials[social][1]))
