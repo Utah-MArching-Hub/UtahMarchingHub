@@ -103,3 +103,10 @@
     width: 16px;
     height: 16px;
 }
+
+.user .socials .reddit {
+    background-image: url(/common/images/icons/reddit/Reddit\ Logo/On\ Orangered/SVG/reddit_logo.svg);
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+}

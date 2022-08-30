@@ -9,6 +9,8 @@ function loadUsers(path) {
             url = 'https://twitter.com/' + username
         } else if (social == 'instagram') {
             url = 'https://instagram.com/' + username
+        } else if (social == 'reddit') {
+            url = 'https://www.reddit.com/user/' + username
         } else {
             url = username
         }
@@ -16,7 +18,7 @@ function loadUsers(path) {
         return url
     }
 
-    socialclasses = ['github', 'youtube', 'twitch', 'twitter', 'instagram']
+    socialclasses = ['github', 'youtube', 'twitch', 'twitter', 'instagram', 'reddit']
 
     document = Document;
     userslist = document.getElementsByClassName('users')[0];
@@ -53,13 +55,13 @@ function loadUsers(path) {
                     var socialLink = document.createElement('a')
                     socialLink.setAttribute('target', '_blank')
                     socialLink.setAttribute('href', getsocial(social,socials[social]))
-                    
+
                     if (!socialclasses.includes(social)) {
                         social = 'site'
                     }
-                
+
                     socialLink.classList.add(social)
-                
+
                     $(socialdiv).append(socialLink)
                 }
             }
