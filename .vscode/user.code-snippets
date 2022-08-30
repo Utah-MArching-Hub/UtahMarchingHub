@@ -18,7 +18,7 @@
 
 	"user": {
 		"scope": "html",
-		"prefix": "html credit",
+		"prefix": "html",
 		"body": [
 			"<div class=\"user\">",
 			"    <a target=\"_blank\" href=\"https://github.com/$2\" class=\"user-icon\">",
