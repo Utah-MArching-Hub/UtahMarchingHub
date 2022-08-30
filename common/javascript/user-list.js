@@ -51,16 +51,16 @@ function loadUsers(path) {
             socialdiv.classList.add('socials')
             
             for (social in socials) {
-                if (!socials[social] == '') {
+                if (!socials[social][1] == '') {
                     var socialLink = document.createElement('a')
                     socialLink.setAttribute('target', '_blank')
-                    socialLink.setAttribute('href', getsocial(social,socials[social]))
+                    socialLink.setAttribute('href', getsocial(socials[social][0],socials[social][1]))
 
-                    if (!socialclasses.includes(social)) {
-                        social = 'site'
+                    if (!socialclasses.includes(socials[social][0])) {
+                        socials[social][0] = 'site'
                     }
 
-                    socialLink.classList.add(social)
+                    socialLink.classList.add(socials[social][0])
 
                     $(socialdiv).append(socialLink)
                 }
