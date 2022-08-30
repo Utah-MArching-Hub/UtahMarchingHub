@@ -18,6 +18,8 @@ function loadUsers(path) {
                 channel = username[1]
             } else if (['id', 'channel'].includes(username[0])) {
                 channel = 'channel/' + username[1]
+            } else {
+                return ''
             }
             url = 'https://youtube.com/' + channel + '/'
         } else {
@@ -61,6 +63,10 @@ function loadUsers(path) {
             
             for (social in socials) {
                 if (!socials[social][1] == '' && !(typeof socials[social][1] != 'string' && socials[social][1].includes(''))) {
+                    link = getsocial(socials[social][0], socials[social][1])
+                    if (link == '') {
+                        continue
+                    }
                     var socialLink = document.createElement('a')
                     socialLink.setAttribute('target', '_blank')
                     socialLink.setAttribute('href', getsocial(socials[social][0],socials[social][1]))
