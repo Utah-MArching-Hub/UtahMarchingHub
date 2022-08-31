@@ -83,6 +83,7 @@ function updateurl(key,value) {
   var queryParams = new URLSearchParams(window.location.search);
   queryParams.set(key, value);
   history.replaceState(null, null, "?"+queryParams.toString());
+//   window.location.reload()
 }
 
 function getScores() {
@@ -90,36 +91,52 @@ function getScores() {
         get: (searchParams, prop) => searchParams.get(prop),
     });
     let year = params.year;
+    yearDrop = document.getElementById("year")
+    $(yearDrop).val(year).change()
+    console.log(year)
     let event = params.event;
+    eventDrop = document.getElementById("event")
+    $(eventDrop).val(event).change()
     let clas = params.clas;
+    clasDrop = document.getElementById("clas")
+    $(clasDrop).val(clas).change()
     document = Document;
+    table = document.getElementsByClassName('scores')[0]
     $.getJSON('../data/scores.json', function(json) {
         console.log(json)
-        console.log(json["Scores"])
+        //console.log(json["Scores"])
         scores = json["Scores"]
         for (score in scores) {
-            console.log(scores[score])
-            console.log(`${year}=${scores[score]["year"]}`)
-            console.log(`${event}=${scores[score]["event"]}`)
-            console.log(`${clas}=${scores[score]["class"]}`)
+            row = scores[score]
+            //console.log(row)
             yearP = false
             eventP = false
             clasP = false
 
-            if (year = scores[score]["year"]) {
+            console.log(`${year}=${row["year"]}`)
+            if (year === row["year"]) {
                 yearP = true
             }
-            if (event = scores[score]["event"]) {
+            console.log(`${event}=${row["event"]}`)
+            if (event === row["event"]) {
                 eventP = true
             }
-            if (clas = scores[score]["class"]) {
+            console.log(`${clas}=${row["class"]}`)
+            if (clas === row["class"]) {
                 clasP = true
             }
             if (yearP && eventP && clasP) {
-                // var scoreR = document.createElement('tr')
-                for (item in scores[score]) {
-                    console.log(item)
+                var scoreR = document.createElement('tr')
+                var item = document.createElement('td')
+                item.innerHTML = row["school"]
+                $(scoreR).append(item)
+                for (key in row['scores']) {
+                    num = row['scores'][key]
+                    var item = document.createElement('td')
+                    item.innerHTML = num
+                    $(scoreR).append(item)
                 }
+                $(table).append(scoreR)
             }
         }
     })
