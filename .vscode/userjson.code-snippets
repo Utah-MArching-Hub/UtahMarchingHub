@@ -25,14 +25,9 @@
 			"    \"url\" : \"https://github.com/$1\",",
 			"    \"socials\" : [",
 			"        [\"github\" , \"$1\"],",
-			"        [\"site\" , \"$3\"],",
-			"        [\"youtube\" , [\"${4|id,custom|}\", \"$5\"]],",
-			"        [\"twitch\" , \"$6\"],",
-			"        [\"twitter\" , \"$7\"],",
-			"        [\"instagram\" , \"$8\"],",
-			"        [\"reddit\" , \"$9\"]",
+			"        ${0:social}",
 			"    ]",
-			"}$0",
+			"}",
 		],
 		"description": "Section of json for the credits page or schools page. To not include a social link, just leave the value blank."
 	}
