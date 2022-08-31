@@ -37,7 +37,7 @@ Each social uses the username as the value. Here's a list of them all (currently
 As said before, the values for each social are the username. Here's an example,
 
 ```
-"github" : "username"
+["github" , "username"]
 ```
 becomes
 ```
@@ -55,7 +55,7 @@ This is the same for every other social, but for the specific site.
 `id` and `channel` are used for a channel id. For example,
 
 ```
-"youtube" : ["id", "id"]
+["youtube" , ["id", "id"]]
 ```
 becomes 
 ```
@@ -64,7 +64,7 @@ https://youtube.com/channel/id/
 
 `c` and `custom` are used for a custom channel url. For example,
 ```
-"youtube : ["c", "custom"]
+["youtube , ["c", "custom"]]
 ```
 becomes
 ```
@@ -73,7 +73,7 @@ https://youtube.com/custom/
 
 If the value is not a list, just a string, it is treated as a channel id. So
 ```
-"youtube" : "id"
+["youtube" , "id"]
 ```
 becomes
 ```
@@ -83,7 +83,7 @@ https://channel/id/"
 `site` just uses whatever value it has as the url. For example,
 
 ```
-"site" : "https://example.com
+["site" , "https://example.com"]
 ```
 becomes
 ```
