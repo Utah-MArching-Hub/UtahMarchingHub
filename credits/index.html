@@ -11,12 +11,15 @@
     <title>Utah Marching Hub</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="" rel="stylesheet" type="text/css" />
+    <link href="/common/css/common.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/credits.css">
+    <link rel="stylesheet" href="/common/css/user.css">
 </head>
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous">
     </script>
+<script src="/common/javascript/user-list.js"></script>
 <script>
     $(function () {
         $("#header").load("/header.html");
@@ -32,10 +35,18 @@
     <![endif]-->
 
 <!-- PUT BODY HERE -->
+    <div id="content">
+        <h1 class="credits-h1">Credits</h1>
+        <p>People who contributed to this website</p>
+
+        <div class="users"></div>
+    </div>
     
 
 <!-- END BODY  -->
 </body>
+<!-- for some reason it has to be under the users div -->
+<script>loadUsers('credits.json')</script>
 
 <div id="footer"></div>
 
