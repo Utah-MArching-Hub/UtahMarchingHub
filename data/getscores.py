@@ -82,13 +82,13 @@ def getBandScores(eventURL,clas):
 		scores.append(scoreT)
 	return(scores)
 
-scores = getBandScores("https://recaps.competitionsuite.com/08935825-bc85-4535-9cb6-8d69a6aeb5b2.htm","5ao")
+scores = getBandScores("http://recaps.competitionsuite.com/b5fc2448-cb45-4e34-8890-d15e968409c8.htm","5ao")
 
 
 print(scores)
 print("---")
-def write_json(new_data, filename='scores.json'):
-		with open(filename,'r+') as file:
+def write_json(new_data, filename='data/scores.json'):
+		with open(filename,'+r') as file:
 			# First we load existing data into a dict.
 			file_data = json.load(file)
 			# Join new_data with file_data inside emp_details
