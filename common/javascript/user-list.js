@@ -11,6 +11,8 @@ function loadUsers(path, id) {
             url = 'https://instagram.com/' + username + '/'
         } else if (social == 'reddit') {
             url = 'https://www.reddit.com/user/' + username + '/'
+        } else if (social == 'facebook') {
+            url = 'https://facebook.com/' + username + '/'
         } else if (social == 'youtube') {
             if (typeof username == 'string') {
                 channel = 'channel/' + username
@@ -29,7 +31,7 @@ function loadUsers(path, id) {
         return url
     }
 
-    socialclasses = ['github', 'youtube', 'twitch', 'twitter', 'instagram', 'reddit']
+    socialclasses = ['github', 'youtube', 'twitch', 'twitter', 'instagram', 'reddit', 'facebook']
 
     document = Document;
 
