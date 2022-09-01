@@ -1,0 +1,15 @@
+{
+    "Westlake High School" : {
+        "icon" : "https://thunderband.com/wp-content/uploads/2021/05/Thunderband-logo-83x88.png",
+        "url" : "https://thunderband.com/",
+        "socials" : [
+            ["site" , ""],
+            ["youtube" , ["id", ""]],
+            ["twitch" , ""],
+            ["twitter" , ""],
+            ["instagram" , "westlakethunderbands"],
+            ["reddit" , ""],
+            ["facebook","WestlakeThunderBands"]
+        ]
+    }
+}
