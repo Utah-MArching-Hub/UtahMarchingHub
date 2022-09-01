@@ -12,7 +12,16 @@ function loadUsers(path, id) {
         } else if (social == 'reddit') {
             url = 'https://www.reddit.com/user/' + username + '/'
         } else if (social == 'facebook') {
-            url = 'https://facebook.com/' + username + '/'
+            if (typeof username == 'string') {
+                page = username
+            } else if (['u','user'].includes(username[0])) {
+                page = username[1]
+            } else if (['g', 'group'].includes(username[0])) {
+                page = 'groups/' + username[1]
+            } else {
+                return ''
+            }
+            url = 'https://facebook.com/' + page + '/'
         } else if (social == 'youtube') {
             if (typeof username == 'string') {
                 channel = 'channel/' + username
