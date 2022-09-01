@@ -22,7 +22,7 @@
 		"body": [
 			"\"$1\" : {",
 			"    \"icon\" : \"$2\",",
-			"    \"url\" : \"https://$1.alpineschools.org/\",",
+			"    \"url\" : \"$3\",",
 			"    \"socials\" : [",
 			"        ${0:social}",
 			"    ]",
