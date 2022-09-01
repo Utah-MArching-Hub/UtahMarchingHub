@@ -44,20 +44,28 @@ function loadUsers(path, id) {
 
     document = Document;
 
-    classlist = document.getElementsByClassName('users')
-    if (id) {
-        for (element in classlist) {
-            if (classlist[element].id == id) {
-                userslist = classlist[element]
-                break
-            }
-            throw new Error('Could not find element with id: ' + id);
-        }
-    } else {
-        userslist = classlist[0];
-    }
     $.getJSON(path, function(json) {
-        console.log(json);
+        classlist = document.getElementsByClassName('users')
+        // console.log(classlist)
+        if (id) {
+            found = false
+            for (element in classlist) {
+                // console.log(classlist[element].id)
+                if (classlist[element].id == id) {
+                    userslist = classlist[element]
+                    found = true
+                    break
+                }
+            }
+            if (!found) {
+                throw new Error('Could not find element with id: ' + id);
+            }
+        } else {
+            userslist = classlist[0];
+        }
+        console.log(userslist)
+        
+        // console.log(json);
         for (user in json) {
             url = json[user]['url']
             icon = json[user]['icon']
@@ -104,6 +112,7 @@ function loadUsers(path, id) {
                 }
             }
             $(userdiv).append(usericon,userlink,socialdiv)
+            console.log(userslist)
             $(userslist).append(userdiv)
         };
     });
