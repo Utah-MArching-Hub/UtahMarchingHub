@@ -38,5 +38,13 @@
             ["instagram","lehi_bands"],
             ["facebook",["g", "308318619211160"]]
         ]
+    },
+    "Skyridge" : {
+        "icon" : "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1356/2018/03/12194726/skyridge-logo21.png",
+        "url" : "https://www.skyridgeband.com/summer-palooza",
+        "socials" : [
+            ["facebook","skyridgeband"],
+            ["instagram","skyridgefalcons"]
+        ]
     }
 }
