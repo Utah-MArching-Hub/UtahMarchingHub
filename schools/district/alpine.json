@@ -46,5 +46,13 @@
             ["instagram","skyridgefalcons"],
             ["facebook","skyridgeband"]
         ]
+    },
+    "Lone Peak" : {
+        "icon" : "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/2548/2022/08/29090615/LonePeak_Logo-150x150.png",
+        "url" : "https://sites.google.com/view/lone-peak-bands",
+        "socials" : [
+            ["instagram","lonepeakhsbands"],
+            ["facebook","lonepeakbands"]
+        ]
     }
 }
