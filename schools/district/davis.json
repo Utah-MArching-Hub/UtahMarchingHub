@@ -3,8 +3,8 @@
         "icon" : "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1525277802/davisk12utus/uizaqwk7eulqnluwggwh/TealandWhitePhoenixwithSign.png",
         "url" : "https://www.farmingtonbands.org/",
         "socials" : [
-            ["facebook","farmingtonbands"],
-            ["instagram","farmingtonhs_bands"]
+            ["instagram","farmingtonhs_bands"],
+            ["facebook","farmingtonbands"]
         ]
     },
     "Davis" : {
@@ -12,8 +12,8 @@
         "url" : "https://www.davisbands.org/",
         "socials" : [
             ["youtube",["id", "UCmdph__5TvunXJKlpZt5h4g"]],
-            ["facebook","davisbands"],
-            ["instagram","davishighbands"]
+            ["instagram","davishighbands"],
+            ["facebook","davisbands"]
         ]
     }
 }
