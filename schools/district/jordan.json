@@ -14,5 +14,13 @@
         "socials" : [
             ["facebook", "mridgebands"]
         ]
+    },
+    "Bingham" : {
+        "icon" : "https://www.binghamminers.org/pics/header_logo.png",
+        "url" : "https://www.binghamminers.org/",
+        "socials" : [
+            ["instagram","binghamhigh"],
+            ["facebook","Bingham-High-School-Bands-203598956350660"]
+        ]
     }
 }
