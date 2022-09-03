@@ -1,0 +1,18 @@
+{
+    "Herriman" : {
+        "icon" : "http://www.herrimanbands.com/uploads/7/9/8/8/79888096/published/hb-mustang3.png",
+        "url" : "http://www.herrimanbands.com/",
+        "socials" : [
+            ["twitter","herrimanbands"],
+            ["instagram","herrimanhs"],
+            ["facebook","HerrimanHSmusic"]
+        ]
+    },
+    "Mountain Ridge" : {
+        "icon" : "https://images.squarespace-cdn.com/content/v1/6112e84c65261430ce2afa21/4a35cd86-087b-4194-bc35-90f67a494b03/LOGO.png",
+        "url" : "https://www.mountainridgebands.org/",
+        "socials" : [
+            ["facebook", "mridgebands"]
+        ]
+    }
+}
