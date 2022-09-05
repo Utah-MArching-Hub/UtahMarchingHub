@@ -1,4 +1,4 @@
-const json = $.getJSON('../data/scores.json')
+// const json = $.getJSON('data/scores.json')
 // console.log(scores)
 // console.log("---")
 // console.log(scores["Scores"])
@@ -39,7 +39,7 @@ function getScores() {
     $(clasDrop).val(clas).change()
     document = Document;
     table = document.getElementsByClassName('scores')[0]
-    $.getJSON('../data/scores.json', function(json) {
+    $.getJSON('data/scores.json', function(json) {
         console.log(json)
         //console.log(json["Scores"])
         scores = json["Scores"]
