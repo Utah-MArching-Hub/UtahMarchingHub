@@ -15,7 +15,7 @@ Here's the format for each user
         ["twitter" , ""],
         ["instagram" , ""],
         ["reddit" , ""],
-        ["facebook", ""],
+        ["facebook", ["", ""]],
         ["site" , ""]
     ]
 }
@@ -47,9 +47,6 @@ https://github.com/username/
 This is the same for every other social, but for the specific site.
 
 ---
-
-`youtube` has a specific format.
-
 `youtube` has a special format. The value is a list. The first item (the key) is the type of url. The second is the channel id.
 
 `id` and `channel` are used for a channel id. For example,
@@ -64,7 +61,7 @@ https://youtube.com/channel/id/
 
 `c` and `custom` are used for a custom channel url. For example,
 ```
-["youtube , ["c", "custom"]]
+["youtube" , ["c", "custom"]]
 ```
 becomes
 ```
@@ -77,7 +74,38 @@ If the value is not a list, just a string, it is treated as a channel id. So
 ```
 becomes
 ```
-https://channel/id/"
+https://youtube.com/channel/id/
+```
+
+---
+`facebook` also has a special format. The value can be a list. The first item (the key) is the type of url. The second is the user or group.
+
+`u` and `user` are used for a user. For example,
+
+```
+["facebook" , ["u", "user"]]
+```
+becomes 
+```
+https://facebook.com/user/
+```
+
+`g` and `group` are used for a facebook group. For example,
+```
+["facebook" , ["g", "group-id"]]
+```
+becomes
+```
+https://facebook.com/group/group-id"
+```
+
+If the value is not a list, just a string, it is treated as a user. So
+```
+["facebook" , "user"]
+```
+becomes
+```
+https://facebook.com/user/
 ```
 ---
 `site` just uses whatever value it has as the url. For example,
