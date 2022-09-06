@@ -15,7 +15,6 @@ table{
   }
   th {
     position: relative;
-    cursor: pointer;
     padding: 20px 15px;
     text-align: left;
     font-weight: 500;
@@ -31,6 +30,9 @@ table{
    -khtml-user-select: none; /* Konqueror HTML */
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none; /* Internet Explorer/Edge */
+  }
+  th:hover {
+    cursor: pointer;
   }
   th::before {
     display: block;
