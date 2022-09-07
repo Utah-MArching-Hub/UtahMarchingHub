@@ -21,6 +21,7 @@ function updateurl(key,value) {
   queryParams.set(key, value);
   history.replaceState(null, null, "?"+queryParams.toString());
 //   window.location.reload()
+//   getScores()
 }
 
 function getScores() {
