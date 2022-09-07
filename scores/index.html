@@ -35,37 +35,39 @@
 	<![endif]-->
 
 <!-- PUT BODY HERE -->
-<select id="year" name="year">
-	<option value=2020>2020</option>
-	<option value=2021>2021</option>
-	<option value=2022>2022</option>
-</select>
-<select id="event" name="event">
-	<option value='timp'>Mnt Timpanogos</option>
-	<option value='davis'>Davis Cup</option>
-	<option value='state'>Redrock State</option>
-	<option value='nebo'>nebo invintational</option>
-</select>
-<select id="clas" name="clas">
-	<option value='5ao'>5A open</option>
-	<option value='5as'>5A schoolastic</option>
-</select>
-<!-- <button class="button" onclick="window.location.reload()">get</button> -->
-<div>
-	<table id="scores" class="scores sortable">
-		<tr class="tbl-header">
-			<th onclick="sortTable(0,this)">Band</th>
-			<th onclick="sortTable(1,this)">Music Ensemble</th>
-			<th onclick="sortTable(2,this)">Music Effect</th>
-			<th onclick="sortTable(3,this)">Music</th>
-			<th onclick="sortTable(4,this)">Visual Ensemble</th>
-			<th onclick="sortTable(5,this)">Visual Effect</th>
-			<th onclick="sortTable(6,this)">Visual</th>
-			<th onclick="sortTable(7,this)">Percussion</th>
-			<th onclick="sortTable(8,this)">Guard</th>
-			<th onclick="sortTable(9,this)">Total</th>
-		</tr>
-	</table>
+<div id="content">
+	<select id="year" name="year">
+		<option value=2020>2020</option>
+		<option value=2021>2021</option>
+		<option value=2022>2022</option>
+	</select>
+	<select id="event" name="event">
+		<option value='timp'>Mnt Timpanogos</option>
+		<option value='davis'>Davis Cup</option>
+		<option value='state'>Redrock State</option>
+		<option value='nebo'>nebo invintational</option>
+	</select>
+	<select id="clas" name="clas">
+		<option value='5ao'>5A open</option>
+		<option value='5as'>5A schoolastic</option>
+	</select>
+	<!-- <button class="button" onclick="window.location.reload()">get</button> -->
+	<div>
+		<table id="scores" class="scores sortable">
+			<tr class="tbl-header">
+				<th onclick="sortTable(0,this)">Band</th>
+				<th onclick="sortTable(1,this)">Music Ensemble</th>
+				<th onclick="sortTable(2,this)">Music Effect</th>
+				<th onclick="sortTable(3,this)">Music</th>
+				<th onclick="sortTable(4,this)">Visual Ensemble</th>
+				<th onclick="sortTable(5,this)">Visual Effect</th>
+				<th onclick="sortTable(6,this)">Visual</th>
+				<th onclick="sortTable(7,this)">Percussion</th>
+				<th onclick="sortTable(8,this)">Guard</th>
+				<th onclick="sortTable(9,this)">Total</th>
+			</tr>
+		</table>
+	</div>
 </div>
 
 
