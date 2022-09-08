@@ -85,7 +85,9 @@ table{
   #scores tr:nth-child(odd){background-color: #0c0297;}
   
   
-  #scores tr:hover {background-color: #006bad;}
+  #scores tr:hover {
+    background-color: #006bad;
+  }
   
   #scores th {
     padding-top: 12px;

@@ -115,6 +115,7 @@ function getScores() {
                 // console.log("pass")
                 var scoreR = document.createElement('tr')
                 scoreR.classList.add('tble-score')
+                scoreR.setAttribute('ontouchstart', '')
                 var item = document.createElement('td')
                 item.innerHTML = row["school"]
                 $(scoreR).append(item)
