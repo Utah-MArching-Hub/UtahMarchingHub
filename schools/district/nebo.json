@@ -1,0 +1,19 @@
+{
+    "Springville" : {
+        "icon" : "https://upload.wikimedia.org/wikipedia/en/8/83/SpringvilleHighSchoolLogoUtah.png",
+        "url" : "https://www.facebook.com/people/Springville-High-School-Bands/100048913274737/",
+        "socials" : [
+            ["instagram","springvilleband"],
+            ["facebook","Springville-High-School-Bands-100048913274737"]
+        ]
+    },
+    "Maple Mountain" : {
+        "icon" : "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/741/2018/01/25153901/logo_outline.png",
+        "url" : "https://www.mmhsband.com/",
+        "socials" : [
+            ["instagram","mmhsband"],
+            ["facebook","MMHSBand"]
+        ]
+
+    }
+}
