@@ -30,7 +30,7 @@ function updateScores() {
 function resetScores() {
     $('.sort-asc').removeClass('sort-asc');
     $('.sort-desc').removeClass('sort-desc');
-    let table = document.getElementById('scores')
+    // let table = document.getElementById('scores')
     $('.tble-score').remove()
 }
 
