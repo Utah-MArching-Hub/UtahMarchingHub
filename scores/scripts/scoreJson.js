@@ -39,7 +39,8 @@ function updateDrops() {
 
     let year = params.year;
     if(year == null){
-        year = "2021" //default value 
+        year = "2021" //default value
+        updateurl('year', year) 
     }
     yearDrop = document.getElementById("year")
     $(yearDrop).val(year).change()
@@ -51,6 +52,7 @@ function updateDrops() {
     let event = params.event;
     if(event == null){
         event = "NA" //default value 
+        updateurl('event', event)
     }
     eventDrop = document.getElementById("event")
     $(eventDrop).val(event).change()
@@ -61,6 +63,7 @@ function updateDrops() {
     let clas = params.clas;
     if(clas == null){
         clas = "NA" //default value 
+        updateurl('clas', clas)
     }
     clasDrop = document.getElementById("clas")
     $(clasDrop).val(clas).change()
