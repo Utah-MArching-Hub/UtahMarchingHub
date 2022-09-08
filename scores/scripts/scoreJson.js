@@ -38,6 +38,9 @@ function updateDrops() {
     });
 
     let year = params.year;
+    if(year == null){
+        year = "2021" //default value 
+    }
     yearDrop = document.getElementById("year")
     $(yearDrop).val(year).change()
     console.log(year)
@@ -46,6 +49,9 @@ function updateDrops() {
     }
 
     let event = params.event;
+    if(event == null){
+        event = "NA" //default value 
+    }
     eventDrop = document.getElementById("event")
     $(eventDrop).val(event).change()
     eventDrop.onchange = () => {
@@ -53,6 +59,9 @@ function updateDrops() {
     }
 
     let clas = params.clas;
+    if(clas == null){
+        clas = "NA" //default value 
+    }
     clasDrop = document.getElementById("clas")
     $(clasDrop).val(clas).change()
     clasDrop.onchange = () => {
@@ -75,7 +84,7 @@ function getScores() {
 
     table = document.getElementsByClassName('scores')[0]
     $.getJSON('data/scores.json', function (json) {
-        console.log(json)
+        // console.log(json)
         //console.log(json["Scores"])
         scores = json["Scores"]
         for (score in scores) {
@@ -85,20 +94,20 @@ function getScores() {
             eventP = false
             clasP = false
 
-            console.log(`${year}=${row["year"]}`)
+            // console.log(`${year}=${row["year"]}`)
             if (year === row["year"]) {
                 yearP = true
             }
-            console.log(`${event}=${row["event"]}`)
+            // console.log(`${event}=${row["event"]}`)
             if (event === row["event"]) {
                 eventP = true
             }
-            console.log(`${clas}=${row["class"]}`)
+            // console.log(`${clas}=${row["class"]}`)
             if (clas === row["class"]) {
                 clasP = true
             }
             if (yearP && eventP && clasP) {
-                console.log("pass")
+                // console.log("pass")
                 var scoreR = document.createElement('tr')
                 scoreR.classList.add('tble-score')
                 var item = document.createElement('td')
