@@ -4,44 +4,87 @@
 // console.log(scores["Scores"])
 // console.log("---")
 // console.log(scores["Scores"][3])
-
 function urlkey() {
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
-      });
-      // Get the value of "key" in eg "https://example.com/?key=value"
-      // let key = params.key; is value
-      let year = params.year;
-      let event = params.event;
-      alert('year:'+ year+ ',event:' + event)
+    });
+    // Get the value of "key" in eg "https://example.com/?key=value"
+    // let key = params.key; is value
+    let year = params.year;
+    let event = params.event;
+    alert('year:' + year + ',event:' + event)
 }
 
-function updateurl(key,value) {
-  var queryParams = new URLSearchParams(window.location.search);
-  queryParams.set(key, value);
-  history.replaceState(null, null, "?"+queryParams.toString());
-//   window.location.reload()
-//   getScores()
+function updateurl(key, value) {
+    var queryParams = new URLSearchParams(window.location.search);
+    queryParams.set(key, value);
+    history.replaceState(null, null, "?" + queryParams.toString());
+    updateScores()
 }
 
-function getScores() {
+function updateScores() {
+    resetScores()
+    getScores()
+}
+
+function resetScores() {
+    let table = document.getElementById('scores')
+    $('.tble-score').remove()
+}
+
+function updateDrops() {
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
+
     let year = params.year;
+    if(year == null){
+        year = "2021" //default value 
+    }
     yearDrop = document.getElementById("year")
     $(yearDrop).val(year).change()
     console.log(year)
+    yearDrop.onchange = () => {
+        updateurl('year', yearDrop.value);
+    }
+
     let event = params.event;
+    if(event == null){
+        event = "NA" //default value 
+    }
     eventDrop = document.getElementById("event")
     $(eventDrop).val(event).change()
+    eventDrop.onchange = () => {
+        updateurl('event', eventDrop.value);
+    }
+
     let clas = params.clas;
+    if(clas == null){
+        clas = "NA" //default value 
+    }
     clasDrop = document.getElementById("clas")
     $(clasDrop).val(clas).change()
+    clasDrop.onchange = () => {
+        updateurl('clas', clasDrop.value);
+    }
+
+    getScores();
+}
+
+function getScores() {
     document = Document;
+
+    const params = new Proxy(new URLSearchParams(window.location.search), {
+        get: (searchParams, prop) => searchParams.get(prop),
+    });
+
+    let year = params.year;
+    let event = params.event;
+    let clas = params.clas;
+
     table = document.getElementsByClassName('scores')[0]
-    $.getJSON('data/scores.json', function(json) {
-        console.log(json)
+    $.getJSON('data/scores.json', function (json) {
+        // console.log(json)
         //console.log(json["Scores"])
         scores = json["Scores"]
         for (score in scores) {
@@ -51,21 +94,22 @@ function getScores() {
             eventP = false
             clasP = false
 
-            console.log(`${year}=${row["year"]}`)
+            // console.log(`${year}=${row["year"]}`)
             if (year === row["year"]) {
                 yearP = true
             }
-            console.log(`${event}=${row["event"]}`)
+            // console.log(`${event}=${row["event"]}`)
             if (event === row["event"]) {
                 eventP = true
             }
-            console.log(`${clas}=${row["class"]}`)
+            // console.log(`${clas}=${row["class"]}`)
             if (clas === row["class"]) {
                 clasP = true
             }
             if (yearP && eventP && clasP) {
-                console.log("pass")
+                // console.log("pass")
                 var scoreR = document.createElement('tr')
+                scoreR.classList.add('tble-score')
                 var item = document.createElement('td')
                 item.innerHTML = row["school"]
                 $(scoreR).append(item)
