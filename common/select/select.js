@@ -42,9 +42,10 @@ for (const key in menus) {
                 element.parentNode.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
             }
             // console.log(element)
+            let options = element.parentNode.parentNode.querySelector('.custom-options').getElementsByClassName('custom-option')
 
-            for (let key in element.parentNode.parentNode.querySelector('.custom-options').getElementsByClassName('custom-option')) {
-                let child = element.parentNode.parentNode.querySelector('.custom-options').getElementsByClassName('custom-option')[key];
+            for (let key in options) {
+                let child = options[key];
                 // console.log(child)
                 if (child.value == val || child.getAttribute('value') == val) {
                     value = child.value || child.getAttribute('value');
