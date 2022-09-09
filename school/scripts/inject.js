@@ -10,7 +10,11 @@ function inject() {
         schools=json["schools"]
         school=schools[schoolN]
         for (id in school) {
-            document.getElementById(id).innerHTML = school[id]
+            if(id = "logo") {
+                document.getElementById(id).src = school[id]
+            } else {
+                document.getElementById(id).innerHTML = school[id]
+            }
         }
     })
 }

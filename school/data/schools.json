@@ -3,7 +3,8 @@
         "blue":{
             "name":"Bluecoats Bakery",
             "location":"Canton, Ohio",
-            "mascot":"blueberry cake"
+            "mascot":"blueberry cake",
+            "logo":"https://i.imgur.com/63Cg9jX.jpeg"
         }
     }
 }
