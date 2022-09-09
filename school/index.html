@@ -33,24 +33,45 @@
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
+    <button onclick="inject()">
+        run
+    </button>
+    <button onclick="updateurl('school','Springville')">
+        add 
+    </button>
+    <button onclick="scores()">
+        scores
+    </button>
     <div id="content">
-        <button onclick="inject()">
-            run
-        </button>
-        <button onclick="updateurl('school','blue')">
-            add 
-        </button>
         <!-- PUT BODY HERE -->
-        <img src="" alt="School Logo" id="logo">
+        <img src="" alt="School Logo" id="logo" width="100">
         <h1 id="name">
             TEST
         </h1>
         <h2 id="location">
             blank
         </h2>
-        <p id="mascot">blank</p>
-        
+        <p id="mascot">
+            blank
+        </p>
+        <div>
+            <table id="scores" class="scores sortable">
+                <tr class="tbl-header">
+                    <th onclick="sortTable(0,this)">Band</th>
+                    <th onclick="sortTable(1,this)">Date</th>
+                    <th onclick="sortTable(2,this)">Music Ensemble</th>
+                    <th onclick="sortTable(3,this)">Music Effect</th>
+                    <th onclick="sortTable(4,this)">Music</th>
+                    <th onclick="sortTable(5,this)">Visual Ensemble</th>
+                    <th onclick="sortTable(6,this)">Visual Effect</th>
+                    <th onclick="sortTable(7,this)">Visual</th>
+                    <th onclick="sortTable(8,this)">Percussion</th>
+                    <th onclick="sortTable(9,this)">Guard</th>
+                    <th onclick="sortTable(10,this)">Total</th>
+                    <th onclick="sortTable(11,this)">Class</th>
+                </tr>
+            </table>
+        </div>
     </div>
 
 <!-- END BODY  -->

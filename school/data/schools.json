@@ -1,10 +1,10 @@
 {
     "schools":{
-        "blue":{
-            "name":"Bluecoats Bakery",
-            "location":"Canton, Ohio",
-            "mascot":"blueberry cake",
-            "logo":"https://i.imgur.com/63Cg9jX.jpeg"
+        "Springville":{
+            "name":"Springville",
+            "location":"Springville",
+            "mascot":"Red Devils",
+            "logo":"http://shs.nebo.edu/sites/shs.nebo.edu/files/SHS%20Logo%2013_0.png"
         }
     }
 }
