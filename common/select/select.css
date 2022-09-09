@@ -1,0 +1,127 @@
+:root {
+    --select-background: white;
+    --select-hover-background: skyblue;
+    --select-selected-background: lightblue;
+    --select-active-background: lightblue;
+    --select-border: darkgrey;
+    --select-txt-color: black;
+    --select-option-border-width: 0;
+    --select-border-width: 1px;
+    --select-font-size: 15px;
+}
+
+.select-wrapper {
+    position: relative;
+    width: fit-content;
+    display: inline-block;
+}
+.select {
+    position: relative;
+    border-color: var(--select-border);
+}
+
+.select__trigger:hover {
+    background-color: var(--select-hover-background);
+}
+
+.select__trigger:active {
+    background-color: var(--select-active-background);
+}
+
+.select__trigger {
+    /* width: fit-content; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--select-txt-color);
+    background: var(--select-background);
+    cursor: pointer;
+    border-width: var(--select-border-width);
+    border-style: solid;
+    border-color: var(--select-border);
+    border-radius: 1.5px;
+    height: 16px;
+    padding: 0 4px 0 4px;
+    font-size: var(--select-font-size);
+    width: initial;
+
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+.custom-options {
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+    padding-bottom: 2em;
+    font-size: var(--select-font-size);
+    width: max-content;
+    
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+.select.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    border-color: var(--select-border);
+}
+.custom-option {
+    position: relative;
+    display: block;
+    padding: 0 4px 0 4px;
+    color: var(--select-txt-color);
+    border-color: var(--select-border);
+    border-style: solid;
+    border-width: var(--select-option-border-width);
+    background-color: var(--select-background);
+}
+.custom-option:hover {
+    background-color: var(--select-hover-background);
+    cursor: pointer;
+}
+.custom-option.selected {
+    background-color: var(--select-selected-background);
+}
+.custom-option.hidden {
+    display: none;
+}
+
+.custom-option.selected:hover {
+    background-color: var(--select-hover-background);
+}
+
+/* arrow */
+.arrow {
+    position: relative;
+    height: 5px;
+    width: 20px;
+    left: 10px;
+}
+.arrow::before, .arrow::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 1px;
+    height: 100%;
+    transition: all 0.5s;
+}
+.arrow::before {
+    left: -2px;
+    transform: rotate(-45deg);
+    background-color: var(--select-txt-color);
+}
+.arrow::after {
+    left: 2px;
+    transform: rotate(45deg);
+    background-color: var(--select-txt-color);
+}
+
