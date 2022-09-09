@@ -58,7 +58,6 @@
     visibility: hidden;
     pointer-events: none;
     z-index: 2;
-    padding-bottom: 2em;
     font-size: var(--select-font-size);
     width: max-content;
     
@@ -83,6 +82,11 @@
     border-style: solid;
     border-width: var(--select-option-border-width);
     background-color: var(--select-background);
+    border-radius: 0;
+}
+.custom-option:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 .custom-option:hover {
     background-color: var(--select-hover-background);
