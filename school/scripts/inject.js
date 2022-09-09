@@ -1,3 +1,7 @@
+function load() {
+    inject()
+    scores()
+}
 
 function inject() {
     document = Document;

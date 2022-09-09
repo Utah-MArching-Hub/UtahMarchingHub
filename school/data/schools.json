@@ -5,6 +5,13 @@
             "location":"Springville",
             "mascot":"Red Devils",
             "logo":"http://shs.nebo.edu/sites/shs.nebo.edu/files/SHS%20Logo%2013_0.png"
+        },
+        "Maple Mountain":{
+            "name":"Maple Moutain",
+            "location":"Mapelton",
+            "mascot":"goldaeb Egals",
+            "logo":"http://shs.nebo.edu/sites/shs.nebo.edu/files/SHS%20Logo%2013_0.png"
+
         }
     }
 }
