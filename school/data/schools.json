@@ -1,0 +1,9 @@
+{
+    "schools":{
+        "blue":{
+            "name":"Bluecoats Bakery",
+            "location":"Canton, Ohio",
+            "mascot":"blueberry cake"
+        }
+    }
+}
