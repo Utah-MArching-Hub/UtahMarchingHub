@@ -37,23 +37,26 @@ for (const key in menus) {
         element.setval = function (val) {
             let value = val;
             let content = val;
+            let found = false;
             if (element.parentNode.parentNode.querySelector('.custom-option.selected')) {
                 element.parentNode.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
             }
             // console.log(element)
 
-            for (const key in element.parentNode.parentNode.childNodes) {
-                if (Object.hasOwnProperty.call(element.parentNode.parentNode.querySelector('.custom-options').getElementsByClassName('custom-option'), key)) {
-                    const child = element.parentNode.parentNode.querySelector('.custom-options').getElementsByClassName('custom-option')[key];
-                    // console.log(child)
-                    if (child.value == val || child.getAttribute('value') == val) {
-                        value = child.value || child.getAttribute('value');
-                        content = child.textContent;
-                        child.classList.add('selected');
-                        break
-                    }
+            for (let key in element.parentNode.parentNode.querySelector('.custom-options').getElementsByClassName('custom-option')) {
+                let child = element.parentNode.parentNode.querySelector('.custom-options').getElementsByClassName('custom-option')[key];
+                // console.log(child)
+                if (child.value == val || child.getAttribute('value') == val) {
+                    value = child.value || child.getAttribute('value');
+                    content = child.textContent;
+                    child.classList.add('selected');
+                    found = true;
+                    break;
                 }
             }
+            if (!found) {
+                console.error('could not find option: ' + val);
+            };
             element.value = value;
             element.setAttribute('value', value);
             element.textContent = content;
