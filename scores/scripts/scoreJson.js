@@ -114,7 +114,10 @@ function getScores() {
                 var scoreR = document.createElement('tr')
                 scoreR.classList.add('tble-score')
                 var item = document.createElement('td')
-                item.innerHTML = row["school"]
+                var link = document.createElement('a')
+                link.innerHTML = row["school"]
+                link.href = "http://utahmarchinghub.com/school/?school=" + row["school"]
+                $(item).append(link)
                 $(scoreR).append(item)
                 for (key in row['scores']) {
                     num = row['scores'][key]
