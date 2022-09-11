@@ -116,7 +116,7 @@ function getScores() {
                 var item = document.createElement('td')
                 var link = document.createElement('a')
                 link.innerHTML = row["school"]
-                link.href = "http://utahmarchinghub.com/school/?school=" + row["school"]
+                link.href = "/school/?school=" + row["school"]
                 $(item).append(link)
                 $(scoreR).append(item)
                 for (key in row['scores']) {
