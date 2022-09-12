@@ -73,6 +73,7 @@ function loadUsers(path, id) {
 
             var userdiv = document.createElement('div');
             userdiv.classList.add('user');
+            userdiv.setAttribute('ontouchstart', '');
 
             var usericon = document.createElement('a')
             usericon.setAttribute('target', '_blank')
