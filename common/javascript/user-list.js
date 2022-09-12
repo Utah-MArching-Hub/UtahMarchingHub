@@ -12,7 +12,16 @@ function loadUsers(path, id) {
         } else if (social == 'reddit') {
             url = 'https://www.reddit.com/user/' + username + '/'
         } else if (social == 'facebook') {
-            url = 'https://facebook.com/' + username + '/'
+            if (typeof username == 'string') {
+                page = username
+            } else if (['u','user'].includes(username[0])) {
+                page = username[1]
+            } else if (['g', 'group'].includes(username[0])) {
+                page = 'groups/' + username[1]
+            } else {
+                return ''
+            }
+            url = 'https://facebook.com/' + page + '/'
         } else if (social == 'youtube') {
             if (typeof username == 'string') {
                 channel = 'channel/' + username
@@ -35,20 +44,28 @@ function loadUsers(path, id) {
 
     document = Document;
 
-    classlist = document.getElementsByClassName('users')
-    if (id) {
-        for (element in classlist) {
-            if (classlist[element].id == id) {
-                userslist = classlist[element]
-                break
-            }
-            throw new Error('Could not find element with id: ' + id);
-        }
-    } else {
-        userslist = classlist[0];
-    }
     $.getJSON(path, function(json) {
-        console.log(json);
+        classlist = document.getElementsByClassName('users')
+        // console.log(classlist)
+        if (id) {
+            found = false
+            for (element in classlist) {
+                // console.log(classlist[element].id)
+                if (classlist[element].id == id) {
+                    userslist = classlist[element]
+                    found = true
+                    break
+                }
+            }
+            if (!found) {
+                throw new Error('Could not find element with id: ' + id);
+            }
+        } else {
+            userslist = classlist[0];
+        }
+        console.log(userslist)
+        
+        // console.log(json);
         for (user in json) {
             url = json[user]['url']
             icon = json[user]['icon']
@@ -95,6 +112,7 @@ function loadUsers(path, id) {
                 }
             }
             $(userdiv).append(usericon,userlink,socialdiv)
+            console.log(userslist)
             $(userslist).append(userdiv)
         };
     });
