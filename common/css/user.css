@@ -5,7 +5,8 @@
     justify-content: space-evenly;
     align-content: stretch;
     justify-items: center;
-    gap: 2em;
+    gap: 5px;
+    row-gap: 2em;
 }
 
 .user {
@@ -117,4 +118,16 @@
     background-size: 16px;
     width: 16px;
     height: 16px;
+}
+
+@media (max-width: 900px) {
+    .users {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .users {
+        grid-template-columns: auto;
+    }
 }
