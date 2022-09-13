@@ -82,6 +82,18 @@ function getScores() {
     let event = params.event;
     let clas = params.clas;
 
+    let order = []
+    let header = document.querySelector('.tbl-header').children
+    for (const key in header) {
+        if (Object.hasOwnProperty.call(header, key)) {
+            const el = header[key];
+            order.push(el.getAttribute('value'))
+        }
+    }
+    
+    // order.splice(order.indexOf('school'), 1)
+    console.log(order)
+
     table = document.getElementsByClassName('scores')[0]
     $.getJSON('data/scores.json', function (json) {
         // console.log(json)
@@ -106,19 +118,29 @@ function getScores() {
             if (clas === row["class"]) {
                 clasP = true
             }
+            
             if (yearP && eventP && clasP) {
                 // console.log("pass")
                 var scoreR = document.createElement('tr')
                 scoreR.classList.add('tble-score')
                 scoreR.setAttribute('ontouchstart', '')
-                var item = document.createElement('td')
-                item.innerHTML = row["school"]
-                $(scoreR).append(item)
-                for (key in row['scores']) {
-                    num = row['scores'][key]
-                    var item = document.createElement('td')
-                    item.innerHTML = num
-                    $(scoreR).append(item)
+
+                for (const key in order) {
+                    if (Object.hasOwnProperty.call(order, key)) {
+                        const score = order[key];
+
+                        if (score == 'school') {
+                            var item = document.createElement('td')
+                            item.innerHTML = row[score]
+                            $(scoreR).append(item)
+                        } else {
+                            console.log(score)
+                            num = row['scores'][score]
+                            var item = document.createElement('td')
+                            item.innerHTML = num
+                            $(scoreR).append(item)
+                        }
+                    }
                 }
                 $(table).append(scoreR)
             }
