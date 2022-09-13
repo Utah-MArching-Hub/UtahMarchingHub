@@ -1,24 +1,20 @@
 /* Score sheet style */
 .scores-div {
+  margin-bottom: 1em;
   overflow: auto;
-  padding-bottom: 1em;
 }
 
 table {
   width: 100%;
   table-layout: fixed;
-  min-width: 50em;
+  min-width: 70em;
 }
-
-.tbl-header{
-  background-color: rgba(255,255,255,0.3);
- }
 
 .tbl-content{
   height:300px;
   overflow-x: auto;
   margin-top: 0px;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,1);
 }
 
 th {
@@ -29,9 +25,10 @@ th {
   font-size: 12px;
   color: #fff;
   text-transform: uppercase;
-  border: rgba(255,255,255,0.3);
-  border-width: 2px;
+  border: rgba(255,255,255,1);
+  border-width: 0.5px;
   border-style: solid;
+
   user-select: none; /* supported by Chrome and Opera */
  -webkit-user-select: none; /* Safari */
  -khtml-user-select: none; /* Konqueror HTML */
@@ -47,8 +44,8 @@ th::before {
   display: block;
   position: absolute;
   content: "▲";
-  right: 5px;
-  top: 15px;
+  right: 4px;
+  bottom: 50%;
   opacity: 0.5;
   font-size: .8em;
 }
@@ -57,8 +54,8 @@ th::after {
   display: block;
   position: absolute;
   content: "▼";
-  right: 5px;
-  bottom: 15px;
+  right: 4px;
+  top: 50%;
   opacity: 0.5;
   font-size: .8em;
 }

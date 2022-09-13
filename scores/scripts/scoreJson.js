@@ -83,7 +83,7 @@ function getScores() {
     let clas = params.clas;
 
     let order = []
-    let header = document.querySelector('.tbl-header').children
+    let header = document.querySelector('.tbl-header').children[0].children
     for (const key in header) {
         if (Object.hasOwnProperty.call(header, key)) {
             const el = header[key];
@@ -118,7 +118,7 @@ function getScores() {
             if (clas === row["class"]) {
                 clasP = true
             }
-            
+
             if (yearP && eventP && clasP) {
                 // console.log("pass")
                 var scoreR = document.createElement('tr')
