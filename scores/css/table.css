@@ -1,7 +1,13 @@
 /* Score sheet style */
-table{
-  width:100%;
+.scores-div {
+  overflow: auto;
+  padding-bottom: 1em;
+}
+
+table {
+  width: 100%;
   table-layout: fixed;
+  min-width: 50em;
 }
 
 .tbl-header{
@@ -10,7 +16,7 @@ table{
 
 .tbl-content{
   height:300px;
-  overflow-x:auto;
+  overflow-x: auto;
   margin-top: 0px;
   border: 1px solid rgba(255,255,255,0.3);
 }
