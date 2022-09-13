@@ -16,6 +16,7 @@ function urlkey() {
 }
 
 function updateurl(key, value) {
+    
     var queryParams = new URLSearchParams(window.location.search);
     queryParams.set(key, value);
     history.replaceState(null, null, "?" + queryParams.toString());
@@ -28,7 +29,9 @@ function updateScores() {
 }
 
 function resetScores() {
-    let table = document.getElementById('scores')
+    $('.sort-asc').removeClass('sort-asc');
+    $('.sort-desc').removeClass('sort-desc');
+    // let table = document.getElementById('scores')
     $('.tble-score').remove()
 }
 
@@ -43,11 +46,9 @@ function updateDrops() {
         updateurl('year', year) 
     }
     yearDrop = document.getElementById("year")
-    $(yearDrop).val(year).change()
     console.log(year)
-    yearDrop.onchange = () => {
-        updateurl('year', yearDrop.value);
-    }
+    yearDrop.setval(year)
+    
 
     let event = params.event;
     if(event == null){
@@ -55,10 +56,8 @@ function updateDrops() {
         updateurl('event', event)
     }
     eventDrop = document.getElementById("event")
-    $(eventDrop).val(event).change()
-    eventDrop.onchange = () => {
-        updateurl('event', eventDrop.value);
-    }
+    console.log(event)
+    eventDrop.setval(event)
 
     let clas = params.clas;
     if(clas == null){
@@ -66,10 +65,8 @@ function updateDrops() {
         updateurl('clas', clas)
     }
     clasDrop = document.getElementById("clas")
-    $(clasDrop).val(clas).change()
-    clasDrop.onchange = () => {
-        updateurl('clas', clasDrop.value);
-    }
+    console.log(clas)
+    clasDrop.setval(clas)
 
     getScores();
 }
@@ -84,6 +81,18 @@ function getScores() {
     let year = params.year;
     let event = params.event;
     let clas = params.clas;
+
+    let order = []
+    let header = document.querySelector('.tbl-header').children[0].children
+    for (const key in header) {
+        if (Object.hasOwnProperty.call(header, key)) {
+            const el = header[key];
+            order.push(el.getAttribute('value'))
+        }
+    }
+    
+    // order.splice(order.indexOf('school'), 1)
+    console.log(order)
 
     table = document.getElementsByClassName('scores')[0]
     $.getJSON('data/scores.json', function (json) {
@@ -109,21 +118,29 @@ function getScores() {
             if (clas === row["class"]) {
                 clasP = true
             }
+
             if (yearP && eventP && clasP) {
                 // console.log("pass")
                 var scoreR = document.createElement('tr')
                 scoreR.classList.add('tble-score')
-                var item = document.createElement('td')
-                var link = document.createElement('a')
-                link.innerHTML = row["school"]
-                link.href = "/school/?school=" + row["school"]
-                $(item).append(link)
-                $(scoreR).append(item)
-                for (key in row['scores']) {
-                    num = row['scores'][key]
-                    var item = document.createElement('td')
-                    item.innerHTML = num
-                    $(scoreR).append(item)
+                scoreR.setAttribute('ontouchstart', '')
+
+                for (const key in order) {
+                    if (Object.hasOwnProperty.call(order, key)) {
+                        const score = order[key];
+
+                        if (score == 'school') {
+                            var item = document.createElement('td')
+                            item.innerHTML = row[score]
+                            $(scoreR).append(item)
+                        } else {
+                            console.log(score)
+                            num = row['scores'][score]
+                            var item = document.createElement('td')
+                            item.innerHTML = num
+                            $(scoreR).append(item)
+                        }
+                    }
                 }
                 $(table).append(scoreR)
             }
