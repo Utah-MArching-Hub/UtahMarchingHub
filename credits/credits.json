@@ -6,11 +6,11 @@
         "socials" : [
             ["github" , "StoneCommander"],
             ["site" , ""],
-            ["youtube" , ""],
-            ["twitch" , ""],
+            ["youtube" , ["id", "UCLqIi9m1WeSG250d39erFVA"]],
+            ["twitch" , "StoneCommanderTW"],
             ["twitter" , ""],
-            ["instagram" , ""],
-            ["reddit" , ""]
+            ["instagram" , "dallinbarker13"],
+            ["reddit" , "StoneCommander"]
         ]
     },
     

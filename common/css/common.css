@@ -1,7 +1,14 @@
+html {
+    height: 100%;
+}
+
 body {
-    background-color: rgb(108, 108, 213);
+    background-image: linear-gradient(#002868,#002868 150px,#004dc9 350px, #004dc9 2000px);
+    background-color: #004dc9;
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
 #content {
-    padding: 0 2em;
+    padding: 0 2em 2em;
 }

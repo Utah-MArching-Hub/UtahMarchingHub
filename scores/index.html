@@ -11,12 +11,14 @@
 	<title></title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link href="css/table.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="/common/css/common.css">
+	<link rel="stylesheet" href="/common/select/select.css">
+	<link rel="icon" type="image/x-icon" href="/common/images/icons/UMH/logo.png">
 </head>
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-	crossorigin="anonymous">
+crossorigin="anonymous">
 	</script>
 <script>
 	$(function () {
@@ -24,22 +26,34 @@
 		$("#footer").load("/footer.html");
 	});
 </script>
-<script src="scripts/scoreJson.js" language="javascript" type="text/javascript"></script>
-<script src="scripts/sort.js"></script>
 
 <div id="header"></div>
 
 <body onload="updateDrops()">
 	<!--[if lt IE 7]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
-
-<!-- PUT BODY HERE -->
-<div id="content">
-	<select id="year" name="year">
+		<![endif]-->
+	<script src="scripts/scoreJson.js" language="javascript" type="text/javascript" async defer></script>
+	<script src="/common/select/select.js" async defer></script>
+	<script src="scripts/sort.js" async defer></script>
+	
+	<!-- PUT BODY HERE -->
+	<div id="content">
+		<!-- <select id="year" name="year">
 		<option value=2021 selected>2021</option>
-	</select>
-	<select id="event" name="event">
+	</select> -->
+	<div class="select-wrapper"> 
+		<div class="select">
+			<div class="select__trigger">
+				<span id="year" value="2021" onchange="updateurl('event', this.value);" ontouchstart>2021</span>
+				<div class="arrow"></div>
+			</div>
+			<div class="custom-options">
+				<span class="custom-option selected" value="2021" ontouchstart>2021</span>
+			</div>
+		</div>
+	</div>
+	<!-- <select id="event" name="event">
 		<option value='NA' selected disabled hidden>select event</option>
 		<option value='nebo'>nebo invintational</option>
 		<option value='oquirrh'>Oquirrh Mountain</option>
@@ -48,8 +62,26 @@
 		<option value='davis'>Davis Cup</option>
 		<option value='timp'>Mnt Timpanogos</option>
 		<option value='state'>Redrock State</option>
-	</select>
-	<select id="clas" name="clas">
+	</select> -->
+	<div class="select-wrapper"> 
+		<div class="select">
+			<div class="select__trigger">
+				<span id="event" value="NA" onchange="updateurl('event', this.value);" ontouchstart>select event</span>
+				<div class="arrow"></div>
+			</div>
+			<div class="custom-options">
+				<span class="custom-option selected hidden" value="NA" ontouchstart>select event</span>
+				<span class="custom-option" value="nebo" ontouchstart>nebo invintational</span>
+				<span class="custom-option" value="oquirrh" ontouchstart>Oquirrh Mountain</span>
+				<span class="custom-option" value="wasatch" ontouchstart>Wasatch Front</span>
+				<span class="custom-option" value="bridgerland" ontouchstart>Bridgerland</span>
+				<span class="custom-option" value="davis" ontouchstart>Davis Cup</span>
+				<span class="custom-option" value="timp" ontouchstart>Mnt Timpanogos</span>
+				<span class="custom-option" value="state" ontouchstart>Redrock State</span>
+			</div>
+		</div>
+	</div>
+	<!-- <select id="clas" name="clas">
 		<option value='NA' selected disabled hidden>select class</option>
 		<option value='3a'>3A</option>
 		<option value='4a'>4A</option>
@@ -57,7 +89,24 @@
 		<option value='5as'>5A schoolastic</option>
 		<option value='6ao'>6A open</option>
 		<option value='6as'>6A schoolastic</option>
-	</select>
+	</select> -->
+	<div class="select-wrapper"> 
+		<div class="select">
+			<div class="select__trigger">
+				<span id="clas" value="NA" onchange="updateurl('clas', this.value);" ontouchstart>select class</span>
+				<div class="arrow"></div>
+			</div>
+			<div class="custom-options">
+				<span class="custom-option selected hidden" value="NA" ontouchstart>select class</span>
+				<span class="custom-option" value="3a" ontouchstart>3A</span>
+				<span class="custom-option" value="4a" ontouchstart>4A</span>
+				<span class="custom-option" value="5ao" ontouchstart>5A open</span>
+				<span class="custom-option" value="5as" ontouchstart>5A schoolastic</span>
+				<span class="custom-option" value="6ao" ontouchstart>6A open</span>
+				<span class="custom-option" value="6as" ontouchstart>6A schoolastic</span>
+			</div>
+		</div>
+	</div>
 	<!-- <button class="button" onclick="window.location.reload()">get</button> -->
 	<div>
 		<table id="scores" class="scores sortable">
