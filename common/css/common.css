@@ -1,9 +1,7 @@
 body {
-    background-color: rgb(128, 128, 128);
-
+    background-image: linear-gradient(#002868,#002868 150px,#004dc9 350px);
 }
 
 #content {
     padding: 0 2em 2em;
-    background-color: blue;
 }
