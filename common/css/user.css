@@ -6,6 +6,8 @@
     align-content: stretch;
     justify-items: center;
     gap: 5px;
+    flex-flow: wrap;
+    padding: 0 5em;
 }
 
 .user {
