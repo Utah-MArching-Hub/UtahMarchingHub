@@ -124,9 +124,3 @@
     width: 16px;
     height: 16px;
 }
-
-@media (max-width: 900px) {
-    .users {
-        grid-template-columns: auto auto;
-    }
-}
