@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Schools</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/common/css/common.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/common/css/user.css">
+	<link rel="icon" type="image/x-icon" href="/common/images/icons/UMH/logo.png">
+</head>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+    <script src="/common/javascript/user-list.js"></script>
+<script>
+    $(function () {
+        $("#footer").load("/footer.html");
+        $("#header").load("/header.html");
+    });
+</script>
+
+<div id="header"></div>
+
+<body>
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <div id="content">
+        <!-- PUT BODY HERE -->
+        <h1>Schools</h1>
+        <p>Here's a list of schools and their socials.</p>
+        
+        <h2>Alpine School District</h2>
+        <div class="users" id="alpine"></div>
+        <script>loadUsers('district/alpine.json', 'alpine')</script>
+        
+        <h2>Nebo School District</h2>
+        <div class="users" id="nebo"></div>
+        <script>loadUsers('district/nebo.json', 'nebo')</script>
+
+        <h2>Davis School District</h2>
+        <div class="users" id="davis"></div>
+        <script>loadUsers('district/davis.json', 'davis')</script>
+
+        <h2>Jordan School District</h2>
+        <div class="users" id="jordan"></div>
+        <script>loadUsers('district/jordan.json', 'jordan')</script>
+        
+        <div class="notice">
+            <p class="missing-school">Is your school missing? <strong><a href="https://forms.gle/YieycSZbW6xWwfhV7" target="_blank">CLICK HERE</a></strong> to let us know!</p>
+            <p>All of the logos belong to their respective schools. <strong>We do not own any of them.</strong></p>
+        </div>
+    </div>
+
+
+
+<!-- END BODY  -->
+</body>
+
+<!-- for some reason it has to be under the users div -->
+
+<div id="footer"></div>
+
+
+</html>

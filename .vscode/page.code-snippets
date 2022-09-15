@@ -33,6 +33,7 @@
 			"    <title>${1:Utah Marching Hub}</title>",
 			"    <meta name=\"description\" content=\"$2\">",
 			"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+			"    <link href=\"/common/css/common.css\" rel=\"stylesheet\" type=\"text/css\" />",
 			"    <link href=\"$3\" rel=\"stylesheet\" type=\"text/css\" />",
 			"</head>",
 			"",
