@@ -1,0 +1,54 @@
+.youtube {
+    background-image: url(/common/images/icons/youtube/youtube_full_color_icon/social/64px/red/youtube_social_icon_red.png);
+    background-size: 16px;
+    width: 16px;
+    height: 11.25px;
+}
+
+.github {
+    background-image: url(/common/images/icons/GitHub/Vector/GitHub-Mark-light-16px.svg);
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.site {
+    background-image: url(/common/images/icons/globe.svg);
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.twitch {
+    background-image: url(/common/images/icons/twitch/Brand\ Assets/Logos/glitch/Purple/TwitchGlitchPurple.svg);
+    background-size: 16px;
+    width: 16px;
+    height: 18px;
+}
+.twitter {
+    background-image: url(/common/images/icons/twitter/Twitter\ logo/SVG/Logo\ blue.svg);
+    background-size: 16px;
+    width: 16px;
+    height: 13px;
+}
+
+.instagram {
+    background-image: url(/common/images/icons/instagram/01\ Gradient\ Glyph/Instagram_Glyph_Gradient_RGB.svg);
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.reddit {
+    background-image: url(/common/images/icons/reddit/Reddit\ Logo/On\ Orangered/SVG/reddit_logo.svg);
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.facebook {
+    background-image: url(/common/images/icons/facebook/f-Logos-2019-1/f_Logo_Online_04_2019/Color/SVG/f_logo_RGB-Blue_1024.svg);
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+}
