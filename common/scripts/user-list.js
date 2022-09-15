@@ -108,6 +108,7 @@ function loadUsers(path, id) {
                     }
 
                     socialLink.classList.add(socials[social][0])
+                    socialLink.classList.add('size-16px')
 
                     $(socialdiv).append(socialLink)
                 }
