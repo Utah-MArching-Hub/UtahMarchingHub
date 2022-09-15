@@ -16,6 +16,8 @@ function get() {
 
     let eName = params.event;
 
+    document.querySelectorAll("h1")[1].innerHTML = eName
+
     table = document.getElementsByClassName('schedule')[0]
     $.getJSON('data/schedules.json', function (json) {
         events = json["events"]
