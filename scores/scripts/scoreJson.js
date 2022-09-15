@@ -16,6 +16,7 @@ function urlkey() {
 }
 
 function updateurl(key, value) {
+    
     var queryParams = new URLSearchParams(window.location.search);
     queryParams.set(key, value);
     history.replaceState(null, null, "?" + queryParams.toString());
@@ -28,7 +29,9 @@ function updateScores() {
 }
 
 function resetScores() {
-    let table = document.getElementById('scores')
+    $('.sort-asc').removeClass('sort-asc');
+    $('.sort-desc').removeClass('sort-desc');
+    // let table = document.getElementById('scores')
     $('.tble-score').remove()
 }
 
@@ -43,11 +46,9 @@ function updateDrops() {
         updateurl('year', year) 
     }
     yearDrop = document.getElementById("year")
-    $(yearDrop).val(year).change()
     console.log(year)
-    yearDrop.onchange = () => {
-        updateurl('year', yearDrop.value);
-    }
+    yearDrop.setval(year)
+    
 
     let event = params.event;
     if(event == null){
@@ -55,10 +56,8 @@ function updateDrops() {
         updateurl('event', event)
     }
     eventDrop = document.getElementById("event")
-    $(eventDrop).val(event).change()
-    eventDrop.onchange = () => {
-        updateurl('event', eventDrop.value);
-    }
+    console.log(event)
+    eventDrop.setval(event)
 
     let clas = params.clas;
     if(clas == null){
@@ -66,10 +65,8 @@ function updateDrops() {
         updateurl('clas', clas)
     }
     clasDrop = document.getElementById("clas")
-    $(clasDrop).val(clas).change()
-    clasDrop.onchange = () => {
-        updateurl('clas', clasDrop.value);
-    }
+    console.log(clas)
+    clasDrop.setval(clas)
 
     getScores();
 }
@@ -113,6 +110,7 @@ function getScores() {
                 // console.log("pass")
                 var scoreR = document.createElement('tr')
                 scoreR.classList.add('tble-score')
+                scoreR.setAttribute('ontouchstart', '')
                 var item = document.createElement('td')
                 item.innerHTML = row["school"]
                 $(scoreR).append(item)
