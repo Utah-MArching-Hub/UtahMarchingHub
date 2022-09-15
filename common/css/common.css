@@ -12,3 +12,33 @@ body {
 #content {
     padding: 0 2em 2em;
 }
+
+table, th, td {
+    border: 1px solid;
+}
+
+.tableStyle {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+.tableStyle td, .tableStyle th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+.tableStyle tr:nth-child(even){background-color: #2b00ba;}
+.tableStyle tr:nth-child(odd){background-color: #0084ffd6;}
+
+
+.tableStyle tr:hover {background-color: #ddd;}
+
+.tableStyle th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #04AA6D;
+color: white;
+}
