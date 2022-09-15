@@ -1,3 +1,14 @@
+/* 
+
+When you load this style, you can add an icon by doing something like this
+
+<div class="youtube size-32px"></div>
+
+You can use it on any element. The size-[size]px classes change the size of
+the element. Then the social icons just resize to fit.
+
+*/
+
 .size-16px {
     width: 16px;
     height: 16px;
