@@ -1,0 +1,111 @@
+{
+  "events": {
+    "nebo": {
+      "Northridge": {
+        "location": "Layton, UT",
+        "class": "5A S",
+        "time": "10:00 AM"
+      },
+      "Orem City": {
+        "location": "Orem, UT",
+        "class": "5A S",
+        "time": "10:15 AM"
+      },
+      "Salem Hills": {
+        "location": "Salem, UT",
+        "class": "5A S",
+        "time": "10:30 AM"
+      },
+      "Wasatch": {
+        "location": "Heber City, UT",
+        "class": "5A S",
+        "time": "10:45 AM"
+      },
+      "Springville": {
+        "location": "Springville, UT",
+        "class": "5A S",
+        "time": "11:00 AM"
+      },
+      "Timpview": {
+        "location": "Provo, UT",
+        "class": "5A S",
+        "time": "11:15 AM"
+      },
+      "Spanish Fork": {
+        "location": "Spanish Fork, UT",
+        "class": "5A S",
+        "time": "11:30 AM"
+      },
+      "custom1": { "txt": "JUDGES BREAK (15 min)", "2time": "11:45 AM" },
+      "Provo": { "location": "Provo, UT", "class": "5A S", "time": "12:00 PM" },
+      "Payson": {
+        "location": "Payson, UT",
+        "class": "5A S",
+        "time": "12:15 PM"
+      },
+      "Viewmont": {
+        "location": "Bountiful, UT",
+        "class": "5A O",
+        "time": "12:30 PM"
+      },
+      "Ridgeline": {
+        "location": "Millville, UT",
+        "class": "5A O",
+        "time": "12:45 PM"
+      },
+      "Green Canyon": {
+        "location": "North Logan, UT",
+        "class": "5A O",
+        "time": "1:00 PM"
+      },
+      "Maple Mountain": {
+        "location": "Spanish Fork, UT",
+        "class": "5A O",
+        "time": "1:15 PM"
+      },
+      "custom2": { "txt": "5A AWARDS", "2time": "1:30 PM" },
+      "Carbon": { "location": "Price, UT", "class": "3A", "time": "2:30 PM" },
+      "Canyon View": {
+        "location": "Cedar City, UT",
+        "class": "3A",
+        "time": "2:45 PM"
+      },
+      "West Jordan": {
+        "location": "West Jordan, UT",
+        "class": "6A S",
+        "time": "3:00 PM"
+      },
+      "Riverton": {
+        "location": "Riverton, UT",
+        "class": "6A S",
+        "time": "3:15 PM"
+      },
+      "Kearns": {
+        "location": "Kearns, UT",
+        "class": "6A S",
+        "time": "3:30 PM"
+      },
+      "custom3": { "txt": "JUDGES BREAK (15 min)", "2time": "3:45 PM" },
+      "American Fork": {
+        "location": "American Fork, UT",
+        "class": "6A O",
+        "time": "4:00 PM"
+      },
+      "custom4": {
+        "txt": "BREAK",
+        "2time": "4:15 PM"
+      },
+      "Herriman": {
+        "location": "Herriman, UT",
+        "class": "6A O",
+        "time": "4:30 PM"
+      },
+      "Davis": {
+        "location": "Kaysville, UT",
+        "class": "6A O",
+        "time": "4:45 PM"
+      },
+      "custom5": { "txt": "3A/6A AWARDS", "2time": "5:00 PM" }
+    }
+  }
+}
