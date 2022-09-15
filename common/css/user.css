@@ -1,8 +1,9 @@
 .users {
-    display: grid;
-    grid-template-columns: auto auto auto;
+    /* display: grid;
+    grid-template-columns: auto auto auto; */
+    display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-content: stretch;
     justify-items: center;
     gap: 5px;
@@ -22,6 +23,8 @@
     margin: 2ch;
     transition: 0.2s;
     min-height: 85px;
+    min-width: 275px;
+    /* flex: 2; */
 }
 
 .user:hover {
@@ -125,11 +128,5 @@
 @media (max-width: 900px) {
     .users {
         grid-template-columns: auto auto;
-    }
-}
-
-@media (max-width: 600px) {
-    .users {
-        grid-template-columns: auto;
     }
 }
