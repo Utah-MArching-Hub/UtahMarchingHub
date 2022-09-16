@@ -8,7 +8,7 @@
     justify-items: center;
     gap: 5px;
     flex-flow: wrap;
-    padding: 0 5em;
+    padding: 0 0 0 5em;
 }
 
 .user {
