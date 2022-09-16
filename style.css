@@ -72,10 +72,11 @@
 .split {
   /* height: 100%; */
   width: 50%;
-  position: absolute;
+  display: flex;
   overflow-x: hidden;
   padding-top: 20px;
   top: 20em;
+  min-width: 20em;
 }
 
 /* Control the left side */
@@ -87,6 +88,14 @@
 /* Control the right side */
 .right {
   right: 0;
+}
+
+.split-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-bottom: 2em;
 }
 
 a {
