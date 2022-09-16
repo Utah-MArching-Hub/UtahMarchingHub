@@ -10,5 +10,10 @@ body {
 }
 
 #content {
-    padding: 0 2em 2em;
+    padding: 0 2% 2em;
+}
+
+body {
+    padding: 0;
+    margin: 0;
 }
