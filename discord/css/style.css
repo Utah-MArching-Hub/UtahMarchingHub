@@ -24,11 +24,12 @@
 }
 
 .discord-link span:after {
+    display: none;
     content: "\00bb";
     position: absolute;
     opacity: 0;
     top: 0;
-    right: -300px;
+    right: -50px;
     transition: 0.5s;
 }
 
@@ -37,6 +38,7 @@
 }
 
 .discord-link:hover span:after {
+    display: inline;
     opacity: 1;
     right: 0;
 }
