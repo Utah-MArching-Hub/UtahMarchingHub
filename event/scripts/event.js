@@ -74,6 +74,8 @@ function getScores(cname,year) {
 
     let event = params.event;
 
+    skip = ["MEnsemble","MEffect","VEnsemble","VEffect"]
+
     tableScore = document.getElementsByClassName(cname)[0]
     $.getJSON('../scores/data/scores.json', function (json) {
         // console.log(json)
@@ -104,10 +106,12 @@ function getScores(cname,year) {
                 item.innerHTML = row["school"]
                 $(scoreR).append(item)
                 for (key in row['scores']) {
-                    num = row['scores'][key]
-                    var item = document.createElement('td')
-                    item.innerHTML = num
-                    $(scoreR).append(item)
+                    if(!skip.includes(key)){
+                        num = row['scores'][key]
+                        var item = document.createElement('td')
+                        item.innerHTML = num
+                        $(scoreR).append(item)
+                    }
                 }
                 var item = document.createElement('td')
                 item.innerHTML = row["class"]

@@ -110,3 +110,7 @@ table{
     color: white;
   }
   
+
+  .schedule td{
+    font-size: 20px;
+  }
