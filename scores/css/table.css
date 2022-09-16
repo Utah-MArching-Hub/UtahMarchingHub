@@ -110,6 +110,6 @@ td a {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #ff0000;
+  background-color: hsl(0, 70%, 50%);
   color: white;
 }
