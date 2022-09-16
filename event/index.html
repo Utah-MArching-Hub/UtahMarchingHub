@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Utah Marching Hub</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/common/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="" rel="stylesheet" type="text/css" />
+</head>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+<script>
+    $(function () {
+        $("#footer").load("/footer.html");
+        $("#header").load("/header.html");
+    });
+</script>
+
+<script src="/event/scripts/event.js"></script>
+<script src="../scores/scripts/sort.js"></script>
+
+<div id="header"></div>
+
+<body onload="load()">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- <button onclick="get()">inject</button> -->
+
+    <div id="content">
+        <!-- PUT BODY HERE -->
+        <h1 class="eventName YHead"></h1>
+        <table class="schedule tableStyle" style="border: 5px;">
+        </table>
+        <h1 class="YHead">2021 scores</h1>
+        <table class="score21 tableStyle">
+            <tr>
+				<th onclick="sortTable(0,this)">Band</th>
+				<th onclick="sortTable(1,this)">Music</th>
+				<th onclick="sortTable(2,this)">Visual</th>
+				<th onclick="sortTable(3,this)">Percussion</th>
+				<th onclick="sortTable(4,this)">Guard</th>
+				<th onclick="sortTable(5,this)">Total</th>
+				<th onclick="sortTable(6,this)">Class</th>
+            </tr>
+        </table>
+
+    </div>
+
+<!-- END BODY  -->
+</body>
+
+<div id="footer"></div>
+
+
+</html>

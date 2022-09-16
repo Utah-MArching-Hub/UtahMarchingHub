@@ -131,10 +131,11 @@ function getScores() {
 
                         if (score == 'school') {
                             var item = document.createElement('td')
-                            var link = document.createElement('a')
-                            link.innerHTML = row[score]
-                            link.href = "/school/?school=" + row[score]
-                            $(item).append(link)
+                            // var link = document.createElement('a')
+                            // link.innerHTML = row[score]
+                            // link.href = "/school/?school=" + row[score]
+                            // $(item).append(link)
+                            item.innerHTML = row[score]
                             $(scoreR).append(item)
                         } else {
                             console.log(score)
