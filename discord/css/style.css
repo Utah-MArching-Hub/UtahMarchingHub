@@ -1,4 +1,4 @@
-button {
+.discord-link {
     display: inline-block;
     border-radius: 4px;
     background-color: #5865F2;
@@ -13,37 +13,41 @@ button {
     margin: 5px;
     font-family: fredoka one;
     font-size: 50px;
-
+    text-decoration: none;
 }
 
-button span {
+.discord-link span {
     cursor: pointer;
     vertical-align: 50%;
     position: relative;
     transition: 0.5s;
 }
 
-button span:after {
-    content: "\00bb";
-    position: absolute;
+.discord-link span:after {
+    /* content: "\00bb"; */
+    /* position: absolute; */
     opacity: 0;
     top: 0;
     right: -300px;
     transition: 0.5s;
 }
 
-button:hover span {
-    padding-right: 45px;
+.discord-link:hover span {
+    /* padding-right: 45px; */
 }
 
-button:hover span:after {
+.discord-link:hover span:after {
     opacity: 1;
     right: 0;
 }
 
-button img {
+.discord-link img {
     height: 100px;
     display: inline-block;
+}
+
+.discord-link:hover {
+    background-color: hsl(235, 80%, 60%);
 }
 
 h1 {
