@@ -40,7 +40,7 @@ th {
   padding: 20px 15px;
   text-align: left;
   font-weight: 500;
-  font-size: --fo;
+  font-size: var(--font-size);
   color: var(--row-text-color);
   text-transform: var(--header-text-transform);
   border: var(--border-color);
