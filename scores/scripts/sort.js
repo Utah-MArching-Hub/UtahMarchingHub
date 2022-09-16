@@ -3,7 +3,7 @@ function sortTable(n, ele) {
     $('.sort-desc').removeClass('sort-desc');
 
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-    table = document.getElementById("scores");
+    table = ele.closest("table");
     switching = true;
     //Set the sorting direction to ascending:
     dir = "asc";
