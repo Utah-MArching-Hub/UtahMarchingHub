@@ -20,7 +20,7 @@
   overflow: auto;
 }
 
-table {
+.tableStyle {
   width: 100%;
   table-layout: fixed;
   min-width: var(--min-width);
@@ -29,13 +29,13 @@ table {
   border-collapse: collapse;
 }
 
-.tbl-content{
+.tableStyle .tbl-content{
   height:300px;
   margin-top: 0px;
   border: var(--border-width) solid var(--border-color);
 }
 
-th {
+.tableStyle th {
   position: relative;
   padding: 20px 15px;
   text-align: left;
@@ -55,11 +55,11 @@ th {
  -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
-th:hover {
+.tableStyle th:hover {
   cursor: pointer;
 }
 
-th::before {
+.tableStyle th::before {
   display: block;
   position: absolute;
   content: "▲";
@@ -69,7 +69,7 @@ th::before {
   font-size: .8em;
 }
 
-th::after {
+.tableStyle th::after {
   display: block;
   position: absolute;
   content: "▼";
@@ -80,15 +80,15 @@ th::after {
   color: var(--header-text-color);
 }
 
-.sort-asc::before {
+.tableStyle .sort-asc::before {
   opacity: 1;
 }
 
-.sort-desc::after {
+.tableStyle .sort-desc::after {
   opacity: 1;
 }
 
-td{
+.tableStyle td{
   padding: 15px;
   text-align: left;
   vertical-align:middle;
@@ -97,28 +97,28 @@ td{
   color: var(--row-text-color);
 }
 
-td a {
+.tableStyle td a {
   color: var(--link-color);
 }
 
-table td, table th {
+.tableStyle table td, table th {
   padding: 8px;
   color: var(--row-text-color);
 }
 
-.tble-row:nth-child(even){
+.tableStyle .tble-row:nth-child(even){
   background-color: var(--row-color-even);
 }
 
-.tble-row:nth-child(odd){
+.tableStyle .tble-row:nth-child(odd){
   background-color: var(--row-color-odd);
 }
 
-.tble-row:hover {
+.tableStyle .tble-row:hover {
   background-color: var(--row-color-hover);
 }
 
-.tbl-header th {
+.tableStyle .tbl-header th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
