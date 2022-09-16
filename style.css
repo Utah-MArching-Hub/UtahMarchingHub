@@ -88,3 +88,7 @@
 .right {
   right: 0;
 }
+
+a {
+  color:hsl(267, 80%, 70%);
+}
