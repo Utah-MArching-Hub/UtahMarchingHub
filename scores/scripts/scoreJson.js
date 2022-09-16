@@ -32,7 +32,7 @@ function resetScores() {
     $('.sort-asc').removeClass('sort-asc');
     $('.sort-desc').removeClass('sort-desc');
     // let table = document.getElementById('scores')
-    $('.tble-score').remove()
+    $('.tble-row').remove()
 }
 
 function updateDrops() {
@@ -122,7 +122,7 @@ function getScores() {
             if (yearP && eventP && clasP) {
                 // console.log("pass")
                 var scoreR = document.createElement('tr')
-                scoreR.classList.add('tble-score')
+                scoreR.classList.add('tble-row')
                 scoreR.setAttribute('ontouchstart', '')
 
                 for (const key in order) {

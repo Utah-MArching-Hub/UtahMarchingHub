@@ -11,11 +11,11 @@
   --row-text-color: white;
   --link-color: aqua;
   --border-width: 1px;
-
-  --min-width: 70em;
+  --min-width: 71em;
+  --font-size: 12px;
 }
 
-.scores-div {
+.table-container {
   margin-bottom: 1em;
   overflow: auto;
 }
@@ -24,11 +24,13 @@ table {
   width: 100%;
   table-layout: fixed;
   min-width: var(--min-width);
+  min-width: var(--min-width);
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
 }
 
 .tbl-content{
   height:300px;
-  overflow-x: auto;
   margin-top: 0px;
   border: var(--border-width) solid var(--border-color);
 }
@@ -38,12 +40,13 @@ th {
   padding: 20px 15px;
   text-align: left;
   font-weight: 500;
-  font-size: 12px;
+  font-size: --fo;
   color: var(--row-text-color);
   text-transform: var(--header-text-transform);
   border: var(--border-color);
   border-width: var(--border-width);
   border-style: solid;
+  width: min-content;
 
   user-select: none; /* supported by Chrome and Opera */
  -webkit-user-select: none; /* Safari */
@@ -89,8 +92,8 @@ td{
   padding: 15px;
   text-align: left;
   vertical-align:middle;
-  font-weight: 300;
-  font-size: 12px;
+  font-weight: 400;
+  font-size: var(--font-size);
   color: var(--row-text-color);
 }
 
@@ -98,30 +101,24 @@ td a {
   color: var(--link-color);
 }
 
-#scores {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#scores td, #score th {
+table td, table th {
   padding: 8px;
   color: var(--row-text-color);
 }
 
-#scores tr:nth-child(even){
+.tble-row:nth-child(even){
   background-color: var(--row-color-even);
 }
 
-#scores tr:nth-child(odd){
+.tble-row:nth-child(odd){
   background-color: var(--row-color-odd);
 }
 
-#scores tr:hover {
+.tble-row:hover {
   background-color: var(--row-color-hover);
 }
 
-#scores th {
+.tbl-header th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
