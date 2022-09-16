@@ -1,5 +1,4 @@
 .video{
-    height: 100%;
     width: 100%;
     position: relative;
 }
@@ -7,7 +6,6 @@
 .video video{
   position: absolute;
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
@@ -22,7 +20,7 @@
 }
 
 
-button {
+.dicord-link {
   display: inline-block;
   border-radius: 4px;
   background-color: #5865F2;
@@ -39,16 +37,17 @@ button {
   font-size: 40px;
   right: 100px;
   vertical-align: center;
+  text-decoration: none;
 }
 
-button span {
+.dicord-link span {
   cursor: pointer;
   vertical-align: center;
   position: relative;
   transition: 0.5s;
 }
 
-button span:after {
+.dicord-link span:after {
   content: "\00bb";
   position: absolute;
   opacity: 0;
@@ -57,26 +56,26 @@ button span:after {
   transition: 0.5s;
 }
 
-button:hover span {
+.dicord-link:hover span {
   padding-right: 50px;
 }
 
-button:hover span:after {
+.dicord-link:hover span:after {
   opacity: 1;
   right: 0;
 }
-button img {
+.dicord-link img {
     height: 100px;
     display: inline-block;
 }
 
 .split {
-  height: 100%;
+  /* height: 100%; */
   width: 50%;
-  position: fixed;
+  position: absolute;
   overflow-x: hidden;
   padding-top: 20px;
-  top: 250px;
+  top: 20em;
 }
 
 /* Control the left side */
