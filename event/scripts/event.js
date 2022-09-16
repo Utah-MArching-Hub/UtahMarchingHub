@@ -25,13 +25,14 @@ function get() {
     tableSch = document.querySelectorAll('table')[0]
     console.log(tableSch)
     $.getJSON('data/schedules.json', function (json) {
-        events = json["events"]
-        event = events[eName]
+        let events = json["events"]
+        let event = events[eName]
         for(item in event) {
             // console.log(item)
             // console.log(Object.keys(event[item]).length)
             if(Object.keys(event[item]).length == 2) {
                 var row = document.createElement("tr")
+                row.classList.add('tble-row')
                 var TItem = document.createElement("td")
                 TItem.innerHTML = event[item]["txt"]
                 TItem.setAttribute("colspan",2)
@@ -43,6 +44,7 @@ function get() {
                 $(tableSch).append(row)
             } else {
                 var row = document.createElement("tr")
+                row.classList.add('tble-row')
                 var TItem = document.createElement("td")
                 TItem.innerHTML = item
                 $(row).append(TItem)
@@ -100,7 +102,7 @@ function getScores(cname,year) {
             if (yearP && eventP ) {
                 console.log("pass")
                 var scoreR = document.createElement('tr')
-                scoreR.classList.add('tble-score')
+                scoreR.classList.add('tble-row')
                 scoreR.setAttribute('ontouchstart', '')
                 var item = document.createElement('td')
                 item.innerHTML = row["school"]

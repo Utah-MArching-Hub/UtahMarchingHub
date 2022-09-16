@@ -19,36 +19,6 @@ body {
     margin: 0;
 }
 
-table, th, td {
-    border: 1px solid;
-}
-
-.tableStyle {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-
-.tableStyle td, .tableStyle th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-.tableStyle tr:nth-child(even){background-color: #00c3ff;}
-.tableStyle tr:nth-child(odd){background-color: #0084ff;}
-
-
-.tableStyle tr:hover {background-color: rgb(0, 213, 255);}
-
-.tableStyle th {
-padding-top: 12px;
-padding-bottom: 12px;
-text-align: left;
-background-color: #04AA6D;
-color: white;
-}
-
 .button {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;

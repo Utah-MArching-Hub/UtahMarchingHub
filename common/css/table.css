@@ -2,7 +2,7 @@
 
 :root {
   --header-text-transform: uppercase;
-  --header-background: hsl(0, 70%, 50%);
+  --header-color: hsl(0, 70%, 50%);
   --header-text-color: white;
   --border-color: white;
   --row-color-even: #08007a;
@@ -13,6 +13,10 @@
   --border-width: 1px;
   --min-width: 71em;
   --font-size: 12px;
+}
+
+table, th, td {
+  border: var(--border-width) solid;
 }
 
 .table-container {
@@ -89,7 +93,7 @@
 }
 
 .tableStyle td{
-  padding: 15px;
+  padding: 8px;
   text-align: left;
   vertical-align:middle;
   font-weight: 400;
@@ -122,6 +126,6 @@
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: var(--header-background);
+  background-color: var(--header-color);
   color: var(--header-text-color);
 }
