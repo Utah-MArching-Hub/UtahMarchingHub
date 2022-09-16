@@ -124,7 +124,7 @@ function sortTable(n, ele) {
     $('.sort-desc').removeClass('sort-desc');
 
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
-    table = document.querySelectorAll("table")[1];
+    table = ele.closest("table");
     switching = true;
     //Set the sorting direction to ascending:
     dir = "asc";
