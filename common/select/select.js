@@ -63,6 +63,79 @@ for (const key in menus) {
             element.textContent = content;
             // triggerOnchange(element);
         }
+
+        element.getMenu = function() {
+            let options = []
+            let options_elements = element.parentElement.parentElement.querySelector('.custom-options').querySelectorAll('.custom-option')
+            for (const key in options_elements) {
+                if (Object.hasOwnProperty.call(options_elements, key)) {
+                    const option = options_elements[key];
+                    let classes = Array.from(option.classList)
+                    options.push({
+                        "value" : option.getAttribute('value'),
+                        "text" : option.innerHTML,
+                        "classes" : classes
+                    })
+                }
+            }
+            return options
+        }
+
+        element.setMenu = function(menu) {
+            let options_element = element.parentElement.parentElement.querySelector('.custom-options')
+
+            element.clearMenu()
+            for (const key in menu) {
+                if (Object.hasOwnProperty.call(menu, key)) {
+                    const option = menu[key];
+                    element.addOption(option)
+                }
+            }
+        }
+
+        element.addOption = function(option) {
+            let options_element = element.parentElement.parentElement.querySelector('.custom-options')
+            let el = document.createElement('span')
+            el.setAttribute('ontouchstart', '')
+            el.setAttribute('value', option['value'])
+            el.innerHTML = option['text']
+            el.classList.add('custom-option')
+            
+            for (const key in option['classes']) {
+                if (Object.hasOwnProperty.call(option['classes'], key)) {
+                    const Class = option['classes'][key];
+                    el.classList.add(Class)
+                }
+            }
+
+            $(options_element).append(el)
+
+            el.addEventListener('click', function() {
+                if (!this.classList.contains('selected')) {
+                    if (this.parentNode.querySelector('.custom-option.selected')) {
+                        this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
+                    }
+                    this.classList.add('selected');
+                    const element = this.closest('.select').querySelector('.select__trigger span')
+                    element.setAttribute('value',this.getAttribute('value'))
+                    element.value = this.getAttribute('value')
+                    element.textContent = this.textContent;
+                    console.log(this.getAttribute('value'))
+                    triggerOnchange(element);
+                }
+            })
+        }
+
+        element.clearMenu = function() {
+            let options_elements = element.parentElement.parentElement.querySelector('.custom-options').querySelectorAll('.custom-option')
+
+            for (const el in options_elements) {
+                if (Object.hasOwnProperty.call(options_elements, el)) {
+                    const option = options_elements[el];
+                    option.remove()
+                }
+            }
+        }
     }
 }
 
