@@ -1,6 +1,13 @@
-function sortTable(n, ele) {
+function getChildElementIndex(node) {
+    return Array.prototype.indexOf.call(node.parentNode.children, node);
+}
+
+function sortTable(ele) {
     $('.sort-asc').removeClass('sort-asc');
     $('.sort-desc').removeClass('sort-desc');
+
+    console.log(getChildElementIndex(ele))
+    let n = getChildElementIndex(ele)
 
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = ele.closest("table");

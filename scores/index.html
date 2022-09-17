@@ -11,7 +11,7 @@
 	<title></title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="css/table.css" rel="stylesheet" type="text/css" />
+	<link href="/common/css/table.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="/common/css/common.css">
 	<link rel="stylesheet" href="/common/select/select.css">
@@ -36,7 +36,7 @@ crossorigin="anonymous">
 		<![endif]-->
 	<script src="scripts/scoreJson.js" language="javascript" type="text/javascript" async defer></script>
 	<script src="/common/select/select.js" async defer></script>
-	<script src="scripts/sort.js" async defer></script>
+	<script src="/common/scripts/sort.js" async defer></script>
 	
 	<!-- PUT BODY HERE -->
 	<div id="content">
@@ -111,19 +111,19 @@ crossorigin="anonymous">
 		</div>
 	</div>
 	<!-- <button class="button" onclick="window.location.reload()">get</button> -->
-	<div class="scores-div">
-		<table id="scores" class="scores sortable">
+	<div class="table-container">
+		<table id="scores" class="scores sortable tableStyle">
 			<thead class="tbl-header">
-				<th onclick="sortTable(0,this)" value="school">Band</th>
-				<th onclick="sortTable(1,this)" value="score">Total</th>
-				<th onclick="sortTable(2,this)" value="MEnsemble">Music Ensemble</th>
-				<th onclick="sortTable(3,this)" value="MEffect">Music Effect</th>
-				<th onclick="sortTable(4,this)" value="MScore">Music</th>
-				<th onclick="sortTable(5,this)" value="VEnsemble">Visual Ensemble</th>
-				<th onclick="sortTable(6,this)" value="VEffect">Visual Effect</th>
-				<th onclick="sortTable(7,this)" value="VScore">Visual</th>
-				<th onclick="sortTable(8,this)" value="Percussion">Percussion</th>
-				<th onclick="sortTable(9,this)" value="Guard">Guard</th>
+				<th onclick="sortTable(this)" value="school">Band</th>
+				<th onclick="sortTable(this)" value="score">Total</th>
+				<th onclick="sortTable(this)" value="MEnsemble">Music Ensemble</th>
+				<th onclick="sortTable(this)" value="MEffect">Music Effect</th>
+				<th onclick="sortTable(this)" value="MScore">Music</th>
+				<th onclick="sortTable(this)" value="VEnsemble">Visual Ensemble</th>
+				<th onclick="sortTable(this)" value="VEffect">Visual Effect</th>
+				<th onclick="sortTable(this)" value="VScore">Visual</th>
+				<th onclick="sortTable(this)" value="Percussion">Percussion</th>
+				<th onclick="sortTable(this)" value="Guard">Guard</th>
 			</thead>
 		</table>
 	</div>
