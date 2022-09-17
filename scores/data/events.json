@@ -65,5 +65,13 @@
             ["5ao", "5A"],
             ["6ao", "6A"]
         ]
+    },
+    {
+        "id" : "nebo",
+        "name" : "Nebo Invitational",
+        "year" : "2022",
+        "classes" : [
+            "all"
+        ]
     }
 ]
