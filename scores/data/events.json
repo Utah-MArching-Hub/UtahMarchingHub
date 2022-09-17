@@ -1,7 +1,55 @@
 [
     {
         "id" : "nebo",
-        "name" : "Nebo",
+        "name" : "Nebo Invitational",
+        "year" : "2021",
+        "classes" : [
+            "all"
+        ]
+    },
+    {
+        "id" : "oquirrh",
+        "name" : "Oquirrh Mountain",
+        "year" : "2021",
+        "classes" : [
+            "all"
+        ]
+    },
+    {
+        "id" : "wasatch",
+        "name" : "Wasatch Front",
+        "year" : "2021",
+        "classes" : [
+            "all"
+        ]
+    },
+    {
+        "id" : "bridgerland",
+        "name" : "Bridgerland",
+        "year" : "2021",
+        "classes" : [
+            "all"
+        ]
+    },
+    {
+        "id" : "davis",
+        "name" : "Davis Cup",
+        "year" : "2021",
+        "classes" : [
+            "all"
+        ]
+    },
+    {
+        "id" : "timp",
+        "name" : "Mnt Timpanogos",
+        "year" : "2021",
+        "classes" : [
+            "all"
+        ]
+    },
+    {
+        "id" : "timp",
+        "name" : "Mnt Timpanogos",
         "year" : "2021",
         "classes" : [
             "all"
