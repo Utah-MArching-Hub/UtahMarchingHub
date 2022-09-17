@@ -5435,7 +5435,12 @@
                 "Guard": 2.675,
                 "score": 57.525
             }
+<<<<<<< HEAD
         },{
+=======
+        },
+        {
+>>>>>>> custom-menu
             "year": "2022",
             "class": "5as",
             "school": "Provo",

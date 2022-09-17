@@ -29,14 +29,15 @@ crossorigin="anonymous">
 </script>
 
 <div id="header"></div>
+<script src="scripts/scripts.js" async defer></script>
+<script src="scripts/scoreJson.js" language="javascript" type="text/javascript" async defer></script>
+<script src="/common/select/select.js" async defer></script>
+<script src="/common/scripts/sort.js" async defer></script>
 
 <body onload="updateDrops()">
 	<!--[if lt IE 7]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-	<script src="scripts/scoreJson.js" language="javascript" type="text/javascript" async defer></script>
-	<script src="/common/select/select.js" async defer></script>
-	<script src="/common/scripts/sort.js" async defer></script>
 	
 	<!-- PUT BODY HERE -->
 	<div id="content">
@@ -45,9 +46,13 @@ crossorigin="anonymous">
 	</select> -->
 	<div id="selections">
 		<div class="select-wrapper">
-			<div class="select">
+			<div class="select" id="year">
 				<div class="select__trigger">
+<<<<<<< HEAD
 					<span id="year" value="2021" onchange="updateurl('year', this.value);" ontouchstart>2021</span>
+=======
+					<span value="2021" onchange="updateurl('year', this.value);" ontouchstart>2021</span>
+>>>>>>> custom-menu
 					<div class="arrow"></div>
 				</div>
 				<div class="custom-options">
@@ -67,20 +72,13 @@ crossorigin="anonymous">
 			<option value='state'>Redrock State</option>
 		</select> -->
 		<div class="select-wrapper"> 
-			<div class="select">
+			<div class="select" id="event">
 				<div class="select__trigger">
-					<span id="event" value="NA" onchange="updateurl('event', this.value);" ontouchstart>select event</span>
+					<span value="NA" onchange="updateurl('event', this.value);" ontouchstart>select event</span>
 					<div class="arrow"></div>
 				</div>
 				<div class="custom-options">
-					<span class="custom-option selected hidden" value="NA" ontouchstart>select event</span>
-					<span class="custom-option" value="nebo" ontouchstart>nebo invintational</span>
-					<span class="custom-option" value="oquirrh" ontouchstart>Oquirrh Mountain</span>
-					<span class="custom-option" value="wasatch" ontouchstart>Wasatch Front</span>
-					<span class="custom-option" value="bridgerland" ontouchstart>Bridgerland</span>
-					<span class="custom-option" value="davis" ontouchstart>Davis Cup</span>
-					<span class="custom-option" value="timp" ontouchstart>Mnt Timpanogos</span>
-					<span class="custom-option" value="state" ontouchstart>Redrock State</span>
+					<span class="custom-option selected hidden" value="NA">Select event</span>
 				</div>
 			</div>
 		</div>
@@ -94,19 +92,13 @@ crossorigin="anonymous">
 			<option value='6as'>6A schoolastic</option>
 		</select> -->
 		<div class="select-wrapper"> 
-			<div class="select">
+			<div class="select" id="clas">
 				<div class="select__trigger">
-					<span id="clas" value="NA" onchange="updateurl('clas', this.value);" ontouchstart>select class</span>
+					<span value="NA" onchange="updateurl('clas', this.value);" ontouchstart>select class</span>
 					<div class="arrow"></div>
 				</div>
 				<div class="custom-options">
-					<span class="custom-option selected hidden" value="NA" ontouchstart>select class</span>
-					<span class="custom-option" value="3a" ontouchstart>3A</span>
-					<span class="custom-option" value="4a" ontouchstart>4A</span>
-					<span class="custom-option" value="5ao" ontouchstart>5A open</span>
-					<span class="custom-option" value="5as" ontouchstart>5A schoolastic</span>
-					<span class="custom-option" value="6ao" ontouchstart>6A open</span>
-					<span class="custom-option" value="6as" ontouchstart>6A schoolastic</span>
+					<span class="custom-option selected hidden" value="NA">Select class</span>
 				</div>
 			</div>
 		</div>
