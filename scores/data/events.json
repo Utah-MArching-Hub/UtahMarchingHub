@@ -1,0 +1,21 @@
+[
+    {
+        "id" : "nebo",
+        "name" : "Nebo",
+        "year" : "2021",
+        "classes" : [
+            "all"
+        ]
+    },
+    {
+        "id" : "state",
+        "name" : "Redrock State",
+        "year" : "2021",
+        "classes" : [
+            ["3a", "3A"],
+            ["4a", "4A"],
+            ["5ao", "5A"],
+            ["6ao", "6A"]
+        ]
+    }
+]
