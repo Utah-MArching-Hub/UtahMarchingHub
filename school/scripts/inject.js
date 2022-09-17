@@ -36,7 +36,7 @@ function scores() {
     });
     let schoolN = params.school;
 
-    $.getJSON('../scores/data/scores.json', function (json) {
+    $.getJSON('/scores/data/scores.json', function (json) {
         console.log(json)
         //console.log(json["Scores"])
         scores = json["Scores"]
@@ -51,7 +51,7 @@ function scores() {
             if (schoolP) {
                 console.log(row)
                 var scoreR = document.createElement('tr')
-                scoreR.classList.add('tble-score')
+                scoreR.classList.add('tble-row')
                 var item = document.createElement('td')
                 item.innerHTML = row["event"]
                 $(scoreR).append(item)
