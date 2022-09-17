@@ -15,7 +15,7 @@ function updateMenus() {
         let Class = class_menu.getval()
         console.log(Class)
 
-        let menu = {"year": [], "event": [{'value': 'NA', 'text': 'select event', 'classes': ['hidden']}], "class": [{'value': 'NA', 'text': 'select class', 'classes': ['hidden']}]}
+        let menu = {"year": [], "event": [{'value': 'NA', 'text': 'select event', 'classes': ['hidden', 'default']}], "class": [{'value': 'NA', 'text': 'select class', 'classes': ['hidden', 'default']}]}
         console.log(json)
 
         for (const key in json) {

@@ -63,6 +63,14 @@ for (const key in menus) {
             }
             if (!found) {
                 console.error('could not find option: ' + val);
+                let option = element.querySelector('.custom-options').querySelector('.default')
+                if (option) {
+                    option.classList.add('selected');
+                    value = option.value || option.getAttribute('value');
+                    content = option.textContent;
+                } else {
+                    console.error('could not find default option');
+                }
             };
             element.querySelector('.select__trigger').querySelector('span').value = value;
             element.querySelector('.select__trigger').querySelector('span').setAttribute('value', value);
