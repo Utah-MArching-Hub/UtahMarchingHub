@@ -71,7 +71,12 @@
         "name" : "Nebo Invitational",
         "year" : "2022",
         "classes" : [
-            "all"
+            ["5as", "5A Schoolastic"],
+            ["5ao", "5A Open"],
+            ["6as", "6A Schoolastic"],
+            ["6ao", "6A Open"],
+            ["3a", "3A"]
+
         ]
     }
 ]
