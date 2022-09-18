@@ -5668,6 +5668,150 @@
                 "Guard": 3.675,
                 "score": 69.275
             }
+        },
+        {
+            "year": "2022",
+            "class": "6as",
+            "school": "Riverton",
+            "event": "nebo",
+            "date": "09/17/2022",
+            "scores": {
+                "MEnsemble": 19.8,
+                "MEffect": 18.838,
+                "MScore": 38.638,
+                "VEnsemble": 11.375,
+                "VEffect": 11.725,
+                "VScore": 23.1,
+                "Percussion": 3.525,
+                "Guard": 3.15,
+                "score": 68.413
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6as",
+            "school": "West Jordan",
+            "event": "nebo",
+            "date": "09/17/2022",
+            "scores": {
+                "MEnsemble": 18.975,
+                "MEffect": 17.875,
+                "MScore": 36.85,
+                "VEnsemble": 10.85,
+                "VEffect": 10.938,
+                "VScore": 21.788,
+                "Percussion": 3.425,
+                "Guard": 2.875,
+                "score": 64.938
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6as",
+            "school": "Kearns",
+            "event": "nebo",
+            "date": "09/17/2022",
+            "scores": {
+                "MEnsemble": 14.3,
+                "MEffect": 15.95,
+                "MScore": 30.25,
+                "VEnsemble": 9.275,
+                "VEffect": 9.013,
+                "VScore": 18.288,
+                "Percussion": 2.825,
+                "Guard": 2.95,
+                "score": 54.313
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "American Fork",
+            "event": "nebo",
+            "date": "09/17/2022",
+            "scores": {
+                "MEnsemble": 23.925,
+                "MEffect": 24.2,
+                "MScore": 48.125,
+                "VEnsemble": 15.138,
+                "VEffect": 14.613,
+                "VScore": 29.75,
+                "Percussion": 4.325,
+                "Guard": 4.325,
+                "score": 86.525
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Davis",
+            "event": "nebo",
+            "date": "09/17/2022",
+            "scores": {
+                "MEnsemble": 21.863,
+                "MEffect": 23.238,
+                "MScore": 45.1,
+                "VEnsemble": 14.613,
+                "VEffect": 14.0,
+                "VScore": 28.613,
+                "Percussion": 4.15,
+                "Guard": 3.9,
+                "score": 81.763
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Herriman",
+            "event": "nebo",
+            "date": "09/17/2022",
+            "scores": {
+                "MEnsemble": 21.588,
+                "MEffect": 22.0,
+                "MScore": 43.588,
+                "VEnsemble": 14.35,
+                "VEffect": 13.213,
+                "VScore": 27.563,
+                "Percussion": 3.9,
+                "Guard": 3.875,
+                "score": 78.925
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Canyon View",
+            "event": "nebo",
+            "date": "09/17/2022",
+            "scores": {
+                "MEnsemble": 15.4,
+                "MEffect": 15.675,
+                "MScore": 31.075,
+                "VEnsemble": 10.325,
+                "VEffect": 9.363,
+                "VScore": 19.688,
+                "Percussion": 2.9,
+                "Guard": 2.75,
+                "score": 56.413
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Carbon",
+            "event": "nebo",
+            "date": "09/17/2022",
+            "scores": {
+                "MEnsemble": 14.713,
+                "MEffect": 16.225,
+                "MScore": 30.938,
+                "VEnsemble": 9.888,
+                "VEffect": 9.1,
+                "VScore": 18.988,
+                "Percussion": 2.95,
+                "Guard": 2.65,
+                "score": 55.525
+            }
         }
     ]
 }
