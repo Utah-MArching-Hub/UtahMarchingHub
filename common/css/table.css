@@ -1,0 +1,131 @@
+/* Score sheet style */
+
+:root {
+  --header-text-transform: uppercase;
+  --header-color: hsl(0, 70%, 50%);
+  --header-text-color: white;
+  --border-color: white;
+  --row-color-even: #08007a;
+  --row-color-odd: #0c0297;
+  --row-color-hover: #006bad;
+  --row-text-color: white;
+  --link-color: aqua;
+  --border-width: 1px;
+  --min-width: 71em;
+  --font-size: 12px;
+}
+
+table, th, td {
+  border: var(--border-width) solid;
+}
+
+.table-container {
+  margin-bottom: 1em;
+  overflow: auto;
+}
+
+.tableStyle {
+  width: 100%;
+  table-layout: fixed;
+  min-width: var(--min-width);
+  min-width: var(--min-width);
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+
+.tableStyle .tbl-content{
+  height:300px;
+  margin-top: 0px;
+  border: var(--border-width) solid var(--border-color);
+}
+
+.tableStyle th {
+  position: relative;
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: var(--font-size);
+  color: var(--row-text-color);
+  text-transform: var(--header-text-transform);
+  border: var(--border-color);
+  border-width: var(--border-width);
+  border-style: solid;
+  width: min-content;
+
+  user-select: none; /* supported by Chrome and Opera */
+ -webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+ -moz-user-select: none; /* Firefox */
+ -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.tableStyle th:hover {
+  cursor: pointer;
+}
+
+.tableStyle th::before {
+  display: block;
+  position: absolute;
+  content: "▲";
+  right: 4px;
+  bottom: 50%;
+  opacity: 0.5;
+  font-size: .8em;
+}
+
+.tableStyle th::after {
+  display: block;
+  position: absolute;
+  content: "▼";
+  right: 4px;
+  top: 50%;
+  opacity: 0.5;
+  font-size: .8em;
+  color: var(--header-text-color);
+}
+
+.tableStyle .sort-asc::before {
+  opacity: 1;
+}
+
+.tableStyle .sort-desc::after {
+  opacity: 1;
+}
+
+.tableStyle td{
+  padding: 8px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 400;
+  font-size: var(--font-size);
+  color: var(--row-text-color);
+}
+
+.tableStyle td a {
+  color: var(--link-color);
+}
+
+.tableStyle table td, table th {
+  padding: 8px;
+  color: var(--row-text-color);
+}
+
+.tableStyle .tble-row:nth-child(even){
+  background-color: var(--row-color-even);
+}
+
+.tableStyle .tble-row:nth-child(odd){
+  background-color: var(--row-color-odd);
+}
+
+.tableStyle .tble-row:hover {
+  background-color: var(--row-color-hover);
+}
+
+.tableStyle .tbl-header th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--header-color);
+  color: var(--header-text-color);
+}

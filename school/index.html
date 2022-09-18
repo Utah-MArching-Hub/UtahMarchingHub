@@ -14,11 +14,11 @@
     <link href="/common/css/common.css" rel="stylesheet" type="text/css" />
     <link href="" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/school.css">
-    <link rel="stylesheet" href="/scores/css/table.css">
+    <link rel="stylesheet" href="/common/css/table.css">
 </head>
 <script src="scripts/inject.js"></script>
 <script src="scripts/scripts.js"></script>
-<script src="/scores/scripts/sort.js"></script>
+<script src="/common/scripts/sort.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous">
     </script>
@@ -51,20 +51,20 @@
             blank
         </p>
         <div class="scores-div">
-            <table id="scores" class="scores sortable">
+            <table id="scores" class="scores sortable tableStyle">
                 <thead class="tbl-header">
-                    <th onclick="sortTable(0,this)">Event</th>
-                    <th onclick="sortTable(1,this)">Date</th>
-                    <th onclick="sortTable(2,this)">Music Ensemble</th>
-                    <th onclick="sortTable(3,this)">Music Effect</th>
-                    <th onclick="sortTable(4,this)">Music</th>
-                    <th onclick="sortTable(5,this)">Visual Ensemble</th>
-                    <th onclick="sortTable(6,this)">Visual Effect</th>
-                    <th onclick="sortTable(7,this)">Visual</th>
-                    <th onclick="sortTable(8,this)">Percussion</th>
-                    <th onclick="sortTable(9,this)">Guard</th>
-                    <th onclick="sortTable(10,this)">Total</th>
-                    <th onclick="sortTable(11,this)">Class</th>
+                    <th onclick="sortTable(this)">Event</th>
+                    <th onclick="sortTable(this)">Date</th>
+                    <th onclick="sortTable(this)">Music Ensemble</th>
+                    <th onclick="sortTable(this)">Music Effect</th>
+                    <th onclick="sortTable(this)">Music</th>
+                    <th onclick="sortTable(this)">Visual Ensemble</th>
+                    <th onclick="sortTable(this)">Visual Effect</th>
+                    <th onclick="sortTable(this)">Visual</th>
+                    <th onclick="sortTable(this)">Percussion</th>
+                    <th onclick="sortTable(this)">Guard</th>
+                    <th onclick="sortTable(this)">Total</th>
+                    <th onclick="sortTable(this)">Class</th>
                 </thead>
             </table>
         </div>
