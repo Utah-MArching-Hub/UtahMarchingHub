@@ -33,6 +33,7 @@ function get() {
             if(Object.keys(event[item]).length == 2) {
                 var row = document.createElement("tr")
                 row.classList.add('tble-row')
+                row.setAttribute("style","--row-color-even: #D92626; --row-color-odd: #D92626;") 
                 var TItem = document.createElement("td")
                 TItem.innerHTML = event[item]["txt"]
                 TItem.setAttribute("colspan",2)
