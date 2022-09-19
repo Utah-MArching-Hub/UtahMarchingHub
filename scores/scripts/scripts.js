@@ -43,9 +43,9 @@ function updateMenus() {
                     ["3a" , "3A"],
                     ["4a" , "4A"],
                     ["5ao", "5A Open"],
-                    ["5as", "5A Schoolastic"],
+                    ["5as", "5A Scholastic"],
                     ["6ao", "6A Open"],
-                    ["6as", "6A Schoolastic"]
+                    ["6as", "6A Scholastic"]
                 ]
                 console.log((event['classes'][0] != 'all'))
                 if (event['classes'][0] != 'all') {
