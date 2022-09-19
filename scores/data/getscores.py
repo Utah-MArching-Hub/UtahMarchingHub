@@ -6,9 +6,9 @@ from datetime import datetime
 def clasName(clas):
 	classes = {
 		'5ao': '5A Open',
-		'5as': '5A Schoolastic',
+		'5as': '5A Scholastic',
 		'6ao': '6A Open',
-		'6as': '6A Schoolastic'
+		'6as': '6A Scholastic'
 	}
 
 	try:
