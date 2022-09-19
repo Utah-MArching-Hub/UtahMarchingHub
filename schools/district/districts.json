@@ -1,0 +1,22 @@
+[
+    {
+        "id": "alpine",
+        "name": "Alpine School District",
+        "file": "/schools/district/alpine.json"
+    },
+    {
+        "id": "nebo",
+        "name": "Nebo School District",
+        "file": "/schools/district/nebo.json"
+    },
+    {
+        "id": "davis",
+        "name": "Davis School District",
+        "file": "/schools/district/davis.json"
+    },
+    {
+        "id": "jordan",
+        "name": "Jordan School District",
+        "file": "/schools/district/jordan.json"
+    }
+]

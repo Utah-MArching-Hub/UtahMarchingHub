@@ -22,6 +22,7 @@
     crossorigin="anonymous">
     </script>
     <script src="/common/scripts/user-list.js"></script>
+    <script src="scripts/districts.js"></script>
 <script>
     $(function () {
         $("#footer").load("/footer.html");
@@ -41,28 +42,14 @@
         <h1 class="YHead">Schools</h1>
         <p>Here's a list of schools and their socials.</p>
         
-        <h2>Alpine School District</h2>
-        <div class="users" id="alpine"></div>
-        <script>loadUsers('district/alpine.json', 'alpine')</script>
-        
-        <h2>Nebo School District</h2>
-        <div class="users" id="nebo"></div>
-        <script>loadUsers('district/nebo.json', 'nebo')</script>
-
-        <h2>Davis School District</h2>
-        <div class="users" id="davis"></div>
-        <script>loadUsers('district/davis.json', 'davis')</script>
-
-        <h2>Jordan School District</h2>
-        <div class="users" id="jordan"></div>
-        <script>loadUsers('district/jordan.json', 'jordan')</script>
+        <div id="districts"></div>
         
         <div class="notice">
             <p class="missing-school">Is your school missing? <strong><a href="https://forms.gle/YieycSZbW6xWwfhV7" target="_blank">CLICK HERE</a></strong> to let us know!</p>
             <p>All of the logos belong to their respective schools. <strong>We do not own any of them.</strong></p>
         </div>
     </div>
-
+    <script>getDistricts('district/districts.json', document.getElementById('districts'))</script>
 
 
 <!-- END BODY  -->
