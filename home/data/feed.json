@@ -15,7 +15,7 @@
                 "class":"5as",
                 "colums":{
                     "Band":"school",
-                    "Total":"Score",
+                    "Total":"score",
                     "Music":"MScore",
                     "Visual":"VScore",
                     "Percussion":"Percussion",

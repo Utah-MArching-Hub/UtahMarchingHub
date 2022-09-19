@@ -10,6 +10,29 @@ function isUpper(str) {
 function feed(loadN) {
     document = Document
 
+    var scores = []
+    $.getJSON('../scores/data/scores.json', function (json) {
+        scores = json["Scores"]
+        console.log("got scores")
+    })
+    scoreKeys = [
+        "MEnsemble",
+        "MEffect",
+        "MScore",
+        "VEnsemble",
+        "VEffect",
+        "VScore",
+        "Percussion",
+        "Guard",
+        "score"
+    ]
+    otherKeys = [
+        "year",
+        "class",
+        "school",
+        "event",
+        "date"
+    ]
     fDiv = document.querySelector("#feed")
     $.getJSON("../home/data/feed.json", function(json) {
         feed=json["feed"]
@@ -55,16 +78,36 @@ function feed(loadN) {
                             $(trow).append(thead)
                         }
                         $(ele).append(trow)
-                        $.getJSON('../scores/data/scores.json', function (json) {
-                            scores = json["Scores"]
-                            console.log(iContent)
+                        console.log(iContent)
                             for(score in scores) {
-                                test=true
+                                row = scores[score]
+                                test=[]
                                 for(item in iContent) {
-                                    // console.log(item)
+                                    if(item!="colums") {
+                                        if(iContent[item]==row[item]){
+                                            test.push(true)
+                                        } else {
+                                            test.push(false)
+                                        }
+                                    }
+                                }
+                                if(!test.includes(false)){
+                                    var trow = document.createElement("tr")
+                                    for(part in iContent["colums"]) {
+                                        if(scoreKeys.includes(iContent["colums"][part])) {
+                                            console.log("score")
+                                            var td = document.createElement("td")
+                                            td.innerHTML=row["scores"][iContent["colums"][part]]
+                                        } else {
+                                            console.log("other")
+                                            var td = document.createElement("td")
+                                            td.innerHTML=row[iContent["colums"][part]]
+                                        }
+                                        $(trow).append(td)
+                                    }
+                                    $(ele).append(trow)
                                 }
                             }
-                        })
                     } else {
                         console.log("txt")
                         var ele = document.createElement(iType)
