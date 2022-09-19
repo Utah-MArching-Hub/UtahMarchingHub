@@ -1,4 +1,11 @@
 {
+    "Provo" : {
+        "icon" : "/common/images/schools/provo/phs-logo.png",
+        "url" : "https://provohigh.provo.edu/band-competition/",
+        "socials" : [
+            ["instagram","provo_high_bands"]
+        ]
+    },
     "Timpview" : {
         "icon" : "https://upload.wikimedia.org/wikipedia/en/8/83/Timpviewlogo.png",
         "url" : "https://timpviewband.webs.com/",
