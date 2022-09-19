@@ -1,0 +1,12 @@
+{
+    "Timpview" : {
+        "icon" : "https://upload.wikimedia.org/wikipedia/en/8/83/Timpviewlogo.png",
+        "url" : "https://timpviewband.webs.com/",
+        "socials" : [
+            ["youtube",["c", "TheTimpviewBand"]],
+            ["instagram","timpviewband"],
+            ["facebook","timpviewband"],
+            ["twitter","timpviewband"]
+        ]
+    }
+}

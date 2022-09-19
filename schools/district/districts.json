@@ -18,5 +18,10 @@
         "id": "jordan",
         "name": "Jordan School District",
         "file": "/schools/district/jordan.json"
+    },
+    {
+        "id": "provo",
+        "name": "Provo School District",
+        "file": "/schools/district/provo.json"
     }
 ]
