@@ -1,0 +1,28 @@
+{
+    "feed":[
+        {
+            "h1-1":"Our new feed!",
+            "p-1":"We got a new feed feature on the homepage! we can post things here for ",
+            "h2-1":"a header",
+            "img-1":"https://production.assets.dci.org/6323f806b47231d8ef01feb2_lsXg2Pbqqe4ezacL-LlvOjIXIQC7IoNJ.jpg",
+            "sub-1":"plus images",
+            "h2-2":"multiple parts?",
+            "p-2":"yea! multiple parts per feed item!",
+            "h2-3":"AND SCORES",
+            "score-1": {
+                "year":2022,
+                "event":"nebo",
+                "class":"5as",
+                "colums":{
+                    "Band":"school",
+                    "Total":"Score",
+                    "Music":"MScore",
+                    "Visual":"VScore",
+                    "Percussion":"Percussion",
+                    "Guard":"Guard"
+                    }
+                },
+            "sub-2":"yeah that too!"
+        }
+    ]
+}

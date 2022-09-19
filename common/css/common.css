@@ -10,6 +10,11 @@ body {
     font-family: Arial;
 }
 
+.caption{
+  font-style: italic;
+  color: #ffc324;
+}
+
 #content {
     padding: 0 2% 2em;
 }
