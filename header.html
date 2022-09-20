@@ -30,9 +30,9 @@
 	}
 	// setHeaderHight()
 
-	console.log(document.querySelector('#header').offsetHeight)
+	console.log(document.querySelector('#header-text').offsetHeight)
 	$(window).scroll(function(){
-	    if ($(window).scrollTop() >= 185) {
+	    if ($(window).scrollTop() >= document.querySelector('#header-text').offsetHeight) {
 	        $('nav').addClass('fixed-top');
 	    }
 	    else {
@@ -45,7 +45,7 @@
 
 
 <body>
-	<div class="p-5 text-center container-fluid" style="font-family: 'Fredoka one'; background-image: linear-gradient(#002868,#002868 150px,#004dc9 350px, #004dc9 2000px); z-index: inherit;">
+	<div id="header-text" class="p-5 text-center container-fluid" style="font-family: 'Fredoka one'; background-image: linear-gradient(#002868,#002868 150px,#004dc9 350px, #004dc9 2000px); z-index: inherit;">
 		<h1 class="display-1" style="color: #FFC324; z-index: inherit;">Utah Marching Hub!</h1>
 	</div>
 	<nav id="mainNavbar" class="navbar navbar-expand-lg bg-dark navbar-dark" style="font-size: 18px; z-index: inherit;">
