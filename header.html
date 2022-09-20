@@ -9,20 +9,54 @@
 <style>
 </style>
 
+<script>
+	function setHeaderHight() {
+		var biggestHeight = 0;
+		// Loop through elements children to find & set the biggest height
+		$("#header").children().each(function(){
+		 // If this elements height is bigger than the biggestHeight
+		 if ($(this).height() > biggestHeight ) {
+		   // Set the biggestHeight to this Height
+		   biggestHeight = $(this).height();
+		 }
+		});
+	
+		// Set the container height
+		$("#header").height(biggestHeight);
+	}
+	// setHeaderHight()
+
+	console.log(document.querySelector('#header').offsetHeight)
+	$(window).scroll(function(){
+	    if ($(window).scrollTop() >= 300) {
+	        $('nav').addClass('fixed-top');
+	    }
+	    else {
+	        $('nav').removeClass('fixed-top');
+	    }
+	});
+
+	// $(window).resize(function(){setHeaderHight()})
+</script>
+
 
 <body>
 	<div class="p-5 text-center container-fluid" style="font-family: 'Fredoka one'; background-image: linear-gradient(#002868,#002868 150px,#004dc9 350px, #004dc9 2000px);">
 		<h1 class="display-1" style="color: #FFC324;">Utah Marching Hub!</h1>
 	</div>
-	<nav id="mainNavbar" class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top" style="font-size: 18px;">
+	<nav id="mainNavbar" class="navbar navbar-expand-lg bg-dark navbar-dark" style="font-size: 18px;">
 		
 		<div class="container-fluid">
+			<a class="navbar-brand" href="/">
+			<img class="rounded-pill" src="/common/images/icons/UMH/logo.png" alt="bruh2" width="40" style="padding-left: 5px;">
+			Utah Marching Hub!
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
 			
-			<ul class="navbar-nav">
-				<a class="navbar-brand" href="/">
-				<img class="rounded-pill" src="/common/images/icons/UMH/logo.png" alt="bruh2" width="40" style="padding-left: 5px;">
-				Utah Marching Hub!
-				</a>
+			<div id="navbar-content" class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto">
 				<li class="nav-item container text-center">
 					<a class="nav-link" href="/scores/">Scores</a>
 				</li>
@@ -36,6 +70,7 @@
 					<a class="nav-link" href="/credits/">Credits</a>
 				</li>
 			</ul>
+		</div>
 
 		</div>
 
