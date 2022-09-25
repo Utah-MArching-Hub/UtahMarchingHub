@@ -59,6 +59,23 @@
                 }
             },
             "sub-2":"comparing 5AS scores, 2022 above, 2021 below"
+        },
+        {
+            "h1-1":"testing more scores",
+            "score-1":{
+                "school":"Springville",
+                "colums":{
+                    "Year":"year",
+                    "date":"date",
+                    "Event":"event",
+                    "Total":"score",
+                    "Music":"MScore",
+                    "Visual":"VScore",
+                    "Percussion":"Percussion",
+                    "Guard":"Guard"
+                }
+            },
+            "sub-1":"I sure hope this works"
         }
     ]
 }
