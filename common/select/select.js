@@ -108,6 +108,7 @@ for (const key in menus) {
             // triggerOnchange(element);
         }
 
+
         element.getMenu = function() {
             let options = []
             let options_elements = element.querySelector('.custom-options').querySelectorAll('.custom-option')
@@ -126,6 +127,8 @@ for (const key in menus) {
         }
 
         element.setMenu = function(menu) {
+            element.height = 0
+
             let options_element = element.querySelector('.custom-options')
 
             element.clearMenu()
@@ -135,6 +138,9 @@ for (const key in menus) {
                     element.addOption(option)
                 }
             }
+            element.height += parseInt(getComputedStyle(element).borderWidth, 10) + 2
+
+            element.style.setProperty('--options-height', element.height + 'px')
         }
 
         element.addOption = function(option) {
@@ -180,6 +186,8 @@ for (const key in menus) {
                     select.classList.remove('open')
                 }
             }
+
+            element.height += (el.classList.contains('hidden')) ? 0 : el.clientHeight
 
             el.addEventListener('click', el.select)
             el.addEventListener('keydown', function(e) {

@@ -60,18 +60,23 @@
     z-index: 2;
     font-size: var(--select-font-size);
     width: max-content;
+    height: 0;
+    overflow-y: hidden;
     
     user-select: none; /* supported by Chrome and Opera */
    -webkit-user-select: none; /* Safari */
    -khtml-user-select: none; /* Konqueror HTML */
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none; /* Internet Explorer/Edge */
+
+   transition: height 150ms ease-in-out, visibility 150ms;
 }
 .select.open .custom-options {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
     border-color: var(--select-border);
+    height: var(--options-height);
 }
 .custom-option {
     position: relative;
