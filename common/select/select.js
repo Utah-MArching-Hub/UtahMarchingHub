@@ -26,9 +26,20 @@ for (const key in menus) {
 
         element.querySelector('.select__trigger').addEventListener('keydown', function(e) {
             if (e.key == 'Enter') {
-                element.classList.toggle('open')
+                    e.preventDefault()
+                    element.classList.toggle('open')
             } else if (e.key == 'ArrowDown') {
+                e.preventDefault()
                 element.querySelector('.custom-option:not(.hidden)').focus()
+            } else if (e.key == 'ArrowUp') {
+                e.preventDefault()
+                let child = element.querySelector('.custom-options').lastElementChild
+                while (child && child.classList.contains('hidden')) {
+                    child = child.previousElementSibling
+                }
+                if (child) {
+                    child.focus()
+                }
             }
             console.log(e.key)
         })
@@ -173,15 +184,32 @@ for (const key in menus) {
             el.addEventListener('click', el.select)
             el.addEventListener('keydown', function(e) {
                 if (e.key == 'Enter') {
+                    e.preventDefault()
                     el.select()
                     let index = el.tabIndex+1
                     let focusElement = document.querySelector('[tabindex="' + index + '"]')
                     console.log('focus', focusElement)
                     focusElement.focus()
                 } else if (e.key == 'ArrowDown') {
+                    e.preventDefault()
                     console.log(e.key)
-                    el.nextSibling.focus()
+                    let sibling = el.nextElementSibling
+                    while (sibling && sibling.classList.contains('hidden')) {
+                        sibling = el.nextElementSibling
+                    }
+                    if (!sibling) {
+                        sibling = el.parentNode.firstElementChild
+                        console.log(sibling)
+                        while (sibling && sibling.classList.contains('hidden')) {
+                            sibling = sibling.nextElementSibling
+                            console.log(sibling)
+                        }
+                    }
+                    if (sibling) {
+                        sibling.focus()
+                    }
                 } else if (e.key == 'ArrowUp') {
+                    e.preventDefault()
                     console.log(e.key)
                     let prev = el.previousElementSibling
                     console.log(prev)
@@ -194,8 +222,13 @@ for (const key in menus) {
                     if (prev) {
                         prev.focus()
                     } else {
-                        console.log(el.parentElement.parentElement.querySelector('[tabindex]'))
-                        el.parentElement.parentElement.querySelector('[tabindex]').focus()
+                        let sibling = element.querySelector('.custom-options').lastElementChild
+                        while (sibling && sibling.classList.contains('hidden')) {
+                            sibling = sibling.previousElementSibling
+                        }
+                        if (sibling) {
+                            sibling.focus()
+                        }
                     }
                 }
             })
