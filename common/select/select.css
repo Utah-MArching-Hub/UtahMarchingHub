@@ -20,7 +20,7 @@
     border-color: var(--select-border);
 }
 
-.select__trigger:hover {
+.select__trigger:hover, .select__trigger:focus {
     background-color: var(--select-hover-background);
 }
 
@@ -88,7 +88,8 @@
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
-.custom-option:hover {
+.custom-option:hover,
+.custom-option:focus  {
     background-color: var(--select-hover-background);
     cursor: pointer;
 }
@@ -99,7 +100,8 @@
     display: none;
 }
 
-.custom-option.selected:hover {
+.custom-option.selected:hover,
+.custom-option:focus {
     background-color: var(--select-hover-background);
 }
 
