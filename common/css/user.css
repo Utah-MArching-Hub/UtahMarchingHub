@@ -1,14 +1,8 @@
 .users {
-    /* display: grid;
-    grid-template-columns: auto auto auto; */
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    align-content: stretch;
-    justify-items: center;
-    gap: 5px;
-    flex-flow: wrap;
     padding: 0 0 0 2%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
 }
 
 .user {
@@ -20,11 +14,12 @@
     background-color: lightgray;
     border-radius: 5px;
     padding: 5px;
-    margin: 1ch;
+    margin: 0.5em;
     transition: 0.2s;
     min-height: 85px;
     min-width: 275px;
-    /* flex: 2; */
+
+    margin-inline: auto;
 }
 
 .user:hover {
@@ -51,8 +46,9 @@
     grid-row-start: 1;
     grid-row-end: 1;
     align-items: center;
-    font-size: 16pt;
+    font-size: 15pt;
     margin: 0 5px;
+    width: max-content;
 }
 
 .user .socials {
