@@ -1,4 +1,6 @@
 :root {
+    --select-font: Arial;
+
     --select-background: white;
     --select-hover-background: skyblue;
     --select-selected-background: lightblue;
@@ -10,7 +12,7 @@
     --select-border-width: 1px;
     --select-font-size: 15px;
     
-    --select-option-border-width: 0;
+    --select-option-gap: 0;
     --select-options-border-width: 1px;
 
     --select-options-border-radius: 4px;
@@ -24,6 +26,8 @@
 .select {
     position: relative;
     border-color: var(--select-border-color);
+
+    font-family: --select-font;
 }
 
 .select__trigger:hover, .select__trigger:focus {
@@ -71,8 +75,8 @@
    -khtml-user-select: none; /* Konqueror HTML */
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none; /* Internet Explorer/Edge */
-
-   transition: height 150ms ease-out, visibility 150ms;
+   
+   transition: height 80ms ease-out, visibility 80ms;
 }
 .select.open .custom-options {
     opacity: 1;
@@ -80,6 +84,8 @@
     pointer-events: all;
     border-color: var(--select-border-color);
     height: var(--options-height);
+    
+    transition: height 80ms ease-in, visibility 80ms;
 }
 .custom-option {
     position: relative;
@@ -92,6 +98,7 @@
     
     border-top-width: var(--select-options-border-width);
     border-bottom-width: 0;
+    border-bottom-width: calc(var(--select-option-gap) / 2);
     border-left-width: var(--select-options-border-width);
     border-right-width: var(--select-options-border-width);
     
@@ -99,17 +106,20 @@
     border-radius: 0;
 }
 .custom-option:last-child {
-    border-bottom-left-radius: var(--select-options-border-radius);
-    border-bottom-right-radius: var(--select-options-border-radius);
+    border-bottom-left-radius: var(--select-options-border-radius) !important;
+    border-bottom-right-radius: var(--select-options-border-radius) !important;
     border-bottom-width: var(--select-options-border-width) !important;
     margin-bottom: 2px;
+
+    border-bottom-color: var(--select-border-color) !important;
 }
 
 .custom-option:not(.hidden) ~ .custom-option {
+    border-radius: 0;
     border-top-width: 0;
-    border-top-width: calc(var(--select-option-border-width) / 2);
+    border-top-width: calc(var(--select-option-gap) / 2);
     border-bottom-width: 0;
-    border-bottom-width: calc(var(--select-option-border-width) / 2);
+    border-bottom-width: calc(var(--select-option-gap) / 2);
 }
 
 .custom-option:hover,
