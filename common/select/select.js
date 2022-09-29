@@ -138,7 +138,12 @@ for (const key in menus) {
                     element.addOption(option)
                 }
             }
-            element.height += parseInt(getComputedStyle(element).borderWidth, 10) + 2
+            if (getComputedStyle(element).getPropertyValue('--select-option-border-width') == 0) {
+                element.style.setProperty('--select-option-border-width', '0px')
+            }
+
+            element.height += parseInt(getComputedStyle(element).borderWidth, 10) - 1
+            element.height += parseInt(getComputedStyle(element).getPropertyValue('--select-option-border-width'), 10) * (element.querySelectorAll('.custom-option:not(.hidden)').length + 1) + (parseInt(getComputedStyle(element).getPropertyValue('--select-options-border-width'), 10) * 2)
 
             element.style.setProperty('--options-height', element.height + 'px')
         }
