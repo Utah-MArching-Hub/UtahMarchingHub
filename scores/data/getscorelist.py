@@ -1,3 +1,4 @@
+from datetime import datetime
 from bs4 import BeautifulSoup
 import requests
 
@@ -42,8 +43,8 @@ class getComps():
 
         # print('\n\n')
         result = self.loadSupportingFiles()
-        pp.pprint(result)
-        with open('result.json', 'w+', encoding='utf-8') as file:
+        # pp.pprint(result)
+        with open('seasons.json', 'w+', encoding='utf-8') as file:
             json.dump(result, file, indent=2)
         # self.getSeasons()
 
@@ -71,22 +72,26 @@ class getComps():
                 item = data[i]
 
                 seasons.append({'name': item['name'], 'seasonGuid': item['seasonGuid'], 'events': self.loadSeason(item['seasonGuid'])})
+        
+        # print(seasons)
 
         return seasons
 
     def loadSeason(self, season):
         self.currentSeasonGuid = season
-        self.getEvents()
+        print('getting season: ' + season)
+        return self.getEvents()
 
 
 
     def getEvents(self):
         if self.currentSeasonGuid:
             # print(f'{self.currentSeasonGuid = }')
-            url = self.domain + "api/orgscores/GetCompetitionsBySeason/jsonp?season=" + self.currentSeasonGuid + "&showTrainingEvents=" + self.settingTest + "&version=" + self.version + "&callback=result="
+            url = self.domain + "api/orgscores/GetCompetitionsBySeason/jsonp?season=" + self.currentSeasonGuid + "&showTrainingEvents=" + str(self.settingTest) + "&version=" + self.version + "&callback=result="
             result = js.eval_js( requests.get(url).text )
             # print(result)
             complist = self.getCompetitionList(result)
+            # print(complist)
             return complist
 
         else:
@@ -100,6 +105,8 @@ class getComps():
     def getCompetitionList(self, data):
         self.currentOrgInitials = data['organizationInitials']
 
+        # print(data)
+
         comps = []
 
         if (not data or len(data['competitions']) < 1):
@@ -108,7 +115,9 @@ class getComps():
             for i in range(len(data['competitions'])):
                 item = data['competitions'][i]
 
-                comps.append({'name': item['name'], 'competitionGuid': item['competitionGuid'], 'location': item['location'], 'performances': self.getPerformances(item['competitionGuid'])})
+                # print('getting competition: ' + item['name'])
+
+                comps.append({'Organization': self.currentOrgInitials, 'name': item['name'], 'competitionGuid': item['competitionGuid'], 'location': item['location'], 'performances': self.getPerformances(item['competitionGuid'])})
 
         # print(comps)
         return comps
@@ -135,7 +144,10 @@ class getComps():
             pass
         else:
             comp = {'name': data['name'], 'date': data['competitionDate'], 'location': data['location']}
-            comp['rounds'] = []
+            comp['classes'] = []
+            date = datetime.strptime(data['competitionDate'], '%Y-%m-%dT%H:%M:%S')
+
+            print('getting competition: ' + data['name'] + ' ' + str(date.year))
 
             # print(f"\n{data['rounds'][0] = }")
             for i in range(len(data['rounds'])):
@@ -144,12 +156,14 @@ class getComps():
                 round = {'class': roundData['name']}
 
                 try:
-                    round['fullRecapUrl'] = roundData['fullRecapUrl']
+                    if self.settingFullRecap:
+                        round['fullRecapUrl'] = roundData['fullRecapUrl']
                 except:
                     pass
 
                 try:
-                    round['categoryRecapUrl'] = roundData['categoryRecapUrl']
+                    if self.settingCategoryRecap:
+                        round['categoryRecapUrl'] = roundData['categoryRecapUrl']
                 except:
                     pass
 
@@ -160,7 +174,7 @@ class getComps():
 
                     round['performances'].append({'rank': perf['rank'], 'name': perf['name'], 'score': perf['score']})
 
-                comp['rounds'].append(round)
+                comp['classes'].append(round)
 
         # print(comp)
         return(comp)
@@ -197,14 +211,14 @@ class getComps():
             if attrRecap and attrRecap.lower() == 'false':
                 attrRecap = False
         except:
-            pass
+            try:
+                attrCategoryRecap = element['data-compsuite-recap-category']
+                if attrCategoryRecap and attrCategoryRecap.lower() == 'false':
+                    self.settingCategoryRecap = False
+            except:
+                pass
 
-        try:
-            attrCategoryRecap = element['data-compsuite-recap-category']
-            if attrCategoryRecap and attrCategoryRecap.lower() == 'false':
-                self.settingCategoryRecap = False
-        except:
-            pass
+        
 
         try:
             attrLoad = element['data-compsuite-load']
@@ -213,11 +227,12 @@ class getComps():
 
         # print(f'{attrLoad = }')
 
-        print('\n\n')
+        # print('\n\n')
         if attrLoad == 'event':
             return self.getPerformances()
         else:
-            return self.getEvents()
+            # return self.getEvents()
+            return self.getSeasons()
 
         content = str(webpage)
 
