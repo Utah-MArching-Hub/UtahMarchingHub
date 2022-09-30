@@ -24,6 +24,7 @@ function updateurl(key, value) {
 }
 
 function updateScores() {
+    updateMenus()
     resetScores()
     getScores()
 }
@@ -36,6 +37,7 @@ function resetScores() {
 }
 
 function updateDrops() {
+    updateMenus()
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
@@ -98,13 +100,13 @@ function getScores() {
     $.getJSON('data/scores.json', function (json) {
         // console.log(json)
         //console.log(json["Scores"])
-        scores = json["Scores"]
+        let scores = json["Scores"]
         for (score in scores) {
             row = scores[score]
             //console.log(row)
-            yearP = false
-            eventP = false
-            clasP = false
+            let yearP = false
+            let eventP = false
+            let clasP = false
 
             // console.log(`${year}=${row["year"]}`)
             if (year === row["year"]) {
@@ -147,6 +149,17 @@ function getScores() {
                     }
                 }
                 $(table).append(scoreR)
+                // console.log(table.tabIndex)
+                // if (table.tabIndex > 0) {
+                //     for (const v in scoreR.children) {
+                //         if (Object.hasOwnProperty.call(scoreR.children, v)) {
+                //             const value = scoreR.children[v];
+                //             // console.log(row)
+                //             console.log(value)
+                //             value.tabIndex = table.tabIndex
+                //         }
+                //     }
+                // }
             }
         }
     })

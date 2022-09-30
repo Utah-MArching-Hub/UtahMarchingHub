@@ -34,12 +34,27 @@ body {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    background-color: white;
+  }
+
+  :root {
+    --li-padding-top: auto;
+    --li-padding-bottom: auto;
+  }
+
+  li {
+    padding-top: var(--li-padding-top);
+    padding-bottom: var(--li-padding-bottom);
   }
   
   .button:active {
     box-shadow: 0px 0px 0px 0px;
     top: 5px;
     left: 5px;
+  }
+  .button:hover,
+  .button:focus {
+    background-color: lightgray;
   }
 
   .YHead {
