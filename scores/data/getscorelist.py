@@ -42,11 +42,12 @@ class getComps():
         self.settingCategoryRecap = True
 
         # print('\n\n')
-        result = self.loadSupportingFiles()
         # pp.pprint(result)
-        with open('seasons.json', 'w+', encoding='utf-8') as file:
-            json.dump(result, file, indent=2)
+        # with open('seasons.json', 'w+', encoding='utf-8') as file:
+        #     json.dump(result, file, indent=2)
         # self.getSeasons()
+
+        self.loadData()
 
 
 
@@ -72,6 +73,8 @@ class getComps():
                 item = data[i]
 
                 seasons.append({'name': item['name'], 'seasonGuid': item['seasonGuid'], 'events': self.loadSeason(item['seasonGuid'])})
+
+            self.currentSeasonGuid = None
         
         # print(seasons)
 
@@ -84,7 +87,7 @@ class getComps():
 
 
 
-    def getEvents(self):
+    def getEvents(self, season=None):
         if self.currentSeasonGuid:
             # print(f'{self.currentSeasonGuid = }')
             url = self.domain + "api/orgscores/GetCompetitionsBySeason/jsonp?season=" + self.currentSeasonGuid + "&showTrainingEvents=" + str(self.settingTest) + "&version=" + self.version + "&callback=result="
@@ -181,7 +184,7 @@ class getComps():
                 
                 
 
-    def loadSupportingFiles(self):
+    def loadData(self):
 
         # webpage = requests.get('https://bridge.competitionsuite.com/orgscores/orgscores.js').text
         webpage = requests.get(self.page).text
@@ -227,19 +230,5 @@ class getComps():
 
         # print(f'{attrLoad = }')
 
-        # print('\n\n')
-        if attrLoad == 'event':
-            return self.getPerformances()
-        else:
-            # return self.getEvents()
-            return self.getSeasons()
-
-        content = str(webpage)
-
-        # with open('page.html', 'w', encoding='utf-8') as file:
-            # file.write(content)
-
-
-
-
-getComps()
+if __name__ == '__manin__':
+    compData = getComps()
