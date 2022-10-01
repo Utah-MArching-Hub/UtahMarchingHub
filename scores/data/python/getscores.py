@@ -1,24 +1,60 @@
+import os
 from bs4 import BeautifulSoup
 import requests
 import json
 from datetime import datetime
+
+def backup(filename):
+	with open(filename, mode='r') as file:
+		contents = file.read()
+
+	try:
+		os.mkdir('backup')
+	except:
+		pass
+
+	with open(filename + '.bak', mode='w') as file:
+		file.write(contents)
 
 def clasName(clas):
 	classes = {
 		'5ao': '5A Open',
 		'5as': '5A Scholastic',
 		'6ao': '6A Open',
-		'6as': '6A Scholastic'
+		'6as': '6A Scholastic',
+		
+		'5a open': '5A Open',
+		'5a scholastic': '5A Scholastic',
+		'6a open': '6A Open',
+		'6a scholastic': '6A Scholastic',
 	}
 
 	try:
-		classes[clas]
-		if classes[clas]:
-			return classes[clas]
+		return classes[clas.lower()]
 	except:
 		return clas.upper()
 
-def getBandScores(eventURL,clas, id=None, name=None):
+def clasId(clas):
+	classes = {
+		'5a open': '5ao',
+		'5ao': '5ao',
+		'5a': '5ao',
+		'5a scholastic': '5as',
+		'5as': '5as',
+
+		'6a open': '6ao',
+		'6ao': '6ao',
+		'6a': '6ao',
+		'6a scholastic': '6as',
+		'6as': '6as',
+	}
+
+	try:
+		return classes[clas.lower()]
+	except:
+		return clas.lower()
+
+def getBandScores(eventURL, clas, id=None, name=None):
 	#keys for finding scores
 	scoreKeys = {
 			"MEnsemble": 2,
@@ -61,15 +97,16 @@ def getBandScores(eventURL,clas, id=None, name=None):
 	date = dateT.strftime("%m/%d/%Y")
 	year = dateT.strftime("%Y")
 
+
 	eventjson = {
 		'id': event,
 		'name': name,
 		'year': str(year),
 		'classes': [
-			[clas, clasName(clas)]
+			[clasId(clas), clasName(clas)]
 		]
 	}
-
+	clas = clasId(clas)
 	
 	#----------
 	yy=0
@@ -115,27 +152,37 @@ def getBandScores(eventURL,clas, id=None, name=None):
 	return([scores, eventjson])
 
 def write_json(new_data, filename='scores.json'):
-	with open(filename,'+r') as file:
-		# First we load existing data into a dict.
-		file_data = json.load(file)
-		# Join new_data with file_data inside emp_details
-		for data in new_data:
-			dupe = False
-			print(data)
-			for old in file_data["Scores"]:
-				if old["year"] == data["year"] and old["event"] == data["event"] and old["school"] == data["school"] :
-					# print("!!!!!!!!!!DUPLICATE!!!!!!!!!!")
-					# print(f"old:{old['year']},{old['event']},{old['school']}.NEW:{data['year']},{data['event']},{data['school']}.")
-					dupe = True
-			if not dupe:
-				file_data["Scores"].append(data)
+	backup(filename)
+	
+
+	with open(filename,'r') as file:
+		contents = file.read()
+		
+		try:
+			# First we load existing data into a dict.
+			file_data = json.loads(contents)
+			# Join new_data with file_data inside emp_details
+			for data in new_data:
+				dupe = False
+				print(data)
+				for old in file_data["Scores"]:
+					if old["year"] == data["year"] and old["event"] == data["event"] and old["school"] == data["school"] :
+						# print("!!!!!!!!!!DUPLICATE!!!!!!!!!!")
+						# print(f"old:{old['year']},{old['event']},{old['school']}.NEW:{data['year']},{data['event']},{data['school']}.")
+						dupe = True
+				if not dupe:
+					file_data["Scores"].append(data)
+		except:
+			file_data = {'Scores': new_data}
 				
 		# Sets file's current position at offset.
-		file.seek(0)
+	
+	with open(filename, 'w') as file:
 		# convert back to json.
 		json.dump(file_data, file, indent = 4)
 
 def addEvent(event, filename='events.json', classes=None, replaceall=False):
+	backup(filename)
 	def findindex(list: list, condition):
 		for x in range(len(list)):
 			if condition(list[x]):
@@ -156,51 +203,62 @@ def addEvent(event, filename='events.json', classes=None, replaceall=False):
 	print('adding event')
 
 	with open(filename, 'r+') as file:
-		events = json.load(file)
-		id = None
-		for e in range(len(events)):
-			if events[e]['id'] == event['id'] and events[e]['year'] == event['year']:
-				id = e
-				break
-		print(id)
+		contents = file.read()
+		try:
+			events = json.loads(contents)
+			id = None
+			for e in range(len(events)):
+				if events[e]['id'] == event['id'] and events[e]['year'] == event['year']:
+					id = e
+					break
+			print(id)
 
-		if id:
-			if events[id]['classes'][0] == 'all':
-				print('all')
-				if replaceall:
-					events[id]['classes'] = classes
-			elif classes[0] == 'all':
-				print('event all')
-				events[id]['classes'] = ['all']
+			if id:
+				if events[id]['classes'][0] == 'all':
+					print('all')
+					if replaceall:
+						events[id]['classes'] = classes
+				elif classes[0] == 'all':
+					print('event all')
+					events[id]['classes'] = ['all']
+				else:
+					for cl in classes:
+						val = findindex(events[id]['classes'], lambda c: c[0] == cl[0])
+						print(val)
+						if not val == None:
+							events[id]['classes'][val][1] = cl[1]
+						else:
+							events[id]['classes'].append(cl)
+				print(events[id]['classes'])
+
 			else:
-				for cl in classes:
-					val = findindex(events[id]['classes'], lambda c: c[0] == cl[0])
-					print(val)
-					if not val == None:
-						events[id]['classes'][val][1] = cl[1]
-					else:
-						events[id]['classes'].append(cl)
-			print(events[id]['classes'])
+				event['classes'] = classes
+				events.append(event)
 
-		else:
-			event['classes'] = classes
-			events.append(event)
+		except:
+			events = [event]
 
 	with open(filename, mode='w') as file:
 		json.dump(events, file, indent=4)
 
-with open('scores.json', mode='r') as file:
-	contents = file.read()
+if __name__ == '__main__':
+	with open(os.path.abspath('../scores.json'), mode='r') as file:
+		contents = file.read()
 
-with open('scores.json.bak', mode='w+') as file:
-	file.write(contents)
+	try:
+		os.mkdir('backup')
+	except:
+		pass
 
-link = "https://recaps.competitionsuite.com/f13ca6c1-5873-4b6c-823f-83c3087a9a07.htm"
-scores, eventjson = getBandScores(link,"5ao", name='Nebo Invitational')
-print(scores)
-print("---")
-print(eventjson)
+	with open('backup/scores.bak.json', mode='w') as file:
+		file.write(contents)
 
-write_json(scores)
+	link = "https://recaps.competitionsuite.com/f13ca6c1-5873-4b6c-823f-83c3087a9a07.htm"
+	scores, eventjson = getBandScores(link,"5ao", name='Nebo Invitational')
+	print(scores)
+	print("---")
+	print(eventjson)
 
-addEvent(eventjson, classes=['3a','5ao','5as','6ao','6as'])
+	write_json(scores, filename=os.path.abspath('../scores.json'))
+
+	addEvent(eventjson, classes=['3a','5ao','5as','6ao','6as'], filename=os.path.abspath('../events.json'))

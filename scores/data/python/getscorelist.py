@@ -80,14 +80,15 @@ class getComps():
 
         return seasons
 
-    def loadSeason(self, season):
+    def loadSeason(self, season=None):
         self.currentSeasonGuid = season
-        print('getting season: ' + season)
+        print('getting season: ' + str(season))
         return self.getEvents()
+        self.currentSeasonGuid = None
 
 
 
-    def getEvents(self, season=None):
+    def getEvents(self):
         if self.currentSeasonGuid:
             # print(f'{self.currentSeasonGuid = }')
             url = self.domain + "api/orgscores/GetCompetitionsBySeason/jsonp?season=" + self.currentSeasonGuid + "&showTrainingEvents=" + str(self.settingTest) + "&version=" + self.version + "&callback=result="

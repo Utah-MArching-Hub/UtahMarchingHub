@@ -1,65 +1,61 @@
 [
     {
-        "id": "nebo",
-        "name": "Nebo Invitational",
+        "id": "state",
+        "name": "UMEA Red Rocks State Marching Band Championships",
         "year": "2021",
         "classes": [
-            "all"
-        ]
-    },
-    {
-        "id": "oquirrh",
-        "name": "Oquirrh Mountain",
-        "year": "2021",
-        "classes": [
-            "all"
-        ]
-    },
-    {
-        "id": "wasatch",
-        "name": "Wasatch Front",
-        "year": "2021",
-        "classes": [
-            "all"
-        ]
-    },
-    {
-        "id": "bridgerland",
-        "name": "Bridgerland",
-        "year": "2021",
-        "classes": [
-            "all"
-        ]
-    },
-    {
-        "id": "davis",
-        "name": "Davis Cup",
-        "year": "2021",
-        "classes": [
-            "all"
-        ]
-    },
-    {
-        "id": "timp",
-        "name": "Mnt Timpanogos",
-        "year": "2021",
-        "classes": [
-            "all"
-        ]
-    },
-    {
-        "id": "timp",
-        "name": "Mnt Timpanogos",
-        "year": "2021",
-        "classes": [
-            "all"
+            [
+                "3a",
+                "3A"
+            ]
         ]
     },
     {
         "id": "state",
-        "name": "Redrock State",
+        "name": "UMEA Red Rocks State Marching Band Championships",
         "year": "2021",
         "classes": [
+            [
+                "4a",
+                "4A"
+            ]
+        ]
+    },
+    {
+        "id": "state",
+        "name": "UMEA Red Rocks State Marching Band Championships",
+        "year": "2021",
+        "classes": [
+            [
+                "5ao",
+                "5A"
+            ]
+        ]
+    },
+    {
+        "id": "state",
+        "name": "UMEA Red Rocks State Marching Band Championships",
+        "year": "2021",
+        "classes": [
+            [
+                "6ao",
+                "6A"
+            ]
+        ]
+    },
+    {
+        "id": "timp",
+        "name": "Mt. Timpanogos Invitational",
+        "year": "2021",
+        "classes": [
+            [
+                "5as",
+                "5A Scholastic"
+            ],
+            [
+                "5ao",
+                "5A Open"
+            ],
             [
                 "3a",
                 "3A"
@@ -69,24 +65,144 @@
                 "4A"
             ],
             [
-                "5ao",
-                "5A"
+                "6as",
+                "6A Scholastic"
             ],
             [
                 "6ao",
-                "6A"
+                "6A Open"
+            ]
+        ]
+    },
+    {
+        "id": "davis",
+        "name": "Davis Cup Invitational",
+        "year": "2021",
+        "classes": [
+            [
+                "4a",
+                "4A"
+            ],
+            [
+                "3a",
+                "3A"
+            ],
+            [
+                "5as",
+                "5A Scholastic"
+            ],
+            [
+                "5ao",
+                "5A Open"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
+            ],
+            [
+                "6ao",
+                "6A Open"
+            ]
+        ]
+    },
+    {
+        "id": "bridgerland",
+        "name": "Bridgerland Band Invitational",
+        "year": "2021",
+        "classes": [
+            [
+                "3a",
+                "3A"
+            ],
+            [
+                "5as",
+                "5A Scholastic"
+            ],
+            [
+                "5ao",
+                "5A Open"
+            ],
+            [
+                "4a",
+                "4A"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
+            ],
+            [
+                "6ao",
+                "6A Open"
+            ]
+        ]
+    },
+    {
+        "id": "wasatch",
+        "name": "Wasatch Front Invitational",
+        "year": "2021",
+        "classes": [
+            [
+                "6as",
+                "6A Scholastic"
+            ],
+            [
+                "6ao",
+                "6A Open"
+            ],
+            [
+                "4a",
+                "4A"
+            ],
+            [
+                "3a",
+                "3A"
+            ],
+            [
+                "5as",
+                "5A Scholastic"
+            ],
+            [
+                "5ao",
+                "5A Open"
             ]
         ]
     },
     {
         "id": "nebo",
         "name": "Nebo Tournament of Bands",
-        "year": "2022",
+        "year": "2021",
         "classes": [
+            [
+                "5as",
+                "5A Scholastic"
+            ],
+            [
+                "5ao",
+                "5A Open"
+            ],
             [
                 "3a",
                 "3A"
             ],
+            [
+                "6as",
+                "6A Scholastic"
+            ],
+            [
+                "6ao",
+                "6A Open"
+            ],
+            [
+                "4a",
+                "4A"
+            ]
+        ]
+    },
+    {
+        "id": "oquirrh",
+        "name": "Oquirrh Mountain Band Invitational",
+        "year": "2021",
+        "classes": [
             [
                 "5ao",
                 "5A Open"
@@ -96,12 +212,78 @@
                 "5A Scholastic"
             ],
             [
-                "6ao",
-                "6A Open"
+                "3a",
+                "3A"
+            ],
+            [
+                "4a",
+                "4A"
             ],
             [
                 "6as",
                 "6A Scholastic"
+            ],
+            [
+                "6ao",
+                "6A Open"
+            ]
+        ]
+    },
+    {
+        "id": "oquirrh",
+        "name": "Oquirrh Mountain Band Invitational",
+        "year": "2022",
+        "classes": [
+            [
+                "5as",
+                "5A Scholastic"
+            ],
+            [
+                "5ao",
+                "5A Open"
+            ],
+            [
+                "3a",
+                "3A"
+            ],
+            [
+                "4a",
+                "4A"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
+            ],
+            [
+                "6ao",
+                "6A Open"
+            ]
+        ]
+    },
+    {
+        "id": "nebo",
+        "name": "Nebo Tournament of Bands",
+        "year": "2022",
+        "classes": [
+            [
+                "5as",
+                "5A Scholastic"
+            ],
+            [
+                "5ao",
+                "5A Open"
+            ],
+            [
+                "3a",
+                "3A"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
+            ],
+            [
+                "6ao",
+                "6A Open"
             ]
         ]
     }
