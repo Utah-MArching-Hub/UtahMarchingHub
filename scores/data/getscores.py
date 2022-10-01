@@ -83,8 +83,8 @@ def getBandScores(eventURL,clas):
 	return(scores)
 
 
-link = "https://recaps.competitionsuite.com/d68736f3-c280-4209-bbaf-feca8a917de5.htm"
-scores = getBandScores(link,"5as")
+link = "http://recaps.competitionsuite.com/dab9fff2-113b-4be9-9218-4901b49d1938.htm"
+scores = getBandScores(link,"5ao")
 print(scores)
 print("---")
 def write_json(new_data, filename='/data/scores.json'):
