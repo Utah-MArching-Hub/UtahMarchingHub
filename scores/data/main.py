@@ -9,6 +9,7 @@ scoresObj = scorelist.getComps(url='https://www-umea-us.filesusr.com/html/4a996b
 print(scoresObj)
 
 events = scoresObj.loadSeason()
+events.reverse()
 
 for event in range(len(events)):
     for clas in range(len(events[event]['performances']['classes'])):
