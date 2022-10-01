@@ -42,7 +42,7 @@ function updateDrops() {
 
     let year = params.year;
     if(year == null){
-        year = "2021" //default value
+        year = "2022" //default value
         updateurl('year', year) 
     }
     yearDrop = document.getElementById("year")
