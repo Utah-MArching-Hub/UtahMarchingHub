@@ -6677,6 +6677,186 @@
                 "Guard": 0.0,
                 "score": 67.1
             }
+        },
+        {
+            "year": "2022",
+            "class": "4a",
+            "school": "Nampa",
+            "event": "bridgerland",
+            "date": "10/01/2022",
+            "scores": {
+                "MEnsemble": 21.863,
+                "MEffect": 21.725,
+                "MScore": 43.588,
+                "VEnsemble": 12.163,
+                "VEffect": 12.294,
+                "VScore": 24.456,
+                "Percussion": 3.563,
+                "Guard": 3.125,
+                "score": 74.731
+            }
+        },
+        {
+            "year": "2022",
+            "class": "4a",
+            "school": "Columbia",
+            "event": "bridgerland",
+            "date": "10/01/2022",
+            "scores": {
+                "MEnsemble": 20.763,
+                "MEffect": 20.969,
+                "MScore": 41.731,
+                "VEnsemble": 11.638,
+                "VEffect": 12.775,
+                "VScore": 24.413,
+                "Percussion": 3.625,
+                "Guard": 3.075,
+                "score": 72.844
+            }
+        },
+        {
+            "year": "2022",
+            "class": "4a",
+            "school": "Sky View",
+            "event": "bridgerland",
+            "date": "10/01/2022",
+            "scores": {
+                "MEnsemble": 19.113,
+                "MEffect": 21.038,
+                "MScore": 40.15,
+                "VEnsemble": 12.513,
+                "VEffect": 12.425,
+                "VScore": 24.938,
+                "Percussion": 3.05,
+                "Guard": 2.85,
+                "score": 70.988
+            }
+        },
+        {
+            "year": "2022",
+            "class": "4a",
+            "school": "Highland",
+            "event": "bridgerland",
+            "date": "10/01/2022",
+            "scores": {
+                "MEnsemble": 21.313,
+                "MEffect": 19.8,
+                "MScore": 41.113,
+                "VEnsemble": 11.55,
+                "VEffect": 10.938,
+                "VScore": 22.488,
+                "Percussion": 3.475,
+                "Guard": 2.55,
+                "score": 69.625
+            }
+        },
+        {
+            "year": "2022",
+            "class": "4a",
+            "school": "Mountain Crest",
+            "event": "bridgerland",
+            "date": "10/01/2022",
+            "scores": {
+                "MEnsemble": 19.8,
+                "MEffect": 20.35,
+                "MScore": 40.15,
+                "VEnsemble": 12.075,
+                "VEffect": 11.2,
+                "VScore": 23.275,
+                "Percussion": 2.875,
+                "Guard": 3.025,
+                "score": 69.325
+            }
+        },
+        {
+            "year": "2022",
+            "class": "4a",
+            "school": "Ogden",
+            "event": "bridgerland",
+            "date": "10/01/2022",
+            "scores": {
+                "MEnsemble": 20.488,
+                "MEffect": 18.013,
+                "MScore": 38.5,
+                "VEnsemble": 12.863,
+                "VEffect": 11.638,
+                "VScore": 24.5,
+                "Percussion": 2.775,
+                "Guard": 3.225,
+                "score": 69.0
+            }
+        },
+        {
+            "year": "2022",
+            "class": "4a",
+            "school": "Madison",
+            "event": "bridgerland",
+            "date": "10/01/2022",
+            "scores": {
+                "MEnsemble": 20.075,
+                "MEffect": 20.625,
+                "MScore": 40.7,
+                "VEnsemble": 10.763,
+                "VEffect": 11.419,
+                "VScore": 22.181,
+                "Percussion": 2.75,
+                "Guard": 2.925,
+                "score": 68.556
+            }
+        },
+        {
+            "year": "2022",
+            "class": "4a",
+            "school": "Ridgeline",
+            "event": "bridgerland",
+            "date": "10/01/2022",
+            "scores": {
+                "MEnsemble": 18.975,
+                "MEffect": 18.563,
+                "MScore": 37.538,
+                "VEnsemble": 11.988,
+                "VEffect": 11.463,
+                "VScore": 23.45,
+                "Percussion": 2.975,
+                "Guard": 2.7,
+                "score": 66.663
+            }
+        },
+        {
+            "year": "2022",
+            "class": "4a",
+            "school": "High Desert",
+            "event": "bridgerland",
+            "date": "10/01/2022",
+            "scores": {
+                "MEnsemble": 18.013,
+                "MEffect": 20.075,
+                "MScore": 38.088,
+                "VEnsemble": 10.588,
+                "VEffect": 10.719,
+                "VScore": 21.306,
+                "Percussion": 3.55,
+                "Guard": 2.613,
+                "score": 65.556
+            }
+        },
+        {
+            "year": "2022",
+            "class": "4a",
+            "school": "Century",
+            "event": "bridgerland",
+            "date": "10/01/2022",
+            "scores": {
+                "MEnsemble": 18.563,
+                "MEffect": 17.6,
+                "MScore": 36.163,
+                "VEnsemble": 11.025,
+                "VEffect": 10.763,
+                "VScore": 21.788,
+                "Percussion": 2.725,
+                "Guard": 2.6,
+                "score": 63.275
+            }
         }
     ]
 }
