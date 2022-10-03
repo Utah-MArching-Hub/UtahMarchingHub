@@ -9,13 +9,13 @@
     --select-selected-txt-color: var(--select-txt-color);
     
     --select-border-color: darkgrey;
-    --select-border-width: 1px;
-    --select-font-size: 15px;
+    --select-border-width: 0.1em;
+    --select-font-size: 1rem;
     
-    --select-option-gap: 0;
-    --select-options-border-width: 1px;
+    --select-option-gap: 0em;
+    --select-options-border-width: 0.1em;
 
-    --select-options-border-radius: 4px;
+    --select-options-border-radius: 0.4em;
 }
 
 .select-wrapper {
