@@ -16,6 +16,8 @@
     --select-options-border-width: 0.1em;
 
     --select-options-border-radius: 0.4em;
+
+    --select-options-animation-duration: 40ms;
 }
 
 .select-wrapper {
@@ -76,7 +78,7 @@
    -moz-user-select: none; /* Firefox */
    -ms-user-select: none; /* Internet Explorer/Edge */
    
-   transition: height 80ms ease-out, visibility 80ms;
+   transition: height var(--select-options-animation-duration) ease-out, visibility var(--select-options-animation-duration);
 }
 .select.open .custom-options {
     opacity: 1;
@@ -85,7 +87,7 @@
     border-color: var(--select-border-color);
     height: var(--options-height);
     
-    transition: height 80ms ease-in, visibility 80ms;
+    transition: height var(--select-options-animation-duration) ease-in, visibility var(--select-options-animation-duration);
 }
 .custom-option {
     position: relative;
