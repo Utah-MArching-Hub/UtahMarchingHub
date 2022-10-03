@@ -1,10 +1,10 @@
 import json
 # import sys
+import schedule
 
 # sys.path.insert(0, 'python/')
 import getscorelist as scorelist
 import getscores
-import time
 # this is to load the modules in a different directory. Ignore what vscode says, they do load.
 
 scoresObj = scorelist.getComps(url='https://www-umea-us.filesusr.com/html/4a996b_94944928dddae9e892d2136a828f4bc9.html')
@@ -32,8 +32,9 @@ def loadScores(season=None):
                 data = events[event]['performances']['classes'][clas]
                 scores, eventjson = getscores.getBandScores(data['fullRecapUrl'], data['class'], name=events[event]['name'])
 
-                # put discord bot code here
-                
+                # put discord bot code here. You may need to check if the
+                # scores already exist, because I don't check for that.
+
                 print(events[event]['name'], '\n')
                 print(scores)
                 print("---")
@@ -44,4 +45,7 @@ def loadScores(season=None):
 
         print(events[0]['performances']['classes'][0]['fullRecapUrl'])
 
-loadScores()
+schedule.every(5).minutes.do(loadScores)
+
+while True:
+    schedule.run_pending()
