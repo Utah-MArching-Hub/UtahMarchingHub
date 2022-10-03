@@ -1,5 +1,5 @@
 .DS_Store
 *.bak
-*.pyc
 scores/data/last-scores.json
-/.venv/*
+*.venv*
+*__pycache__*
