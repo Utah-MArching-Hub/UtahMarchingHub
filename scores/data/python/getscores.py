@@ -4,8 +4,9 @@ import requests
 import json
 from datetime import datetime
 
-def backup(filename):
-	with open(filename, mode='r') as file:
+def backup(path):
+	filename = os.path.basename(path)
+	with open(path, mode='r') as file:
 		contents = file.read()
 
 	try:
@@ -13,7 +14,7 @@ def backup(filename):
 	except:
 		pass
 
-	with open(filename + '.bak', mode='w') as file:
+	with open('backup/' + filename + '.bak', mode='w') as file:
 		file.write(contents)
 
 def clasName(clas):
@@ -204,39 +205,46 @@ def addEvent(event, filename='events.json', classes=None, replaceall=False):
 
 	with open(filename, 'r+') as file:
 		contents = file.read()
+
+		id = -1
+		print(event)
 		try:
 			events = json.loads(contents)
-			id = None
 			for e in range(len(events)):
+				print(events[e])
+				print(f"{events[e]['id'] = }\n{event['id'] = }\n{events[e]['year'] = }\n{event['year'] = }")
+				# input('')
 				if events[e]['id'] == event['id'] and events[e]['year'] == event['year']:
 					id = e
 					break
-			print(id)
-
-			if id:
-				if events[id]['classes'][0] == 'all':
-					print('all')
-					if replaceall:
-						events[id]['classes'] = classes
-				elif classes[0] == 'all':
-					print('event all')
-					events[id]['classes'] = ['all']
-				else:
-					for cl in classes:
-						val = findindex(events[id]['classes'], lambda c: c[0] == cl[0])
-						print(val)
-						if not val == None:
-							events[id]['classes'][val][1] = cl[1]
-						else:
-							events[id]['classes'].append(cl)
-				print(events[id]['classes'])
-
-			else:
-				event['classes'] = classes
-				events.append(event)
-
 		except:
-			events = [event]
+			events = []
+		
+		print(id)
+
+		if id >= 0:
+			if events[id]['classes'][0] == 'all':
+				print('all')
+				if replaceall:
+					events[id]['classes'] = classes
+			elif classes[0] == 'all':
+				print('event all')
+				events[id]['classes'] = ['all']
+			else:
+				for cl in classes:
+					val = findindex(events[id]['classes'], lambda c: c[0] == cl[0])
+					# print(f'{val = }')
+					if not val == None:
+						events[id]['classes'][val][1] = cl[1]
+					else:
+						events[id]['classes'].append(cl)
+			events[id]['classes'].sort()
+			print(events[id]['classes'])
+
+		else:
+			event['classes'] = classes
+			event['classes'].sort()
+			events.append(event)
 
 	with open(filename, mode='w') as file:
 		json.dump(events, file, indent=4)

@@ -5,63 +5,28 @@
         "year": "2021",
         "classes": [
             [
-                "5ao",
-                "5A Open"
-            ]
-        ]
-    },
-    {
-        "id": "oquirrh",
-        "name": "Oquirrh Mountain Band Invitational",
-        "year": "2021",
-        "classes": [
-            [
-                "5as",
-                "5A Scholastic"
-            ]
-        ]
-    },
-    {
-        "id": "oquirrh",
-        "name": "Oquirrh Mountain Band Invitational",
-        "year": "2021",
-        "classes": [
-            [
                 "3a",
                 "3A"
-            ]
-        ]
-    },
-    {
-        "id": "oquirrh",
-        "name": "Oquirrh Mountain Band Invitational",
-        "year": "2021",
-        "classes": [
+            ],
             [
                 "4a",
                 "4A"
-            ]
-        ]
-    },
-    {
-        "id": "oquirrh",
-        "name": "Oquirrh Mountain Band Invitational",
-        "year": "2021",
-        "classes": [
+            ],
             [
-                "6as",
-                "6A Scholastic"
-            ]
-        ]
-    },
-    {
-        "id": "oquirrh",
-        "name": "Oquirrh Mountain Band Invitational",
-        "year": "2021",
-        "classes": [
+                "5ao",
+                "5A Open"
+            ],
+            [
+                "5as",
+                "5A Scholastic"
+            ],
             [
                 "6ao",
                 "6A Open"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
             ]
         ]
     },
@@ -71,28 +36,28 @@
         "year": "2021",
         "classes": [
             [
-                "5as",
-                "5A Scholastic"
+                "3a",
+                "3A"
+            ],
+            [
+                "4a",
+                "4A"
             ],
             [
                 "5ao",
                 "5A Open"
             ],
             [
-                "3a",
-                "3A"
-            ],
-            [
-                "6as",
-                "6A Scholastic"
+                "5as",
+                "5A Scholastic"
             ],
             [
                 "6ao",
                 "6A Open"
             ],
             [
-                "4a",
-                "4A"
+                "6as",
+                "6A Scholastic"
             ]
         ]
     },
@@ -102,28 +67,28 @@
         "year": "2021",
         "classes": [
             [
-                "6as",
-                "6A Scholastic"
-            ],
-            [
-                "6ao",
-                "6A Open"
+                "3a",
+                "3A"
             ],
             [
                 "4a",
                 "4A"
             ],
             [
-                "3a",
-                "3A"
+                "5ao",
+                "5A Open"
             ],
             [
                 "5as",
                 "5A Scholastic"
             ],
             [
-                "5ao",
-                "5A Open"
+                "6ao",
+                "6A Open"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
             ]
         ]
     },
@@ -137,24 +102,24 @@
                 "3A"
             ],
             [
-                "5as",
-                "5A Scholastic"
+                "4a",
+                "4A"
             ],
             [
                 "5ao",
                 "5A Open"
             ],
             [
-                "4a",
-                "4A"
-            ],
-            [
-                "6as",
-                "6A Scholastic"
+                "5as",
+                "5A Scholastic"
             ],
             [
                 "6ao",
                 "6A Open"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
             ]
         ]
     },
@@ -164,28 +129,28 @@
         "year": "2021",
         "classes": [
             [
-                "4a",
-                "4A"
-            ],
-            [
                 "3a",
                 "3A"
             ],
             [
-                "5as",
-                "5A Scholastic"
+                "4a",
+                "4A"
             ],
             [
                 "5ao",
                 "5A Open"
             ],
             [
-                "6as",
-                "6A Scholastic"
+                "5as",
+                "5A Scholastic"
             ],
             [
                 "6ao",
                 "6A Open"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
             ]
         ]
     },
@@ -195,14 +160,6 @@
         "year": "2021",
         "classes": [
             [
-                "5as",
-                "5A Scholastic"
-            ],
-            [
-                "5ao",
-                "5A Open"
-            ],
-            [
                 "3a",
                 "3A"
             ],
@@ -211,12 +168,20 @@
                 "4A"
             ],
             [
-                "6as",
-                "6A Scholastic"
+                "5ao",
+                "5A Open"
+            ],
+            [
+                "5as",
+                "5A Scholastic"
             ],
             [
                 "6ao",
                 "6A Open"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
             ]
         ]
     },
@@ -249,24 +214,24 @@
         "year": "2022",
         "classes": [
             [
-                "5as",
-                "5A Scholastic"
+                "3a",
+                "3A"
             ],
             [
                 "5ao",
                 "5A Open"
             ],
             [
-                "3a",
-                "3A"
-            ],
-            [
-                "6as",
-                "6A Scholastic"
+                "5as",
+                "5A Scholastic"
             ],
             [
                 "6ao",
                 "6A Open"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
             ]
         ]
     },
@@ -276,14 +241,6 @@
         "year": "2022",
         "classes": [
             [
-                "5as",
-                "5A Scholastic"
-            ],
-            [
-                "5ao",
-                "5A Open"
-            ],
-            [
                 "3a",
                 "3A"
             ],
@@ -292,12 +249,47 @@
                 "4A"
             ],
             [
-                "6as",
-                "6A Scholastic"
+                "5ao",
+                "5A Open"
+            ],
+            [
+                "5as",
+                "5A Scholastic"
             ],
             [
                 "6ao",
                 "6A Open"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
+            ]
+        ]
+    },
+    {
+        "id": "bridgerland",
+        "name": "Bridgerland Band Invitational",
+        "year": "2022",
+        "classes": [
+            [
+                "4a",
+                "4A"
+            ],
+            [
+                "5ao",
+                "5A Open"
+            ],
+            [
+                "5as",
+                "5A Scholastic"
+            ],
+            [
+                "6ao",
+                "6A Open"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
             ]
         ]
     }

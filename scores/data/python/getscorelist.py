@@ -82,7 +82,7 @@ class getComps():
 
     def loadSeason(self, season=None):
         self.currentSeasonGuid = season
-        print('getting season: ' + str(season))
+        print('getting season: ' + (str(season) if season else 'current'))
         return self.getEvents()
         self.currentSeasonGuid = None
 
