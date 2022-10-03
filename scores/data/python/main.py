@@ -47,5 +47,7 @@ def loadScores(season=None):
 
 schedule.every(5).minutes.do(loadScores)
 
+print('press CTRL + C to stop')
+
 while True:
     schedule.run_pending()
