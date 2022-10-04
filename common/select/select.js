@@ -106,6 +106,9 @@ for (const key in menus) {
             element.querySelector('.select__trigger').querySelector('span').setAttribute('value', value);
             element.querySelector('.select__trigger').querySelector('span').textContent = content;
             // triggerOnchange(element);
+
+            element.setHeight()
+            element.setWidth()
         }
 
 
@@ -148,6 +151,16 @@ for (const key in menus) {
             return element.height
         }
 
+        element.setWidth = function() {
+            element.style.width = 'max-content'
+            element.style.minWidth = 0
+            element.querySelector('.custom-options').style.width = 'max-content'
+            element.querySelector('.custom-options').style.minWidth = 0
+
+            element.style.minWidth = getComputedStyle(element.querySelector('.custom-options')).width
+            element.querySelector('.custom-options').style.minWidth = getComputedStyle(element).width
+        }
+
         element.setMenu = function(menu) {
             if (getComputedStyle(element).getPropertyValue('--select-option-gap') == 0) {
                 element.style.setProperty('--select-option-gap', '0px')
@@ -164,6 +177,7 @@ for (const key in menus) {
             }
 
             element.setHeight()
+            element.setWidth()
         }
 
         element.addOption = function(option) {
