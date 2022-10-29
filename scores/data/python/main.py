@@ -45,6 +45,8 @@ def loadScores(season=None):
 
         print(events[0]['performances']['classes'][0]['fullRecapUrl'])
 
+loadScores()
+
 schedule.every(5).minutes.do(loadScores)
 
 print('press CTRL + C to stop')
