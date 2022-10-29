@@ -106,6 +106,9 @@ for (const key in menus) {
             element.querySelector('.select__trigger').querySelector('span').setAttribute('value', value);
             element.querySelector('.select__trigger').querySelector('span').textContent = content;
             // triggerOnchange(element);
+
+            element.setHeight()
+            element.setWidth()
         }
 
 
@@ -131,18 +134,34 @@ for (const key in menus) {
                 element.style.setProperty('--select-option-gap', '0px')
             }
 
-            element.height = 0
+            element.height = 'calc(0px'
             for (const index in element.querySelectorAll('.custom-option:not(.hidden)')) {
                 if (Object.hasOwnProperty.call(element.querySelectorAll('.custom-option:not(.hidden)'), index)) {
                     const el = element.querySelectorAll('.custom-option:not(.hidden)')[index];
-                    element.height += parseInt(getComputedStyle(el).height)
+                    element.height += ' + ' + getComputedStyle(el).height
                 }
             }
-            element.height += parseInt(getComputedStyle(element).getPropertyValue('--select-option-gap')) * (element.querySelectorAll('.custom-option:not(.hidden)').length - 1 ) + (parseInt(getComputedStyle(element).getPropertyValue('--select-options-border-width')) * 2) + 1
+            // element.height += parseInt(getComputedStyle(element).getPropertyValue('--select-option-gap')) * (element.querySelectorAll('.custom-option:not(.hidden)').length - 1 ) + (parseInt(getComputedStyle(element).getPropertyValue('--select-options-border-width')) * 2) + 1
+            // console.log(element.querySelectorAll('.custom-option:not(.hidden)').length - 1)
+            element.height += ' + (' + getComputedStyle(element).getPropertyValue('--select-option-gap') + ' * ' + (element.querySelectorAll('.custom-option:not(.hidden)').length - 1) + ')'
+            element.height += ' + (' + getComputedStyle(element).getPropertyValue('--select-options-border-width') + ' * 2)'
+            element.height += ')'
+            console.log('height', element.height)
+            element.style.setProperty('--options-height', element.height)
+            return element.height
+        }
+
+        element.setWidth = function() {
+            element.style.width = 'max-content'
+            element.style.minWidth = 0
+            element.querySelector('.custom-options').style.width = 'max-content'
+            element.querySelector('.custom-options').style.minWidth = 0
+
+            element.style.minWidth = getComputedStyle(element.querySelector('.custom-options')).width
+            element.querySelector('.custom-options').style.minWidth = getComputedStyle(element).width
         }
 
         element.setMenu = function(menu) {
-            element.height = 0
             if (getComputedStyle(element).getPropertyValue('--select-option-gap') == 0) {
                 element.style.setProperty('--select-option-gap', '0px')
             }
@@ -157,14 +176,8 @@ for (const key in menus) {
                 }
             }
 
-
-
-            // element.height += 1
-            // element.height += parseInt(getComputedStyle(element).getPropertyValue('--select-option-gap'), 10) * (element.querySelectorAll('.custom-option:not(.hidden)').length + 1) + (parseInt(getComputedStyle(element).getPropertyValue('--select-options-border-width'), 10) * 2)
-            element.height +=  parseInt(getComputedStyle(element).getPropertyValue('--select-option-gap')) * (element.querySelectorAll('.custom-option:not(.hidden)').length - 1 ) + (parseInt(getComputedStyle(element).getPropertyValue('--select-options-border-width')) * 2) + 1
-
-            console.log('height', element.height)
-            element.style.setProperty('--options-height', element.height + 'px')
+            element.setHeight()
+            element.setWidth()
         }
 
         element.addOption = function(option) {
@@ -210,8 +223,6 @@ for (const key in menus) {
                     select.classList.remove('open')
                 }
             }
-
-            element.height += (el.classList.contains('hidden')) ? 0 : parseInt(getComputedStyle(el).height)
 
             el.addEventListener('click', el.select)
             el.addEventListener('keydown', function(e) {
@@ -291,6 +302,7 @@ $('.select').click(function(e) {
     e.stopPropagation()
     if (this.focused) {
         console.log('clicked')
+        console.log(getComputedStyle(this.querySelector(".custom-options")).getPropertyValue('--options-height'))
         this.focused = false
     } else {
         console.log('no-focus')
