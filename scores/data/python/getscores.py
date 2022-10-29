@@ -1,4 +1,5 @@
 import os
+import bs4
 from bs4 import BeautifulSoup
 import requests
 import json
@@ -114,6 +115,8 @@ def getBandScores(eventURL, clas, id=None, name=None):
 	#Parser, finds table
 	for bandRaw in list(soup.find("table", style="background-color: #FFFFFF;")):
 		#skips non-needed rows (rows without scores)
+		if (isinstance(bandRaw, bs4.element.Comment)):
+			continue
 		if len(bandRaw) == 1:
 			continue
 		if yy < 4:
