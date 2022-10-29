@@ -32,7 +32,9 @@
     font-family: --select-font;
 }
 
-.select__trigger:hover, .select__trigger:focus {
+.select__trigger:hover,
+.select.open:focus-within .select__trigger,
+.select.open .select__trigger:focus {
     background-color: var(--select-hover-background);
 }
 

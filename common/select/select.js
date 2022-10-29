@@ -304,14 +304,15 @@ $('.select').click(function(e) {
         console.log('clicked')
         console.log(getComputedStyle(this.querySelector(".custom-options")).getPropertyValue('--options-height'))
         this.focused = false
+        $(this).toggleClass('open')
     } else {
         console.log('no-focus')
         $(this).toggleClass('open')
     }
 })
 
-$('.select').focusin(function() {
-    $(this).addClass('open')
+$('.select').focusin(function(e) {
+    // $(this).addClass('open')
     console.log('focus-in')
     this.focused = true
 })
