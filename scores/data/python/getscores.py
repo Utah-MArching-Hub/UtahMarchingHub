@@ -105,7 +105,11 @@ def getBandScores(eventURL, clas, id=None, name=None):
 		'name': name,
 		'year': str(year),
 		'classes': [
-			[clasId(clas), clasName(clas)]
+			{
+				'id': clasId(clas),
+				'name': clasName(clas),
+				'url': eventURL,
+			}
 		]
 	}
 	clas = clasId(clas)
@@ -235,18 +239,18 @@ def addEvent(event, filename='events.json', classes=None, replaceall=False):
 				events[id]['classes'] = ['all']
 			else:
 				for cl in classes:
-					val = findindex(events[id]['classes'], lambda c: c[0] == cl[0])
+					val = findindex(events[id]['classes'], lambda c: c['id'] == cl['id'])
 					# print(f'{val = }')
 					if not val == None:
-						events[id]['classes'][val][1] = cl[1]
+						events[id]['classes'][val]['name'] = cl['name']
 					else:
 						events[id]['classes'].append(cl)
-			events[id]['classes'].sort()
+			events[id]['classes'] = sorted(events[id]['classes'], key=lambda d: d['id'])
 			print(events[id]['classes'])
 
 		else:
 			event['classes'] = classes
-			event['classes'].sort()
+			event['classes'] = sorted(event['classes'], key=lambda d: d['id'])
 			events.append(event)
 
 	with open(filename, mode='w') as file:

@@ -1,4 +1,16 @@
 #selections {
+    position: relative;
     padding-bottom: 5px;
     padding-top: 5px;
+}
+
+.score-url {
+    position: absolute;
+    right: 0;
+
+    text-decoration: none;
+}
+
+.score-url[href=""], .score-url[href="#"] {
+    display: none;
 }

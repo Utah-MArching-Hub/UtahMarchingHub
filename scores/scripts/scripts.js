@@ -18,6 +18,8 @@ function updateMenus() {
         let menu = {"year": [], "event": [{'value': 'NA', 'text': 'select event', 'classes': ['hidden', 'default']}], "class": [{'value': 'NA', 'text': 'select class', 'classes': ['hidden', 'default']}]}
         console.log(json)
 
+        document.getElementById('score-url').setAttribute('href', '')
+
         for (const key in json) {
             if (Object.hasOwnProperty.call(json, key)) {
                 const event = json[key];
@@ -40,12 +42,12 @@ function updateMenus() {
                 console.log(event['classes'])
 
                 let classes = [
-                    ["3a" , "3A"],
-                    ["4a" , "4A"],
-                    ["5ao", "5A Open"],
-                    ["5as", "5A Scholastic"],
-                    ["6ao", "6A Open"],
-                    ["6as", "6A Scholastic"]
+                    {"id": "3a" , "name": "3A", "url": ''},
+                    {"id": "4a" , "name": "4A", "url": ''},
+                    {"id": "5ao" , "name": "5A Open", "url": ''},
+                    {"id": "5as" , "name": "5A Scholastic", "url": ''},
+                    {"id": "6ao" , "name": "6A Open", "url": ''},
+                    {"id": "6as" , "name": "6A Scholastic", "url": ''},
                 ]
                 console.log((event['classes'][0] != 'all'))
                 if (event['classes'][0] != 'all') {
@@ -57,8 +59,11 @@ function updateMenus() {
                     if (Object.hasOwnProperty.call(classes, c)) {
                         const cl = classes[c];
                         console.log(cl)
-                        if (!menu['class'].some(o => o['value'] == cl[0])) {
-                            menu['class'].push({'value': cl[0], 'text': cl[1], 'classes': []})
+                        if (!menu['class'].some(o => o['value'] == cl['id'])) {
+                            menu['class'].push({'value': cl['id'], 'text': cl['name'], 'classes': []})
+                        }
+                        if (Class == cl['id'] && event_value == event['id'] && year == event['year']) {
+                            document.getElementById('score-url').setAttribute('href', cl['url'])
                         }
                     }
                 }
@@ -97,6 +102,7 @@ function updateMenus() {
             Class = Class.replace('s', 'o')
         }
         document.getElementById('clas').setval(Class)
+
 
         return menu
     });

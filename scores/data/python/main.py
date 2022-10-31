@@ -45,7 +45,10 @@ def loadScores(season=None):
 
         print(events[0]['performances']['classes'][0]['fullRecapUrl'])
 
+# current year
 loadScores()
+# 2021
+# loadScores(season='871de29c-53ea-4b45-b69a-cbb245861811')
 
 schedule.every(5).minutes.do(loadScores)
 
