@@ -1,13 +1,19 @@
+.options-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 #selections {
-    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     padding-bottom: 5px;
     padding-top: 5px;
 }
 
 .score-url {
-    position: absolute;
-    right: 0;
-
     text-decoration: none;
 }
 
