@@ -1,3 +1,25 @@
+function updateSortableTables() {
+    var sortable = document.querySelectorAll('table.sortable')
+
+    for (const t in sortable) {
+        if (Object.hasOwnProperty.call(sortable, t)) {
+            const table = sortable[t];
+            
+            const header = table.querySelector('.tbl-header').querySelectorAll('th')
+
+            for (const column in header) {
+                if (Object.hasOwnProperty.call(header, column)) {
+                    const th = header[column];
+                    
+                    th.setAttribute('onclick', 'sortTable(this)')
+                }
+            }
+        }
+    }
+}
+
+updateSortableTables()
+
 function getChildElementIndex(node) {
     return Array.prototype.indexOf.call(node.parentNode.children, node);
 }

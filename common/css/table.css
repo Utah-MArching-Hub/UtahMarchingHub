@@ -51,16 +51,16 @@ table, th, td {
   border-width: var(--border-width);
   border-style: solid;
   width: min-content;
+}
+
+.tableStyle.sortable th:hover {
+  cursor: pointer;
 
   user-select: none; /* supported by Chrome and Opera */
  -webkit-user-select: none; /* Safari */
  -khtml-user-select: none; /* Konqueror HTML */
  -moz-user-select: none; /* Firefox */
  -ms-user-select: none; /* Internet Explorer/Edge */
-}
-
-.tableStyle th:hover {
-  cursor: pointer;
 }
 
 .tableStyle.sortable th::before {
