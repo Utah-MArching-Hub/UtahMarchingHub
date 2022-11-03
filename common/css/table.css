@@ -63,7 +63,7 @@ table, th, td {
   cursor: pointer;
 }
 
-.tableStyle th::before {
+.tableStyle.sortable th::before {
   font-family: 'Courier New', Courier, monospace;
   display: block;
   position: absolute;
@@ -74,7 +74,7 @@ table, th, td {
   font-size: .8em;
 }
 
-.tableStyle th::after {
+.tableStyle.sortable th::after {
   font-family: 'Courier New', Courier, monospace;
   display: block;
   position: absolute;
@@ -86,11 +86,11 @@ table, th, td {
   color: var(--header-text-color);
 }
 
-.tableStyle .sort-asc::before {
+.tableStyle.sortable .sort-asc::before {
   opacity: 1;
 }
 
-.tableStyle .sort-desc::after {
+.tableStyle.sortable .sort-desc::after {
   opacity: 1;
 }
 
@@ -107,7 +107,8 @@ table, th, td {
   color: var(--link-color);
 }
 
-.tableStyle table td, table th {
+.tableStyle table td,
+table th {
   padding: 8px;
   color: var(--row-text-color);
 }
