@@ -85,7 +85,10 @@ function getScores() {
     let clas = params.clas;
 
     let order = []
-    let header = document.querySelector('.tbl-header').children[0].children
+    let header = document.querySelector('.tbl-header').children
+    if (header[0].nodeName == 'TR') {
+        header = header[0].children
+    }
     for (const key in header) {
         if (Object.hasOwnProperty.call(header, key)) {
             const el = header[key];
