@@ -1,0 +1,76 @@
+import json
+# import sys
+import schedule
+
+# sys.path.insert(0, 'python/')
+import getscorelist as scorelist
+import getscores
+# this is to load the modules in a different directory. Ignore what vscode says, they do load.
+
+scoresObj = scorelist.getComps(url='https://www-umea-us.filesusr.com/html/4a996b_94944928dddae9e892d2136a828f4bc9.html')
+# print(scoresObj)
+
+def loadScores(season=None):
+    events = scoresObj.loadSeason(season)
+    try:
+        with open('last-scores.json', 'r', encoding='utf-8') as file:
+            lastScores = json.load(file)
+    except:
+        lastScores = None
+
+    print(lastScores == events)
+    if lastScores == events:
+        print('already on current scores')
+    else:
+        with open('last-scores.json', 'w', encoding='utf-8') as file:
+            json.dump(events, file)
+
+        events.reverse()
+
+        for event in range(len(events)):
+            for clas in range(len(events[event]['performances']['classes'])):
+                data = events[event]['performances']['classes'][clas]
+                scores, eventjson = getscores.getBandScores(data['fullRecapUrl'], data['class'], name=events[event]['name'])
+
+                # put discord bot code here. You may need to check if the
+                # scores already exist, because I don't check for that.
+
+                print(events[event]['name'], '\n')
+                print(scores)
+                print("---")
+                print(eventjson)
+
+                getscores.write_json(scores, filename='../scores.json')
+                getscores.addEvent(eventjson, filename='../events.json')
+
+        print(events[0]['performances']['classes'][0]['fullRecapUrl'])
+
+if __name__ == "__main__":
+    import win32api
+    from flask import Flask, render_template
+    
+    app = Flask(__name__)
+    
+    
+    #Using the below, the popup message appears on the page load of index.html
+    #0x00001000 - This makes the popup appear over the browser window
+    @app.route('/')
+    def index():
+        win32api.MessageBox(0, 'You have just run a python script on the page load!', 'Running a Python Script via Javascript', 0x00001000)
+        return render_template('index.html')
+    
+    #Using the below, the popup message appears when the button is clicked on the webpage.
+    #0x00001000 - This makes the popup appear over the browser window
+    @app.route('/test')
+    def test():
+        win32api.MessageBox(0, 'You have just run a python script on the button press!', 'Running a Python Script via Javascript', 0x00001000)
+        return render_template('index.html')
+    
+    if __name__ == "__main__":
+        app.run(debug=True)
+
+
+    # current year
+    loadScores()
+    # 2021
+    # loadScores(season='871de29c-53ea-4b45-b69a-cbb245861811')
