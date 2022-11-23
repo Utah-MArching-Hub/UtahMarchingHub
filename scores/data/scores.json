@@ -8837,6 +8837,744 @@
                 "Guard": 4.15,
                 "score": 89.438
             }
+        },
+        {
+            "year": "2022",
+            "class": "3a",
+            "school": "Ogden",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 17.188,
+                "MEffect": 17.6,
+                "MScore": 34.788,
+                "VEnsemble": 14.263,
+                "VEffect": 13.65,
+                "VScore": 27.913,
+                "Percussion": 3.575,
+                "Guard": 3.8,
+                "score": 70.075
+            }
+        },
+        {
+            "year": "2022",
+            "class": "3a",
+            "school": "Carbon",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 15.813,
+                "MEffect": 15.95,
+                "MScore": 31.763,
+                "VEnsemble": 10.325,
+                "VEffect": 10.106,
+                "VScore": 20.431,
+                "Percussion": 3.175,
+                "Guard": 2.875,
+                "score": 58.244
+            }
+        },
+        {
+            "year": "2022",
+            "class": "3a",
+            "school": "Canyon View",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 16.363,
+                "MEffect": 15.4,
+                "MScore": 31.763,
+                "VEnsemble": 10.238,
+                "VEffect": 10.063,
+                "VScore": 20.3,
+                "Percussion": 3.05,
+                "Guard": 3.1,
+                "score": 58.213
+            }
+        },
+        {
+            "year": "2022",
+            "class": "3a",
+            "school": "Delta",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 15.538,
+                "MEffect": 14.85,
+                "MScore": 30.388,
+                "VEnsemble": 9.975,
+                "VEffect": 11.288,
+                "VScore": 21.263,
+                "Percussion": 3.15,
+                "Guard": 3.15,
+                "score": 57.95
+            }
+        },
+        {
+            "year": "2022",
+            "class": "3a",
+            "school": "Grand County",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 14.988,
+                "MEffect": 13.75,
+                "MScore": 28.738,
+                "VEnsemble": 9.8,
+                "VEffect": 9.931,
+                "VScore": 19.731,
+                "Percussion": 2.75,
+                "Guard": 2.825,
+                "score": 54.044
+            }
+        },
+        {
+            "year": "2022",
+            "class": "4a",
+            "school": "Mountain Crest",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 16.913,
+                "MEffect": 16.225,
+                "MScore": 33.138,
+                "VEnsemble": 10.938,
+                "VEffect": 12.994,
+                "VScore": 23.931,
+                "Percussion": 3.525,
+                "Guard": 3.5,
+                "score": 64.094
+            }
+        },
+        {
+            "year": "2022",
+            "class": "4a",
+            "school": "Ridgeline",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 15.263,
+                "MEffect": 17.875,
+                "MScore": 33.138,
+                "VEnsemble": 10.675,
+                "VEffect": 12.95,
+                "VScore": 23.625,
+                "Percussion": 3.5,
+                "Guard": 2.95,
+                "score": 63.213
+            }
+        },
+        {
+            "year": "2022",
+            "class": "4a",
+            "school": "Sky View",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 16.088,
+                "MEffect": 15.125,
+                "MScore": 31.213,
+                "VEnsemble": 11.288,
+                "VEffect": 12.906,
+                "VScore": 24.194,
+                "Percussion": 3.55,
+                "Guard": 3.7,
+                "score": 62.656
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Green Canyon",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 21.863,
+                "MEffect": 20.625,
+                "MScore": 42.488,
+                "VEnsemble": 16.013,
+                "VEffect": 14.481,
+                "VScore": 30.494,
+                "Percussion": 4.525,
+                "Guard": 4.125,
+                "score": 81.631
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Cedar Valley",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 20.488,
+                "MEffect": 20.075,
+                "MScore": 40.563,
+                "VEnsemble": 15.663,
+                "VEffect": 13.956,
+                "VScore": 29.619,
+                "Percussion": 4.2,
+                "Guard": 3.75,
+                "score": 78.131
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Maple Mountain",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 20.763,
+                "MEffect": 20.9,
+                "MScore": 41.663,
+                "VEnsemble": 14.7,
+                "VEffect": 13.781,
+                "VScore": 28.481,
+                "Percussion": 4.075,
+                "Guard": 3.725,
+                "score": 77.944
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Lehi",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 21.038,
+                "MEffect": 18.288,
+                "MScore": 39.325,
+                "VEnsemble": 15.138,
+                "VEffect": 14.088,
+                "VScore": 29.225,
+                "Percussion": 3.888,
+                "Guard": 4.375,
+                "score": 76.813
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Alta",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 20.213,
+                "MEffect": 20.35,
+                "MScore": 40.563,
+                "VEnsemble": 14.0,
+                "VEffect": 13.694,
+                "VScore": 27.694,
+                "Percussion": 3.95,
+                "Guard": 3.8,
+                "score": 76.006
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Brighton",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 19.663,
+                "MEffect": 18.7,
+                "MScore": 38.363,
+                "VEnsemble": 14.438,
+                "VEffect": 13.869,
+                "VScore": 28.306,
+                "Percussion": 3.913,
+                "Guard": 4.225,
+                "score": 74.806
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Orem City",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 19.25,
+                "MEffect": 18.425,
+                "MScore": 37.675,
+                "VEnsemble": 12.25,
+                "VEffect": 12.731,
+                "VScore": 24.981,
+                "Percussion": 3.75,
+                "Guard": 3.225,
+                "score": 69.631
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Wasatch",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 18.7,
+                "MEffect": 17.463,
+                "MScore": 36.163,
+                "VEnsemble": 12.688,
+                "VEffect": 12.688,
+                "VScore": 25.375,
+                "Percussion": 3.375,
+                "Guard": 3.95,
+                "score": 68.863
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Salem Hills",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 18.15,
+                "MEffect": 16.775,
+                "MScore": 34.925,
+                "VEnsemble": 12.95,
+                "VEffect": 13.081,
+                "VScore": 26.031,
+                "Percussion": 3.975,
+                "Guard": 3.675,
+                "score": 68.606
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Tooele",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 18.425,
+                "MEffect": 17.738,
+                "MScore": 36.163,
+                "VEnsemble": 11.638,
+                "VEffect": 12.994,
+                "VScore": 24.631,
+                "Percussion": 3.5,
+                "Guard": 3.2,
+                "score": 67.494
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Timpview",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 17.738,
+                "MEffect": 15.675,
+                "MScore": 33.413,
+                "VEnsemble": 12.6,
+                "VEffect": 13.3,
+                "VScore": 25.9,
+                "Percussion": 3.7,
+                "Guard": 3.15,
+                "score": 66.163
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Provo",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 17.463,
+                "MEffect": 16.363,
+                "MScore": 33.825,
+                "VEnsemble": 11.113,
+                "VEffect": 13.169,
+                "VScore": 24.281,
+                "Percussion": 3.6,
+                "Guard": 4.15,
+                "score": 65.856
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Viewmont",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 16.225,
+                "MEffect": 17.05,
+                "MScore": 33.275,
+                "VEnsemble": 11.288,
+                "VEffect": 10.938,
+                "VScore": 22.225,
+                "Percussion": 3.55,
+                "Guard": 3.25,
+                "score": 62.3
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Uintah",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 17.188,
+                "MEffect": 15.813,
+                "MScore": 33.0,
+                "VEnsemble": 10.763,
+                "VEffect": 11.069,
+                "VScore": 21.831,
+                "Percussion": 3.875,
+                "Guard": 3.4,
+                "score": 62.106
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Stansbury",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 16.638,
+                "MEffect": 16.5,
+                "MScore": 33.138,
+                "VEnsemble": 10.413,
+                "VEffect": 10.588,
+                "VScore": 21.0,
+                "Percussion": 3.2,
+                "Guard": 2.85,
+                "score": 60.188
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Spanish Fork",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 15.4,
+                "MEffect": 16.088,
+                "MScore": 31.488,
+                "VEnsemble": 9.538,
+                "VEffect": 10.5,
+                "VScore": 20.038,
+                "Percussion": 3.425,
+                "Guard": 3.1,
+                "score": 58.05
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Springville",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 14.438,
+                "MEffect": 14.988,
+                "MScore": 29.425,
+                "VEnsemble": 10.15,
+                "VEffect": 10.325,
+                "VScore": 20.475,
+                "Percussion": 3.3,
+                "Guard": 2.875,
+                "score": 56.075
+            }
+        },
+        {
+            "year": "2022",
+            "class": "5ao",
+            "school": "Payson",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 14.713,
+                "MEffect": 14.575,
+                "MScore": 29.288,
+                "VEnsemble": 9.888,
+                "VEffect": 9.975,
+                "VScore": 19.863,
+                "Percussion": 3.1,
+                "Guard": 2.7,
+                "score": 54.95
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "American Fork",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 24.888,
+                "MEffect": 24.75,
+                "MScore": 49.638,
+                "VEnsemble": 16.1,
+                "VEffect": 16.363,
+                "VScore": 32.463,
+                "Percussion": 4.525,
+                "Guard": 4.5,
+                "score": 91.125
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Davis",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 22.963,
+                "MEffect": 23.65,
+                "MScore": 46.613,
+                "VEnsemble": 15.4,
+                "VEffect": 14.963,
+                "VScore": 30.363,
+                "Percussion": 4.35,
+                "Guard": 4.25,
+                "score": 85.575
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Westlake",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 21.45,
+                "MEffect": 22.0,
+                "MScore": 43.45,
+                "VEnsemble": 15.225,
+                "VEffect": 15.663,
+                "VScore": 30.888,
+                "Percussion": 4.25,
+                "Guard": 4.375,
+                "score": 82.963
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Farmington",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 22.413,
+                "MEffect": 23.1,
+                "MScore": 45.513,
+                "VEnsemble": 14.7,
+                "VEffect": 14.263,
+                "VScore": 28.963,
+                "Percussion": 4.075,
+                "Guard": 4.2,
+                "score": 82.75
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Skyridge",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 21.038,
+                "MEffect": 22.275,
+                "MScore": 43.313,
+                "VEnsemble": 14.963,
+                "VEffect": 14.525,
+                "VScore": 29.488,
+                "Percussion": 3.975,
+                "Guard": 4.075,
+                "score": 80.85
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Lone Peak",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 21.863,
+                "MEffect": 22.55,
+                "MScore": 44.413,
+                "VEnsemble": 12.425,
+                "VEffect": 13.125,
+                "VScore": 25.55,
+                "Percussion": 4.0,
+                "Guard": 3.475,
+                "score": 77.438
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Herriman",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 19.938,
+                "MEffect": 20.763,
+                "MScore": 40.7,
+                "VEnsemble": 14.263,
+                "VEffect": 13.738,
+                "VScore": 28.0,
+                "Percussion": 3.775,
+                "Guard": 4.175,
+                "score": 76.65
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Bingham",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 20.075,
+                "MEffect": 21.725,
+                "MScore": 41.8,
+                "VEnsemble": 13.038,
+                "VEffect": 11.725,
+                "VScore": 24.763,
+                "Percussion": 3.825,
+                "Guard": 3.6,
+                "score": 73.988
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Riverton",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 18.288,
+                "MEffect": 19.938,
+                "MScore": 38.225,
+                "VEnsemble": 12.075,
+                "VEffect": 10.85,
+                "VScore": 22.925,
+                "Percussion": 3.9,
+                "Guard": 3.575,
+                "score": 68.625
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Mountain Ridge",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 18.563,
+                "MEffect": 18.838,
+                "MScore": 37.4,
+                "VEnsemble": 12.6,
+                "VEffect": 10.763,
+                "VScore": 23.363,
+                "Percussion": 3.675,
+                "Guard": 3.45,
+                "score": 67.888
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "West Jordan",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 17.875,
+                "MEffect": 18.563,
+                "MScore": 36.438,
+                "VEnsemble": 10.85,
+                "VEffect": 10.5,
+                "VScore": 21.35,
+                "Percussion": 3.5,
+                "Guard": 3.5,
+                "score": 64.788
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Pleasant Grove",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 17.05,
+                "MEffect": 18.013,
+                "MScore": 35.063,
+                "VEnsemble": 11.55,
+                "VEffect": 10.806,
+                "VScore": 22.356,
+                "Percussion": 3.375,
+                "Guard": 3.35,
+                "score": 64.144
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Fremont",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 16.5,
+                "MEffect": 16.638,
+                "MScore": 33.138,
+                "VEnsemble": 11.113,
+                "VEffect": 10.588,
+                "VScore": 21.7,
+                "Percussion": 3.2,
+                "Guard": 3.125,
+                "score": 61.163
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Copper Hills",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 15.95,
+                "MEffect": 15.538,
+                "MScore": 31.488,
+                "VEnsemble": 10.588,
+                "VEffect": 9.756,
+                "VScore": 20.344,
+                "Percussion": 3.1,
+                "Guard": 2.775,
+                "score": 57.706
+            }
+        },
+        {
+            "year": "2022",
+            "class": "6ao",
+            "school": "Roy",
+            "event": "state",
+            "date": "11/04/2022",
+            "scores": {
+                "MEnsemble": 15.125,
+                "MEffect": 14.713,
+                "MScore": 29.838,
+                "VEnsemble": 9.625,
+                "VEffect": 9.625,
+                "VScore": 19.25,
+                "Percussion": 3.0,
+                "Guard": 2.675,
+                "score": 54.763
+            }
         }
     ]
 }
