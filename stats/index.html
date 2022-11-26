@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Utah Marching Hub</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/x-icon" href="/common/images/icons/UMH/logo.png">
+
+    <link href="/common/css/common.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/style.css">
+    <link href="" rel="stylesheet" type="text/css" />
+</head>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+<script src="scripts/script.js"></script>
+<script>
+    $(function () {
+        $("#footer").load("/footer.html");
+        $("#header").load("/header.html");
+    });
+</script>
+<body onload="onLoad()">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<!-- 
+    Idea:
+    load schools from list (precompile list from JSON?)
+    when scohool is selected from list, load scores from JSON,
+    then generate statistics from scores.
+ -->
+
+<div id="header"></div>
+
+    <div id="content">
+        <!-- PUT BODY HERE -->
+
+        <div class="dropdown">
+            <button onclick="showDrop()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            </div>
+          </div>
+
+
+
+
+
+    </div>
+
+<div id="footer"></div>
+
+<!-- END BODY  -->
+</body>
+</html>

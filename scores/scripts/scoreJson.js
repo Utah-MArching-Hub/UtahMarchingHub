@@ -96,7 +96,7 @@ function getScores() {
 
     table = document.getElementsByClassName('scores')[0]
     $.getJSON('data/scores.json', function (json) {
-        // console.log(json)
+        console.log(json)
         //console.log(json["Scores"])
         scores = json["Scores"]
         for (score in scores) {
