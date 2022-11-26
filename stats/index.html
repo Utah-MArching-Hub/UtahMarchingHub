@@ -16,6 +16,7 @@
 
     <link href="/common/css/common.css" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="../common/css/table.css">
     <link href="" rel="stylesheet" type="text/css" />
 </head>
 
@@ -45,14 +46,33 @@
 
     <div id="content">
         <!-- PUT BODY HERE -->
+        <h1 class="YHead">SCHOOL STATS</h1>
 
         <div class="dropdown">
             <button onclick="showDrop()" class="dropbtn">Dropdown</button>
             <div id="myDropdown" class="dropdown-content">
               <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
             </div>
-          </div>
+        </div>
 
+        <h2 class="YHead" id="SchoolName">SCHOOL</h2>
+
+        <div class="table-container">
+            <table id="scores" class="scores sortable tableStyle">
+                <thead class="tbl-header">
+                    <th onclick="sortTable(this)" value="school">Band</th>
+                    <th onclick="sortTable(this)" value="score">Total</th>
+                    <th onclick="sortTable(this)" value="MEnsemble">Music Ensemble</th>
+                    <th onclick="sortTable(this)" value="MEffect">Music Effect</th>
+                    <th onclick="sortTable(this)" value="MScore">Music</th>
+                    <th onclick="sortTable(this)" value="VEnsemble">Visual Ensemble</th>
+                    <th onclick="sortTable(this)" value="VEffect">Visual Effect</th>
+                    <th onclick="sortTable(this)" value="VScore">Visual</th>
+                    <th onclick="sortTable(this)" value="Percussion">Percussion</th>
+                    <th onclick="sortTable(this)" value="Guard">Guard</th>
+                </thead>
+            </table>
+        </div>
 
 
 

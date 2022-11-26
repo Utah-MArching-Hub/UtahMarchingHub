@@ -28,25 +28,7 @@
 
     function getSchools() {
         document = Document;
-    
-        const params = new Proxy(new URLSearchParams(window.location.search), {
-            get: (searchParams, prop) => searchParams.get(prop),
-        });
-    
-        let year = params.year;
-        let school = params.school;
-    
-        // let order = []
-        // let header = document.querySelector('.tbl-header').children[0].children
-        // for (const key in header) {
-        //     if (Object.hasOwnProperty.call(header, key)) {
-        //         const el = header[key];
-        //         order.push(el.getAttribute('value'))
-        //     }
-        // }
-        
-        // order.splice(order.indexOf('school'), 1)
-        // console.log(order)
+
         console.log("RUNNING")
         div = document.getElementsByClassName('dropdown-content')[0]
         $.getJSON('../scores/data/scores.json', function (json) {
@@ -67,9 +49,16 @@
                 school = schools[num]
                 var item = document.createElement('a')
                 item.innerHTML = school
-                item.setAttribute('href', 'FName('+ school + ')')
+                item.setAttribute('onclick', 'fillSchool("'+ school + '")')
                 item.style.display = "none"
                 $(div).append(item)
             }
         })
+    }
+
+    function fillSchool(school) {
+        document = Document;
+
+        schoolHead = document.getElementById("SchoolName")
+        schoolHead.innerHTML = school
     }
