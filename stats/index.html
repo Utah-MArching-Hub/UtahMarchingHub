@@ -23,6 +23,9 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous">
 </script>
+<script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
 <script src="scripts/script.js"></script>
 <script>
     $(function () {
@@ -60,7 +63,8 @@
         <div class="table-container">
             <table id="scores" class="scores sortable tableStyle">
                 <thead class="tbl-header">
-                    <th onclick="sortTable(this)" value="school">Band</th>
+                    <th onclick="sortTable(this)" value="year">Year</th>
+                    <th onclick="sortTable(this)" value="event">Event</th>
                     <th onclick="sortTable(this)" value="score">Total</th>
                     <th onclick="sortTable(this)" value="MEnsemble">Music Ensemble</th>
                     <th onclick="sortTable(this)" value="MEffect">Music Effect</th>
@@ -72,6 +76,10 @@
                     <th onclick="sortTable(this)" value="Guard">Guard</th>
                 </thead>
             </table>
+        </div>
+        <div>
+            <h2 class="YHead">2022 score progresion!</h2>
+            <canvas id="TTLscore" style="width:100%;max-width:700px"></canvas>
         </div>
 
 

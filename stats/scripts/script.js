@@ -1,5 +1,16 @@
 
     function onLoad() {
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
+        // Get the value of "key" in eg "https://example.com/?key=value"
+        // let key = params.key; is value
+        let school = params.school;
+        console.log(school);
+        if (!(school == null)) {
+            console.log(school);
+            fillSchool(school);
+        }
         getSchools()
     }
 
@@ -56,9 +67,102 @@
         })
     }
 
-    function fillSchool(school) {
-        document = Document;
 
-        schoolHead = document.getElementById("SchoolName")
-        schoolHead.innerHTML = school
+    function fillSchool(school) {
+    console.log("FILLING: " + school)
+    document = Document;
+
+    schoolHead = document.getElementById('SchoolName')
+    schoolHead.innerHTML = school
+    
+
+
+    let order = []
+    let header = document.querySelector('.tbl-header').children[0].children
+    for (const key in header) {
+        if (Object.hasOwnProperty.call(header, key)) {
+            const el = header[key];
+            order.push(el.getAttribute('value'))
+        }
     }
+    
+    // order.splice(order.indexOf('school'), 1)
+    console.log(order)
+
+    table = document.getElementsByClassName('scores')[0]
+    $.getJSON('../scores/data/scores.json', function (json) {
+        console.log(json)
+        //console.log(json["Scores"])
+        scores = json["Scores"]
+        RScores = []
+        // SCORE TABLE
+        $('.tble-row').remove()
+        for (score in scores) {
+            row = scores[score]
+            //console.log(row)
+            if (school === row["school"]) {
+                // console.log("pass")
+                var scoreR = document.createElement('tr')
+                scoreR.classList.add('tble-row')
+                scoreR.setAttribute('ontouchstart', '')
+                RScores.push(row)
+
+                for (const key in order) {
+                    if (Object.hasOwnProperty.call(order, key)) {
+                        const score = order[key];
+
+                        if (score == 'event' || score == "year") {
+                            var item = document.createElement('td')
+                            // var link = document.createElement('a')
+                            // link.innerHTML = row[score]
+                            // link.href = "/school/?school=" + row[score]
+                            // $(item).append(link)
+                            item.innerHTML = row[score]
+                            $(scoreR).append(item)
+                        } else {
+                            console.log(score)
+                            num = row['scores'][score]
+                            var item = document.createElement('td')
+                            item.innerHTML = num
+                            $(scoreR).append(item)
+                        }
+                    }
+                }
+                $(table).append(scoreR)
+            }
+        }
+        // TTL SCORE CHART
+        Events = []
+        TtlScores = []
+        for (num in RScores) {
+            row = RScores[num]
+            if (row["year"] == "2022") {
+                Events.push(row["event"])
+                console.log(row["scores"])
+                TtlScores.push(row["scores"]["score"])
+            }
+        }
+        console.log(Events)
+        console.log(TtlScores)
+
+        new Chart("TTLscore", {
+            type: "line",
+            data: {
+              labels: Events,
+              datasets: [{
+                fill: false,
+                lineTension: 0.1,
+                backgroundColor: "rgba(255,195,36,1)",
+                borderColor: "rgba(255,195,36,0.1)",
+                data: TtlScores
+              }]
+            },
+            options:{
+                legend: {display: false},
+                scales: {
+                  yAxes: [{ticks: {min: 50, max:100}}],
+                }
+            }
+          });
+    })
+}
