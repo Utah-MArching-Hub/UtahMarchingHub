@@ -104,5 +104,87 @@
                 "6A Scholastic"
             ]
         ]
+    },
+    {
+        "id": "oquirrh",
+        "name": "Oquirrh Mountain",
+        "year": "2022",
+        "classes": [
+            "all"
+        ]
+    },
+    {
+        "id": "wasatch",
+        "name": "Wasatch Front",
+        "year": "2022",
+        "classes": [
+            "all"
+        ]
+    },
+    {
+        "id": "bridgerland",
+        "name": "Bridgerland",
+        "year": "2022",
+        "classes": [
+            [
+                "4a",
+                "4A"
+            ],
+            [
+                "5ao",
+                "5A Open"
+            ],
+            [
+                "5as",
+                "5A Scholastic"
+            ],
+            [
+                "6ao",
+                "6A Open"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
+            ]
+        ]
+    },
+    {
+        "id": "davis",
+        "name": "Davis Cup",
+        "year": "2022",
+        "classes": [
+            "all"
+        ]
+    },
+    {
+        "id": "timp",
+        "name": "Mnt Timpanogos",
+        "year": "2022",
+        "classes": [
+            "all"
+        ]
+    },
+    {
+        "id": "bridgerland",
+        "name": "Bridgerland",
+        "year": "2022",
+        "classes": [
+            [
+                "3a",
+                "3A"
+            ],
+            [
+                "4a",
+                "4A"
+            ],
+            [
+                "5ao",
+                "5A Open"
+            ],
+            [
+                "6ao",
+                "6A"
+            ]
+        ]
     }
 ]
