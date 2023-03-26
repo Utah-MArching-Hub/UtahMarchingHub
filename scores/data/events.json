@@ -1,0 +1,108 @@
+[
+    {
+        "id": "nebo",
+        "name": "Nebo Invitational",
+        "year": "2021",
+        "classes": [
+            "all"
+        ]
+    },
+    {
+        "id": "oquirrh",
+        "name": "Oquirrh Mountain",
+        "year": "2021",
+        "classes": [
+            "all"
+        ]
+    },
+    {
+        "id": "wasatch",
+        "name": "Wasatch Front",
+        "year": "2021",
+        "classes": [
+            "all"
+        ]
+    },
+    {
+        "id": "bridgerland",
+        "name": "Bridgerland",
+        "year": "2021",
+        "classes": [
+            "all"
+        ]
+    },
+    {
+        "id": "davis",
+        "name": "Davis Cup",
+        "year": "2021",
+        "classes": [
+            "all"
+        ]
+    },
+    {
+        "id": "timp",
+        "name": "Mnt Timpanogos",
+        "year": "2021",
+        "classes": [
+            "all"
+        ]
+    },
+    {
+        "id": "timp",
+        "name": "Mnt Timpanogos",
+        "year": "2021",
+        "classes": [
+            "all"
+        ]
+    },
+    {
+        "id": "state",
+        "name": "Redrock State",
+        "year": "2021",
+        "classes": [
+            [
+                "3a",
+                "3A"
+            ],
+            [
+                "4a",
+                "4A"
+            ],
+            [
+                "5ao",
+                "5A"
+            ],
+            [
+                "6ao",
+                "6A"
+            ]
+        ]
+    },
+    {
+        "id": "nebo",
+        "name": "Nebo Tournament of Bands",
+        "year": "2022",
+        "classes": [
+            [
+                "3a",
+                "3A"
+            ],
+            [
+                "5ao",
+                "5A Open"
+            ],
+            [
+                "5as",
+                "5A Scholastic"
+            ],
+            [
+                "6ao",
+                "6A Open"
+            ],
+            [
+                "6as",
+                "6A Scholastic"
+            ]
+        ]
+    }
+]
