@@ -1,3 +1,7 @@
+:root{
+    --bs-body-bg: #004dc9 !important;
+}
+
 html {
     height: 100%;
 }
