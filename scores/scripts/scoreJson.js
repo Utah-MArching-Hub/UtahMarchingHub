@@ -24,6 +24,7 @@ function updateurl(key, value) {
 }
 
 function updateScores() {
+    updateMenus()
     resetScores()
     getScores()
 }
@@ -36,6 +37,7 @@ function resetScores() {
 }
 
 function updateDrops() {
+    updateMenus()
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
