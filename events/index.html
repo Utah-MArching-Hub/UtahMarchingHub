@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/common/css/common.css" rel="stylesheet" type="text/css" />
     <link href="" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="scripts//countdown.js"></script>
 </head>
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -29,21 +30,38 @@
 
 <body>
     <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</h1> to improve your experience.</p>
     <![endif]-->
 
     <div id="content">
 
-    <h1 class="YHead">Event Schedules</h1>
+    <h1 class="YHead" >Event Countdowns</h1>
+    <h4>Schedule's coming soon</h4>
     
     <ul ontouchstart>
-        <li><a href="/event/?event=nebo"><button class="button">Nebo</button></a></li>
-        <li><a href="/event/?event=oquirrh"><button class="button">Oquirrh</button></a></li>
-        <li><a href="/event/?event=bridgerland"><button class="button">Bridgerland</button></a></li>
-        <li><a href="/event/?event=wasatch"><button class="button">Wasatch</button></a></li>
-        <li><a href="/event/?event=timp"><button class="button">Timp</button></a></li>
-        <li><a href="/event/?event=davis"><button class="button">Davis</button></a></li>
+        <li><h1>Nebo</h1></li>
+        <li><h2 id="m1">X</h2></li>
+        <script type="text/javascript">countdown("m1", "Sep 16,2023 8:00:00")</script>
+        <li><h1>Oquirrh</h1></li>
+        <li><h2 id="m2">X</h2></li>
+        <script type="text/javascript">countdown("m2", "Sep 23,2023 8:00:00")</script>
+        <li><h1>Bridgerland</h1></li>
+        <li><h2 id="m3">X</h2></li>
+        <script type="text/javascript">countdown("m3", "Sep 30 ,2023 8:00:00")</script>
+        <li><h1>Wasatch</h1></li>
+        <li><h2 id="m4">X</h2></li>
+        <script type="text/javascript">countdown("m4", "Oct 7 ,2023 8:00:00")</script>
+        <li><h1>Timp</h1></li>
+        <li><h2 id="m5">X</h2></li>
+        <script type="text/javascript">countdown("m5", "Oct 14 ,2023 8:00:00")</script>
+        <li><h1>Davis</h1></li>
+        <li><h2 id="m6">X</h2></li>
+        <script type="text/javascript">countdown("m6", "Oct 28,2023 8:00:00")</script>
+        <li><h1>State</h1></li>
+        <li><h2 id="m7">X</h2></li>
+        <script type="text/javascript">countdown("m7", "Nov 4 ,2023 8:00:00")</script>
     </ul>
+
         
     </div>
 
