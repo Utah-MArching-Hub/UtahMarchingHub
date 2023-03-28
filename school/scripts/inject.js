@@ -107,6 +107,7 @@ function trophies() {
             var year = row["year"]
             var event  = row["event"]
             var clas  = row["class"]
+            var date  = row["date"]
 
             if(!(year in events)){
                 events[year] = {}
@@ -120,12 +121,15 @@ function trophies() {
 
             events[year][event][clas].push(row)
             if(row["school"]===schoolN){
-                check.push([year,event,clas])
+                check.push([year,event,clas,date])
             }
         }
         console.log(events)
         console.log(check)
-
+        check.sort(function(a,b){
+            return - new Date(b[3]) - new Date(a[3]);
+        })
+        console.log(check)
         casse = document.querySelector("#case")
 
         for (keys in check) {
