@@ -5,7 +5,9 @@
         "socials" : [
             ["instagram","springvilleband"],
             ["facebook","Springville-High-School-Bands-100048913274737"]
-        ]
+        ],
+        "location":"Springville",
+        "mascot":"Red Devils"
     },
     "Maple Mountain" : {
         "icon" : "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/741/2018/01/25153901/logo_outline.png",
@@ -13,7 +15,8 @@
         "socials" : [
             ["instagram","mmhsband"],
             ["facebook","MMHSBand"]
-        ]
-
+        ],
+        "location":"Mapelton",
+        "mascot":"Golden Eagles"
     }
 }
