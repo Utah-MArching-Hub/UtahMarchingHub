@@ -18,5 +18,34 @@
         ],
         "location":"Mapelton",
         "mascot":"Golden Eagles"
+    },
+    "Salem Hills" : {
+        "icon" : "https://www.uhsaa.org/Logos/Salem%20Hills.png",
+        "url" : "https://www.facebook.com/SalemHillsBands/",
+        "socials" : [
+            ["instagram","salemhillsbands"],
+            ["facebook","SalemHillsBands"]
+        ],
+        "location":"Salem",
+        "mascot":"Skyhawks"
+    },
+    "Payson" : {
+        "icon" : "https://www.uhsaa.org/Logos/Payson.png",
+        "url" : "https://www.facebook.com/Payson-Lion-Bands-393055520789905/",
+        "socials" : [
+            ["facebook","Payson-Lion-Bands"]
+        ],
+        "location":"Payson",
+        "mascot":"Lions"
+    },
+    "Spanish Fork" : {
+        "icon" : "https://www.uhsaa.org/Logos/Spanish%20Fork.png",
+        "url" : "https://spanishforkbands.org/",
+        "socials" : [
+            ["facebook","SpanishForkHighSchoolBands"]
+        ],
+        "location":"Spanish Fork",
+        "mascot":"Dons"
     }
 }
+
