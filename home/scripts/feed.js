@@ -64,8 +64,8 @@ async function upfeed(loadN) {
                 console.log("skip")
             } else {
                 var postDiv = document.createElement("div")
-                var hr = document.createElement("hr")
-                $(postDiv).append(hr)
+                // var hr = document.createElement("hr")
+                // $(postDiv).append(hr)
                 for(item in post) {
                     iContent = post[item]
                     iType = item.split("-")[0]
@@ -196,8 +196,8 @@ async function feed(loadN) {
                 console.log("skip")
             } else {
                 var postDiv = document.createElement("div")
-                var hr = document.createElement("hr")
-                $(postDiv).append(hr)
+                // var hr = document.createElement("hr")
+                // $(postDiv).append(hr)
                 for(item in post) {
                     iContent = post[item]
                     iType = item.split("-")[0]

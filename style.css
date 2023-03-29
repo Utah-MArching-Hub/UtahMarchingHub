@@ -22,7 +22,7 @@
 .dicord-link {
   display: inline-block;
   border-radius: 4px;
-  background-color: #5865F2;
+  background-color: #0015ff;
   border: none;
   color: #23272A;
   text-align: center;
@@ -104,8 +104,22 @@ a {
 
 #feed{
   padding: 10%;
+  justify-content: center;
 }
 
 #feed div{
-  background-color: #7300ff;
+  background-color: #FFC324;
+  justify-content: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+#feed table{
+  width: 80%;
+}
+
+#load-more-button {
+  text-align: center;
+  display: block;
+  margin: auto;
 }
