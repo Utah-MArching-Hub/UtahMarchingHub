@@ -71,6 +71,7 @@ function feed(loadN) {
                         // console.log(iContent)
                         // console.log("^")
                         var trow = document.createElement("tr")
+                        trow.classList.add('tbl-header')
                         cols = iContent["colums"]
                         for(head in cols){ 
                             var thead = document.createElement("th")
@@ -93,6 +94,7 @@ function feed(loadN) {
                                 }
                                 if(!test.includes(false)){
                                     var trow = document.createElement("tr")
+                                    trow.classList.add("tble-row")
                                     for(part in iContent["colums"]) {
                                         if(scoreKeys.includes(iContent["colums"][part])) {
                                             console.log("score")

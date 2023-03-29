@@ -25,7 +25,7 @@ table, th, td {
 }
 
 .tableStyle {
-  width: 100%;
+  width: 80%;
   table-layout: fixed;
   min-width: var(--min-width);
   min-width: var(--min-width);

@@ -100,3 +100,12 @@
 a {
   color:hsl(267, 80%, 70%);
 }
+
+
+#feed{
+  padding: 10%;
+}
+
+#feed div{
+  background-color: #7300ff;
+}
