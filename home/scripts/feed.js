@@ -6,6 +6,9 @@ function isUpper(str) {
         return false
     }
 } 
+function upfeed(loadN) {
+    feed(loadN)
+}
 
 function feed(loadN) {
     document = Document
@@ -43,8 +46,8 @@ function feed(loadN) {
         len = feed.length
         console.log(len)
         console.log(len-loadN)
-        
-        
+        var FeedLen = fDiv.getElementsByTagName('*').length
+        console.log(FeedLen)
         for(let i = len-1; i > len-loadN-1; i--) {
             post = feed[i]
             if(post == undefined){
@@ -127,5 +130,7 @@ function feed(loadN) {
             
         }
     
+    console.log("Wraping up!")
     })
+    console.log("Wraped up!")
 }
