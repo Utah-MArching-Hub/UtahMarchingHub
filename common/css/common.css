@@ -1,7 +1,19 @@
+:root{
+    --bs-body-bg: #004dc9 !important;
+}
+
+html {
+    height: 100%;
+}
+
 body {
-    background-color: rgb(108, 108, 213);
+    background-color: #004dc9;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: Arial;
 }
 
 #content {
-    padding: 1em 2em 2em;
+    padding: 0 2% 2em;
 }
+

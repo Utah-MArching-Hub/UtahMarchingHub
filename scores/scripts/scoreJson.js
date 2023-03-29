@@ -24,6 +24,7 @@ function updateurl(key, value) {
 }
 
 function updateScores() {
+    updateMenus()
     resetScores()
     getScores()
 }
@@ -32,17 +33,18 @@ function resetScores() {
     $('.sort-asc').removeClass('sort-asc');
     $('.sort-desc').removeClass('sort-desc');
     // let table = document.getElementById('scores')
-    $('.tble-score').remove()
+    $('.tble-row').remove()
 }
 
 function updateDrops() {
+    updateMenus()
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
 
     let year = params.year;
     if(year == null){
-        year = "2021" //default value
+        year = "2022" //default value
         updateurl('year', year) 
     }
     yearDrop = document.getElementById("year")
@@ -122,7 +124,7 @@ function getScores() {
             if (yearP && eventP && clasP) {
                 // console.log("pass")
                 var scoreR = document.createElement('tr')
-                scoreR.classList.add('tble-score')
+                scoreR.classList.add('tble-row')
                 scoreR.setAttribute('ontouchstart', '')
 
                 for (const key in order) {
@@ -131,10 +133,11 @@ function getScores() {
 
                         if (score == 'school') {
                             var item = document.createElement('td')
-                            var link = document.createElement('a')
-                            link.innerHTML = row[score]
-                            link.href = "/school/?school=" + row[score]
-                            $(item).append(link)
+                            // var link = document.createElement('a')
+                            // link.innerHTML = row[score]
+                            // link.href = "/school/?school=" + row[score]
+                            // $(item).append(link)
+                            item.innerHTML = row[score]
                             $(scoreR).append(item)
                         } else {
                             console.log(score)
