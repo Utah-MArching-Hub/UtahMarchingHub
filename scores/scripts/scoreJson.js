@@ -24,6 +24,7 @@ function updateurl(key, value) {
 }
 
 function updateScores() {
+    updateMenus()
     resetScores()
     getScores()
 }
@@ -36,13 +37,14 @@ function resetScores() {
 }
 
 function updateDrops() {
+    updateMenus()
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
 
     let year = params.year;
     if(year == null){
-        year = "2021" //default value
+        year = "2022" //default value
         updateurl('year', year) 
     }
     yearDrop = document.getElementById("year")
