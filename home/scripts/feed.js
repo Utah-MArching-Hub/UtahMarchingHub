@@ -11,31 +11,34 @@ function feed(loadN) {
     document = Document
 
     var scores = []
-    $.getJSON('../scores/data/scores.json', function (json) {
-        scores = json["Scores"]
+
+    Promise.all([
+        $.getJSON("../home/data/feed.json"),
+        $.getJSON("../scores/data/scores.json")
+      ]).then(([feedJSON, scoresJSON]) => {
+        feed=feedJSON["feed"]
+        scores = scoresJSON["Scores"]
         console.log("got scores")
-    })
-    scoreKeys = [
-        "MEnsemble",
-        "MEffect",
-        "MScore",
-        "VEnsemble",
-        "VEffect",
-        "VScore",
-        "Percussion",
-        "Guard",
-        "score"
-    ]
-    otherKeys = [
-        "year",
-        "class",
-        "school",
-        "event",
-        "date"
-    ]
-    fDiv = document.querySelector("#feed")
-    $.getJSON("../home/data/feed.json", function(json) {
-        feed=json["feed"]
+
+        scoreKeys = [
+            "MEnsemble",
+            "MEffect",
+            "MScore",
+            "VEnsemble",
+            "VEffect",
+            "VScore",
+            "Percussion",
+            "Guard",
+            "score"
+        ]
+        otherKeys = [
+            "year",
+            "class",
+            "school",
+            "event",
+            "date"
+        ]
+        fDiv = document.querySelector("#feed")
         console.log(feed)
         len = feed.length
         console.log(len)
@@ -123,6 +126,6 @@ function feed(loadN) {
             $(fDiv).append(postDiv)
             
         }
-
+    
     })
 }
