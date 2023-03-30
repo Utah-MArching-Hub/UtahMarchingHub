@@ -133,6 +133,8 @@ async function upfeed(loadN) {
                         var ele = document.createElement('div')
                         $(ele).append(tabl)
                         ele.classList.add('table-container')
+                    } else if (iType === "HTML") {
+                        ele.innerHTML = iContent
                     } else {
                         console.log("txt")
                         var ele = document.createElement(iType)
