@@ -1,5 +1,8 @@
 <html>
 	<style>
+		#footer {
+			z-index: 11;
+		}
 		.footp1 {
 			border: 2px solid #000;
 			margin: 0;
@@ -9,6 +12,7 @@
 			position: fixed;
 			bottom: 0; 
       		width: 100%;
+			z-index: inherit;
 			padding: 5px 10px;
 			border: 0;
 		}
@@ -18,6 +22,7 @@
 			width: inherit;
 			display: block;
 			cursor: pointer;
+			z-index: inherit;
 		}
 		.discord-link-widget {
 			background-color: #5865f2;
@@ -31,13 +36,16 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			z-index: inherit;
 		}
 		.discord-link-widget img {
 			width: 55%;
 			left: 10;
+			z-index: inherit;
 		}
 		a {
 			all: none;
+			z-index: inherit;
 		}
 	</style>
 	<body>

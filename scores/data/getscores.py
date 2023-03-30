@@ -195,12 +195,27 @@ with open('scores.json', mode='r') as file:
 with open('scores.json.bak', mode='w+') as file:
 	file.write(contents)
 
-link = "https://recaps.competitionsuite.com/f13ca6c1-5873-4b6c-823f-83c3087a9a07.htm"
-scores, eventjson = getBandScores(link,"5ao", name='Nebo Invitational')
+link = "http://recaps.competitionsuite.com/dab9fff2-113b-4be9-9218-4901b49d1938.htm"
+scores = getBandScores(link,"5ao")
 print(scores)
 print("---")
-print(eventjson)
-
+def write_json(new_data, filename='/data/scores.json'):
+		with open(filename,'+r') as file:
+			# First we load existing data into a dict.
+			file_data = json.load(file)
+			# Join new_data with file_data inside emp_details
+			for data in new_data:
+				dupe = False
+				for old in file_data["Scores"]:
+					if old["year"] == data["year"] and old["event"] == data["event"] and old["school"] == data["school"] :
+						print("!!!!!!!!!!DUPLICATE!!!!!!!!!!")
+						print(f"old:{old['year']},{old['event']},{old['school']}.NEW:{data['year']},{data['event']},{data['school']}.")
+						dupe = True
+				if dupe == False: 
+					file_data["Scores"].append(data)
+					
+			# Sets file's current position at offset.
+			file.seek(0)
+			# convert back to json.
+			json.dump(file_data, file, indent = 4)
 write_json(scores)
-
-addEvent(eventjson, classes=['3a','5ao','5as','6ao','6as'])
