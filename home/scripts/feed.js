@@ -42,7 +42,9 @@ async function upfeed(loadN) {
         len = feed.length
         console.log(len)
         console.log(len-loadN)
-        var FeedLen = fDiv.getElementsByTagName('div').length
+        var FeedPosts = document.querySelectorAll(".post")
+        var FeedLen = FeedPosts.length
+        console.log(FeedPosts)
         if(FeedLen===len){
             console.log("FULL")
             var Button = document.querySelector("#load-more-button")
@@ -64,6 +66,7 @@ async function upfeed(loadN) {
                 console.log("skip")
             } else {
                 var postDiv = document.createElement("div")
+                postDiv.classList.add("post")
                 // var hr = document.createElement("hr")
                 // $(postDiv).append(hr)
                 for(item in post) {
@@ -126,6 +129,10 @@ async function upfeed(loadN) {
                                     $(ele).append(trow)
                                 }
                             }
+                        var tabl = ele
+                        var ele = document.createElement('div')
+                        $(ele).append(tabl)
+                        ele.classList.add('table-container')
                     } else {
                         console.log("txt")
                         var ele = document.createElement(iType)
@@ -188,14 +195,15 @@ async function feed(loadN) {
         len = feed.length
         console.log(len)
         console.log(len-loadN)
-        var FeedLen = fDiv.getElementsByTagName('*').length
-        console.log(FeedLen)
+        // var FeedLen = fDiv.querySelector('*').length
+        // console.log(FeedLen)
         for(let i = len-1; i > len-loadN-1; i--) {
             post = feed[i]
             if(post == undefined){
                 console.log("skip")
             } else {
                 var postDiv = document.createElement("div")
+                postDiv.classList.add("post")
                 // var hr = document.createElement("hr")
                 // $(postDiv).append(hr)
                 for(item in post) {
@@ -258,6 +266,10 @@ async function feed(loadN) {
                                     $(ele).append(trow)
                                 }
                             }
+                        var tabl = ele
+                        var ele = document.createElement('div')
+                        $(ele).append(tabl)
+                        ele.classList.add('table-container')
                     } else {
                         console.log("txt")
                         var ele = document.createElement(iType)
