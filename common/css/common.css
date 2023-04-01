@@ -17,3 +17,8 @@ body {
     padding: 0 2% 2em;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

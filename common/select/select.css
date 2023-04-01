@@ -4,15 +4,16 @@
     --select-background: white;
     --select-hover-background: skyblue;
     --select-selected-background: lightblue;
-    --select-txt-color: black;
-    --select-hover-txt-color: var(--select-txt-color);
-    --select-selected-txt-color: var(--select-txt-color);
+    --select-text-color: black;
+    --select-hover-text-color: var(--select-text-color);
+    --select-selected-text-color: var(--select-text-color);
     
     --select-border-color: darkgrey;
     --select-border-width: 0.1em;
+    --select-border-radius: 3px;
     --select-font-size: 1rem;
     
-    --select-option-gap: 0em;
+    --select-option-gap: 1em;
     --select-options-border-width: 0.1em;
 
     --select-options-border-radius: 0.4em;
@@ -20,155 +21,93 @@
     --select-options-animation-duration: 40ms;
 }
 
-.select-wrapper {
+.select {
     position: relative;
     width: fit-content;
     display: inline-block;
-}
-.select {
-    position: relative;
-    border-color: var(--select-border-color);
 
-    font-family: --select-font;
+    font-family: var(--select-font);
+    font-size: var(--select-font-size);
 }
 
-.select__trigger:hover,
-.select.open:focus-within .select__trigger,
-.select.open .select__trigger:focus {
-    background-color: var(--select-hover-background);
-}
-
-.select__trigger {
-    /* width: fit-content; */
+.select .trigger {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    color: var(--select-txt-color);
+
+    user-select: none;
+
     background: var(--select-background);
-    cursor: pointer;
-    border-width: var(--select-border-width);
-    border-style: solid;
-    border-color: var(--select-border-color);
-    border-radius: 1.5px;
-    height: 16px;
-    padding: 0 17px 0 4px;
-    font-size: var(--select-font-size);
-    width: initial;
+    border: var(--select-border-color) solid var(--select-border-width);
+    border-radius: var(--select-border-radius);
 
-    user-select: none; /* supported by Chrome and Opera */
-   -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-   -moz-user-select: none; /* Firefox */
-   -ms-user-select: none; /* Internet Explorer/Edge */
+    padding: 0.1em 0.5em;
 }
-.custom-options {
+
+.select .trigger::after {
+    content: "";
+    --triangle-size: 4px;
+    height: var(--triangle-size);
+    margin-left: 0.3em;
+
+    border-top: var(--triangle-size) solid var(--select-text-color);
+    border-left: var(--triangle-size) solid transparent;
+    border-bottom: 0 solid transparent;
+    border-right: var(--triangle-size) solid transparent;
+}
+
+.select .options {
+    display: none;
     position: absolute;
-    top: 100%;
-    visibility: hidden;
-    pointer-events: none;
-    z-index: 2;
-    font-size: var(--select-font-size);
+    z-index: 999;
+
+    min-width: 100%;
     width: max-content;
-    height: 0;
-    overflow-y: hidden;
-    border-style: none;
-    
-    user-select: none; /* supported by Chrome and Opera */
-   -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-   -moz-user-select: none; /* Firefox */
-   -ms-user-select: none; /* Internet Explorer/Edge */
-   
-   transition: height var(--select-options-animation-duration) ease-out, visibility var(--select-options-animation-duration);
+    top: 100%;
+    left: 0;
+
+    margin: 0;
+    padding: 0;
+
+    flex-direction: column;
+
+    border: var(--select-border-color) solid var(--select-border-width);
+    border-radius: 0 0 var(--select-border-radius) var(--select-border-radius);
+
+    background-color: var(--select-border-color);
+    gap: var(--select-border-width);
 }
-.select.open .custom-options {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-    border-color: var(--select-border-color);
-    height: var(--options-height);
-    
-    transition: height var(--select-options-animation-duration) ease-in, visibility var(--select-options-animation-duration);
+
+.select:focus-within .trigger {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
-.custom-option {
-    position: relative;
-    display: block;
-    padding: 0 4px 0 4px;
-    color: var(--select-txt-color);
+
+.select:focus-within .options {
+    display: flex;
+}
+
+.select .option {
+    font-size: 0.9em;
+
+    border: 0;
 
     border-color: var(--select-border-color);
     border-style: solid;
-    
-    border-top-width: var(--select-options-border-width);
-    border-bottom-width: 0;
-    border-bottom-width: calc(var(--select-option-gap) / 2);
-    border-left-width: var(--select-options-border-width);
-    border-right-width: var(--select-options-border-width);
-    
-    background-color: var(--select-background);
-    border-radius: 0;
-}
-.custom-option:last-child {
-    border-bottom-left-radius: var(--select-options-border-radius) !important;
-    border-bottom-right-radius: var(--select-options-border-radius) !important;
-    border-bottom-width: var(--select-options-border-width) !important;
-    margin-bottom: 2px;
 
-    border-bottom-color: var(--select-border-color) !important;
+    text-align: left;
 }
 
-.custom-option:not(.hidden) ~ .custom-option {
-    border-radius: 0;
-    border-top-width: 0;
-    border-top-width: calc(var(--select-option-gap) / 2);
-    border-bottom-width: 0;
-    border-bottom-width: calc(var(--select-option-gap) / 2);
-}
-
-.custom-option:hover,
-.custom-option:focus  {
-    background-color: var(--select-hover-background);
-    color: var(--select-hover-txt-color);
-    cursor: pointer;
-}
-.custom-option.selected {
-    background-color: var(--select-selected-background);
-    color: var(--select-selected-txt-color);
-}
-.custom-option.hidden {
+.select .option.hidden {
     display: none;
 }
 
-.custom-option.selected:hover,
-.custom-option:focus {
+.select .option.selected {
+    background-color: var(--select-selected-background);
+    color: var(--select-selected-text-color);
+}
+
+.select .option:hover {
     background-color: var(--select-hover-background);
+    color: var(--select-hover-text-color);
 }
-
-/* arrow */
-.arrow {
-    position: relative;
-    height: 5px;
-    width: 0px;
-    left: 10px;
-}
-.arrow::before, .arrow::after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    width: 1px;
-    height: 100%;
-    transition: all 0.5s;
-    box-sizing: none;
-}
-.arrow::before {
-    left: -2px;
-    transform: rotate(-45deg);
-    background-color: var(--select-txt-color);
-}
-.arrow::after {
-    left: 2px;
-    transform: rotate(45deg);
-    background-color: var(--select-txt-color);
-}
-
