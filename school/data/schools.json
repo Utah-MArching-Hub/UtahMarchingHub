@@ -1,1 +1,646 @@
-{"American Fork": {"location": "American Fork", "mascot": "Cavemen", "disctrict": "Alpine", "Class": "6A", "icon": "https://seeklogo.com/images/A/american-fork-high-school-logo-5719CB8B55-seeklogo.com.png", "url": "https://www.americanforkband.com/", "socials": [["instagram", "https://www.instagram.com/american_fork_band/"]]}, "Cedar Valley": {"location": "Eagle Mountain", "mascot": "Aviators", "disctrict": "Alpine", "Class": "5A", "icon": "https://upload.wikimedia.org/wikipedia/en/b/b9/Cedar_Valley_High_School_logo.png", "url": "", "socials": [["instagram", "https://www.instagram.com/cedarvalleybands/"]]}, "Lehi": {"location": "Lehi", "mascot": "Pioneers", "disctrict": "Alpine", "Class": "6A", "icon": "https://www.lehibands.com/uploads/2/6/7/7/26770994/published/13938839372.png", "url": "", "socials": [["instagram", "https://www.instagram.com/lehi_bands/"]]}, "Lone Peak": {"location": "Highland", "mascot": "Knights", "disctrict": "Alpine", "Class": "6A", "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/2548/2022/08/29090615/LonePeak_Logo-150x150.png", "url": "", "socials": [["instagram", "https://www.instagram.com/lonepeakhsbands/"]]}, "Orem City": {"location": "Orem", "mascot": "Tigers, Timberwolves, Bruins", "disctrict": "Alpine", "Class": "4A", "icon": "https://instagram.fslc3-1.fna.fbcdn.net/v/t51.2885-19/306360138_839030183928004_1161260564215776749_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fslc3-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=W4CiMo_PGcwAX8I2wDN&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfDjVvNz0MhuHO4WVyiU-PphM5zw_Jjcc4qrLNCNwfHJaw&oe=64B036CF&_nc_sid=ee9879", "url": "", "socials": [["instagram", "https://www.instagram.com/orem_city_marching_band/"]]}, "Pleasant Grove": {"location": "Pleasant Grove", "mascot": "Vikings", "disctrict": "Alpine", "Class": "6A", "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1845/2022/05/12154904/pleasant-Grove-New.png", "url": "", "socials": [["instagram", "https://www.instagram.com/pleasantgrove_band/"]]}, "Skyridge": {"location": "Lehi", "mascot": "Falcons", "disctrict": "Alpine", "Class": "6A", "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1356/2018/03/12194726/skyridge-logo21.png", "url": "", "socials": [["instagram", "https://www.instagram.com/skyridgefalconbands/"]]}, "Westlake": {"location": "Saratoga Springs", "mascot": "Thunder", "disctrict": "Alpine", "Class": "6A", "icon": "https://thunderband.com/wp-content/uploads/2021/05/Thunderband-logo.png", "url": "", "socials": [["instagram", "https://www.instagram.com/westlakethunderbands/"]]}, "Clearfield": {"location": "Clearfield", "mascot": "Falcons", "disctrict": "Davis", "Class": "5A", "icon": "https://d3vbd4zrteu05a.cloudfront.net/uploads/production/school/29115/image/20181010215803_407_mascotOrig.png", "url": "https://www.clearfieldbands.net/home", "socials": [["instagram", "https://www.instagram.com/clearfield.bands/?hl=en"]]}, "Davis": {"location": "Kaysville", "mascot": "Darts", "disctrict": "Davis", "Class": "6A", "icon": "https://www.davisbands.org/uploads/1/2/4/9/124960053/published/dhs-band-logo_1.png", "url": "", "socials": [["instagram", "https://www.instagram.com/davishighbands/"]]}, "Farmington": {"location": "Farmington", "mascot": "Pheonix", "disctrict": "Davis", "Class": "6A", "icon": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1525277802/davisk12utus/uizaqwk7eulqnluwggwh/TealandWhitePhoenixwithSign.png", "url": "", "socials": [["instagram", "https://www.instagram.com/farmingtonhs_bands/"]]}, "Viewmont": {"location": "Bountiful", "mascot": "Vikings", "disctrict": "Davis", "Class": "5A", "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1565/2018/02/08195449/logo_outline.png", "url": "", "socials": [["instagram", "https://www.instagram.com/vhs_marchingband/"]]}, "Green Canyon": {"location": "North Logan", "mascot": "Wolves", "disctrict": "Cache", "Class": "5A", "icon": "https://www.ccsdut.org/cms/lib/UT02205719/Centricity/Template/GlobalAssets/images///logos/GreenCanyonWolf.png", "url": "", "socials": [["instagram", "https://www.instagram.com/gchs_bands/"]]}, "Mountain Crest": {"location": "Hyrum", "mascot": "Mustangs", "disctrict": "Cache", "Class": "4A", "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1094/2017/07/19234344/12600.png", "url": "", "socials": [["instagram", "https://www.instagram.com/mchsbandrecruitment/"]]}, "Ridgeline": {"location": "Millville", "mascot": "RiverHawks", "disctrict": "Cache", "Class": "4A", "icon": "https://www.ccsdut.org/cms/lib/UT02205719/Centricity/Template/GlobalAssets/images///logos/Ridgeline%20logo0.1.png", "url": "", "socials": [["instagram", "https://www.instagram.com/ridge.lineband/"]]}, "Skyview": {"location": "Smithfield", "mascot": "Bobcats", "disctrict": "Cache", "Class": "4A", "icon": "https://s3-us-west-2.amazonaws.com/scorestream-team-profile-pictures/17302/20181010215817_871_mascot300.png", "url": "", "socials": [["instagram", "https://www.instagram.com/svhsmb/"]]}, "Alta": {"location": "Sandy", "mascot": "Hawks", "disctrict": "Canyons", "Class": "5A", "icon": "https://ahs.canyonsdistrict.org/wp-content/uploads/sites/351/2019/08/alta-high-logo.png", "url": "", "socials": [["instagram", "https://www.instagram.com/altamarchingband/"]]}, "Brighton": {"location": "Cottonwood Heights", "mascot": "Bengals", "disctrict": "Canyons", "Class": "5A", "icon": "https://bhs.canyonsdistrict.org/wp-content/uploads/sites/352/2020/06/brighton-high-mascot.png", "url": "", "socials": [["instagram", "https://www.instagram.com/brightonbengalband/"]]}, "Hillcrest": {"location": "Midvale", "mascot": "Huskies", "disctrict": "Canyons", "Class": "4A", "icon": "https://hhs.canyonsdistrict.org/wp-content/uploads/sites/360/2020/09/Hillcrest-Logo.png", "url": "", "socials": [["instagram", "https://www.instagram.com/hillcresthighband/"]]}, "Maple Mountain": {"location": "Spanish Fork", "mascot": "Golden Eagles", "disctrict": "Nebo", "Class": "5A", "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/741/2018/01/25153901/logo_outline.png", "url": "", "socials": [["instagram", "https://www.instagram.com/mmhsband/"]]}, "Payson": {"location": "Payson", "mascot": "Lions", "disctrict": "Nebo", "Class": "4A", "icon": "https://phs.nebo.edu/sites/phs.nebo.edu/files/styles/large/public/2021-08/ATHLETIC-logo-black.png?itok=XJr6WWQD", "url": "", "socials": [["instagram", "https://www.instagram.com/paysonhighbands/"]]}, "Salem Hills": {"location": "Salem", "mascot": "Skyhawks", "disctrict": "Nebo", "Class": "5A", "icon": "https://www.nebo.edu/sites/default/files/SalemHills.png", "url": "", "socials": [["instagram", "https://www.instagram.com/salemhillsbands/"]]}, "Spanish Fork": {"location": "Spanish Fork", "mascot": "Dons", "disctrict": "Nebo", "Class": "5A", "icon": "https://s3-us-west-2.amazonaws.com/scorestream-team-profile-pictures/17312/20181010215819_608_mascotOrig.png", "url": "", "socials": [["instagram", "https://www.instagram.com/sfhsbands/"]]}, "Springville": {"location": "Sprinville", "mascot": "Red Devils", "disctrict": "Nebo", "Class": "5A", "icon": "https://upload.wikimedia.org/wikipedia/en/8/83/SpringvilleHighSchoolLogoUtah.png", "url": "https://www.facebook.com/people/Springville-High-School-Bands/100048913274737/", "socials": [["instagram", "https://www.instagram.com/springvilleband/"]]}, "Bingham": {"location": "South Jordan", "mascot": "Miners", "disctrict": "Jordan", "Class": "6A", "icon": "https://www.binghamminers.org/pics/header_logo.png", "url": "", "socials": [["instagram", "https://www.instagram.com/binghambands/"]]}, "Copper Hills": {"location": "West Jordan", "mascot": "Grizzlys", "disctrict": "Jordan", "Class": "6A", "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1808/2019/07/12180857/Grizzly-New.png", "url": "", "socials": [["instagram", "https://www.instagram.com/copperhillsband/"]]}, "Herriman": {"location": "Herriman", "mascot": "Mustangs", "disctrict": "Jordan", "Class": "6A", "icon": "http://www.herrimanbands.com/uploads/7/9/8/8/79888096/published/hb-mustang3.png", "url": "", "socials": [["instagram", "https://www.instagram.com/officialherrimanbands/"]]}, "Mountain Ridge": {"location": "Herriman", "mascot": "Sentinels", "disctrict": "Jordan", "Class": "6A", "icon": "https://images.squarespace-cdn.com/content/v1/6112e84c65261430ce2afa21/4a35cd86-087b-4194-bc35-90f67a494b03/LOGO.png", "url": "", "socials": [["instagram", "https://www.instagram.com/mt.ridgebands/"]]}, "Riverton": {"location": "Riverton", "mascot": "Silverwolves", "disctrict": "Jordan", "Class": "6A", "icon": "https://www.uhsaa.org/Logos/Riverton.png", "url": "", "socials": [["instagram", "https://www.instagram.com/rivertonhighmusic/"]]}, "West Jordan": {"location": "West Jordan", "mascot": "Jaguars", "disctrict": "Jordan", "Class": "5A", "icon": "https://www.westjordanhigh.org/pics/school_logo.png", "url": "", "socials": [["instagram", "https://www.instagram.com/wjhsjaguarbands/"]]}, "Ogden": {"location": "Ogden", "mascot": "Tigers", "disctrict": "Ogden City", "Class": "3A", "icon": "https://i.imgur.com/2phlSdg.png", "url": "", "socials": [["instagram", "https://www.instagram.com/ogdenhighbands/"]]}, "Provo": {"location": "Provo", "mascot": "Bulldogs", "disctrict": "Provo City", "Class": "4A", "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/861/2017/07/25192123/12617.png", "url": "", "socials": [["instagram", "https://www.instagram.com/provo_high_bands/"]]}, "Timpview": {"location": "Provo", "mascot": "Thunderbirds", "disctrict": "Provo City", "Class": "5A", "icon": "https://upload.wikimedia.org/wikipedia/en/8/83/Timpviewlogo.png", "url": "", "socials": [["instagram", "https://www.instagram.com/timpviewband/"]]}, "Wasatch": {"location": "Heber", "mascot": "Wasps", "disctrict": "Wasatch", "Class": "5A", "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/257/2017/07/14161121/12648.png", "url": "", "socials": [["instagram", "https://www.instagram.com/wasatch.bands/"]]}, "Stansbury": {"location": "Stansbury Park", "mascot": "Stallions", "disctrict": "Tooele", "Class": "4A", "icon": "https://resources.finalsite.net/images/f_auto,q_auto/v1676888623/tooeleschoolsorg/lnwwktexeuzhzfjqgjv9/StansburyHighSchool.png", "url": "", "socials": [["instagram", "https://www.instagram.com/stansbury_high_band/"]]}, "Tooele": {"location": "Tooele", "mascot": "Buffalos", "disctrict": "Tooele", "Class": "4A", "icon": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1687981462/tooeleschoolsorg/oloxpmykkicjyq5zzkpi/thsbig.png", "url": "", "socials": [["instagram", "https://www.instagram.com/tooelehighband/"]]}, "Uintah": {"location": "Vernal", "mascot": "Utes", "disctrict": "Uintah", "Class": "4A", "icon": "https://cdnsm5-ss12.sharpschool.com/UserFiles/Servers/Server_770522/Image/UHS-logo.png", "url": "", "socials": [["instagram", "https://www.instagram.com/uintahband/"]]}, "Fremont": {"location": "Ogden", "mascot": "Silverwolves", "disctrict": "Weber", "Class": "6A", "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/294/2018/04/27164744/FREMONTmainLOGO-copy.png", "url": "", "socials": [["instagram", "https://www.instagram.com/fremont_bands/"]]}, "Roy": {"location": "Roy", "mascot": "Royals", "disctrict": "Weber", "Class": "5A", "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1424/2017/07/12224324/126231.png", "url": "", "socials": [["instagram", "https://www.instagram.com/royhighband/"]]}, "Delta": {"location": "Delta", "mascot": "Rabbits", "disctrict": "Millard", "Class": "3A", "icon": "https://www.millardk12.org/dhs/wp-content/uploads/sites/7/2020/09/DHS-Logo-1536x1536.png", "url": "", "socials": [["instagram", "https://www.instagram.com/deltahigh_band/"]]}, "Canyon View": {"location": "Cedar City", "mascot": "Falcons", "disctrict": "Iron", "Class": "3A", "icon": "https://cmsv2-assets.apptegy.net/uploads/8960/logo/10923/canyon-high.png", "url": "", "socials": [["instagram", ""]]}, "Carbon": {"location": "Price", "mascot": "Dinos", "disctrict": "Carbon", "Class": "3A", "icon": "https://cmsv2-assets.apptegy.net/uploads/2876/file/784270/991e4d89-a5b6-4a76-b722-199bb0e1886c.png", "url": "", "socials": [["instagram", "https://www.instagram.com/carbonhighdinobands/"]]}, "North Sanpete": {"location": "Mt. Pleasant", "mascot": "Hawks", "disctrict": "North Sanpete", "Class": "3A", "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/2957/2021/02/07205306/North_Sanpete_Logo1.png", "url": "", "socials": [["instagram", ""]]}, "Grand County": {"location": "Moab", "mascot": "Red Devils", "disctrict": "Grand County", "Class": "2A", "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/2552/2020/09/22153521/cropped-Grand_County_Logo_white_circle_black_flames_01__1_.png", "url": "", "socials": [["instagram", ""]]}, "Kearns": {"location": "Kearns", "mascot": "Cougars", "disctrict": "Granite", "Class": "5A", "icon": "https://schools.graniteschools.org/kearnshigh/wp-content/uploads/sites/106/2020/02/logo-kearns-high.png", "url": "", "socials": [["instagram", "https://www.instagram.com/kearnshighbands/?hl=en"]]}, "Bear River": {"location": "Garland", "mascot": "Bears", "disctrict": "Box Elder", "Class": "4A", "icon": "https://cmsv2-assets.apptegy.net/uploads/7671/logo/9150/Bear_River_High.png", "url": "", "socials": [["instagram", "https://www.instagram.com/bandsbearriver/"]]}}
+{
+    "American Fork": {
+      "location": "American Fork",
+      "mascot": "Cavemen",
+      "disctrict": "Alpine",
+      "class": "6A",
+      "icon": "https://seeklogo.com/images/A/american-fork-high-school-logo-5719CB8B55-seeklogo.com.png",
+      "url": "https://www.americanforkband.com/",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/american_fork_band/"
+        ]
+      ]
+    },
+    "Cedar Valley": {
+      "location": "Eagle Mountain",
+      "mascot": "Aviators",
+      "disctrict": "Alpine",
+      "class": "5A",
+      "icon": "https://upload.wikimedia.org/wikipedia/en/b/b9/Cedar_Valley_High_School_logo.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/cedarvalleybands/"
+        ]
+      ]
+    },
+    "Lehi": {
+      "location": "Lehi",
+      "mascot": "Pioneers",
+      "disctrict": "Alpine",
+      "class": "6A",
+      "icon": "https://www.lehibands.com/uploads/2/6/7/7/26770994/published/13938839372.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/lehi_bands/"
+        ]
+      ]
+    },
+    "Lone Peak": {
+      "location": "Highland",
+      "mascot": "Knights",
+      "disctrict": "Alpine",
+      "class": "6A",
+      "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/2548/2022/08/29090615/LonePeak_Logo-150x150.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/lonepeakhsbands/"
+        ]
+      ]
+    },
+    "Orem City": {
+      "location": "Orem",
+      "mascot": "Tigers, Timberwolves, Bruins",
+      "disctrict": "Alpine",
+      "class": "4A",
+      "icon": "https://instagram.fslc3-1.fna.fbcdn.net/v/t51.2885-19/306360138_839030183928004_1161260564215776749_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fslc3-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=W4CiMo_PGcwAX8I2wDN&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfDjVvNz0MhuHO4WVyiU-PphM5zw_Jjcc4qrLNCNwfHJaw&oe=64B036CF&_nc_sid=ee9879",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/orem_city_marching_band/"
+        ]
+      ]
+    },
+    "Pleasant Grove": {
+      "location": "Pleasant Grove",
+      "mascot": "Vikings",
+      "disctrict": "Alpine",
+      "class": "6A",
+      "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1845/2022/05/12154904/pleasant-Grove-New.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/pleasantgrove_band/"
+        ]
+      ]
+    },
+    "Skyridge": {
+      "location": "Lehi",
+      "mascot": "Falcons",
+      "disctrict": "Alpine",
+      "class": "6A",
+      "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1356/2018/03/12194726/skyridge-logo21.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/skyridgefalconbands/"
+        ]
+      ]
+    },
+    "Westlake": {
+      "location": "Saratoga Springs",
+      "mascot": "Thunder",
+      "disctrict": "Alpine",
+      "class": "6A",
+      "icon": "https://thunderband.com/wp-content/uploads/2021/05/Thunderband-logo.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/westlakethunderbands/"
+        ]
+      ]
+    },
+    "Clearfield": {
+      "location": "Clearfield",
+      "mascot": "Falcons",
+      "disctrict": "Davis",
+      "class": "5A",
+      "icon": "https://d3vbd4zrteu05a.cloudfront.net/uploads/production/school/29115/image/20181010215803_407_mascotOrig.png",
+      "url": "https://www.clearfieldbands.net/home",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/clearfield.bands/?hl=en"
+        ]
+      ]
+    },
+    "Davis": {
+      "location": "Kaysville",
+      "mascot": "Darts",
+      "disctrict": "Davis",
+      "class": "6A",
+      "icon": "https://www.davisbands.org/uploads/1/2/4/9/124960053/published/dhs-band-logo_1.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/davishighbands/"
+        ]
+      ]
+    },
+    "Farmington": {
+      "location": "Farmington",
+      "mascot": "Pheonix",
+      "disctrict": "Davis",
+      "class": "6A",
+      "icon": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1525277802/davisk12utus/uizaqwk7eulqnluwggwh/TealandWhitePhoenixwithSign.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/farmingtonhs_bands/"
+        ]
+      ]
+    },
+    "Viewmont": {
+      "location": "Bountiful",
+      "mascot": "Vikings",
+      "disctrict": "Davis",
+      "class": "5A",
+      "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1565/2018/02/08195449/logo_outline.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/vhs_marchingband/"
+        ]
+      ]
+    },
+    "Green Canyon": {
+      "location": "North Logan",
+      "mascot": "Wolves",
+      "disctrict": "Cache",
+      "class": "5A",
+      "icon": "https://www.ccsdut.org/cms/lib/UT02205719/Centricity/Template/GlobalAssets/images///logos/GreenCanyonWolf.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/gchs_bands/"
+        ]
+      ]
+    },
+    "Mountain Crest": {
+      "location": "Hyrum",
+      "mascot": "Mustangs",
+      "disctrict": "Cache",
+      "class": "4A",
+      "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1094/2017/07/19234344/12600.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/mchsbandrecruitment/"
+        ]
+      ]
+    },
+    "Ridgeline": {
+      "location": "Millville",
+      "mascot": "RiverHawks",
+      "disctrict": "Cache",
+      "class": "4A",
+      "icon": "https://www.ccsdut.org/cms/lib/UT02205719/Centricity/Template/GlobalAssets/images///logos/Ridgeline%20logo0.1.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/ridge.lineband/"
+        ]
+      ]
+    },
+    "Skyview": {
+      "location": "Smithfield",
+      "mascot": "Bobcats",
+      "disctrict": "Cache",
+      "class": "4A",
+      "icon": "https://s3-us-west-2.amazonaws.com/scorestream-team-profile-pictures/17302/20181010215817_871_mascot300.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/svhsmb/"
+        ]
+      ]
+    },
+    "Alta": {
+      "location": "Sandy",
+      "mascot": "Hawks",
+      "disctrict": "Canyons",
+      "class": "5A",
+      "icon": "https://ahs.canyonsdistrict.org/wp-content/uploads/sites/351/2019/08/alta-high-logo.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/altamarchingband/"
+        ]
+      ]
+    },
+    "Brighton": {
+      "location": "Cottonwood Heights",
+      "mascot": "Bengals",
+      "disctrict": "Canyons",
+      "class": "5A",
+      "icon": "https://bhs.canyonsdistrict.org/wp-content/uploads/sites/352/2020/06/brighton-high-mascot.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/brightonbengalband/"
+        ]
+      ]
+    },
+    "Hillcrest": {
+      "location": "Midvale",
+      "mascot": "Huskies",
+      "disctrict": "Canyons",
+      "class": "4A",
+      "icon": "https://hhs.canyonsdistrict.org/wp-content/uploads/sites/360/2020/09/Hillcrest-Logo.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/hillcresthighband/"
+        ]
+      ]
+    },
+    "Maple Mountain": {
+      "location": "Spanish Fork",
+      "mascot": "Golden Eagles",
+      "disctrict": "Nebo",
+      "class": "5A",
+      "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/741/2018/01/25153901/logo_outline.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/mmhsband/"
+        ]
+      ]
+    },
+    "Payson": {
+      "location": "Payson",
+      "mascot": "Lions",
+      "disctrict": "Nebo",
+      "class": "4A",
+      "icon": "https://phs.nebo.edu/sites/phs.nebo.edu/files/styles/large/public/2021-08/ATHLETIC-logo-black.png?itok=XJr6WWQD",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/paysonhighbands/"
+        ]
+      ]
+    },
+    "Salem Hills": {
+      "location": "Salem",
+      "mascot": "Skyhawks",
+      "disctrict": "Nebo",
+      "class": "5A",
+      "icon": "https://www.nebo.edu/sites/default/files/SalemHills.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/salemhillsbands/"
+        ]
+      ]
+    },
+    "Spanish Fork": {
+      "location": "Spanish Fork",
+      "mascot": "Dons",
+      "disctrict": "Nebo",
+      "class": "5A",
+      "icon": "https://s3-us-west-2.amazonaws.com/scorestream-team-profile-pictures/17312/20181010215819_608_mascotOrig.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/sfhsbands/"
+        ]
+      ]
+    },
+    "Springville": {
+      "location": "Sprinville",
+      "mascot": "Red Devils",
+      "disctrict": "Nebo",
+      "class": "5A",
+      "icon": "https://upload.wikimedia.org/wikipedia/en/8/83/SpringvilleHighSchoolLogoUtah.png",
+      "url": "https://www.facebook.com/people/Springville-High-School-Bands/100048913274737/",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/springvilleband/"
+        ]
+      ]
+    },
+    "Bingham": {
+      "location": "South Jordan",
+      "mascot": "Miners",
+      "disctrict": "Jordan",
+      "class": "6A",
+      "icon": "https://www.binghamminers.org/pics/header_logo.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/binghambands/"
+        ]
+      ]
+    },
+    "Copper Hills": {
+      "location": "West Jordan",
+      "mascot": "Grizzlys",
+      "disctrict": "Jordan",
+      "class": "6A",
+      "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1808/2019/07/12180857/Grizzly-New.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/copperhillsband/"
+        ]
+      ]
+    },
+    "Herriman": {
+      "location": "Herriman",
+      "mascot": "Mustangs",
+      "disctrict": "Jordan",
+      "class": "6A",
+      "icon": "http://www.herrimanbands.com/uploads/7/9/8/8/79888096/published/hb-mustang3.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/officialherrimanbands/"
+        ]
+      ]
+    },
+    "Mountain Ridge": {
+      "location": "Herriman",
+      "mascot": "Sentinels",
+      "disctrict": "Jordan",
+      "class": "6A",
+      "icon": "https://images.squarespace-cdn.com/content/v1/6112e84c65261430ce2afa21/4a35cd86-087b-4194-bc35-90f67a494b03/LOGO.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/mt.ridgebands/"
+        ]
+      ]
+    },
+    "Riverton": {
+      "location": "Riverton",
+      "mascot": "Silverwolves",
+      "disctrict": "Jordan",
+      "class": "6A",
+      "icon": "https://www.uhsaa.org/Logos/Riverton.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/rivertonhighmusic/"
+        ]
+      ]
+    },
+    "West Jordan": {
+      "location": "West Jordan",
+      "mascot": "Jaguars",
+      "disctrict": "Jordan",
+      "class": "5A",
+      "icon": "https://www.westjordanhigh.org/pics/school_logo.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/wjhsjaguarbands/"
+        ]
+      ]
+    },
+    "Ogden": {
+      "location": "Ogden",
+      "mascot": "Tigers",
+      "disctrict": "Ogden City",
+      "class": "3A",
+      "icon": "https://i.imgur.com/2phlSdg.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/ogdenhighbands/"
+        ]
+      ]
+    },
+    "Provo": {
+      "location": "Provo",
+      "mascot": "Bulldogs",
+      "disctrict": "Provo City",
+      "class": "4A",
+      "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/861/2017/07/25192123/12617.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/provo_high_bands/"
+        ]
+      ]
+    },
+    "Timpview": {
+      "location": "Provo",
+      "mascot": "Thunderbirds",
+      "disctrict": "Provo City",
+      "class": "5A",
+      "icon": "https://upload.wikimedia.org/wikipedia/en/8/83/Timpviewlogo.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/timpviewband/"
+        ]
+      ]
+    },
+    "Wasatch": {
+      "location": "Heber",
+      "mascot": "Wasps",
+      "disctrict": "Wasatch",
+      "class": "5A",
+      "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/257/2017/07/14161121/12648.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/wasatch.bands/"
+        ]
+      ]
+    },
+    "Stansbury": {
+      "location": "Stansbury Park",
+      "mascot": "Stallions",
+      "disctrict": "Tooele",
+      "class": "4A",
+      "icon": "https://resources.finalsite.net/images/f_auto,q_auto/v1676888623/tooeleschoolsorg/lnwwktexeuzhzfjqgjv9/StansburyHighSchool.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/stansbury_high_band/"
+        ]
+      ]
+    },
+    "Tooele": {
+      "location": "Tooele",
+      "mascot": "Buffalos",
+      "disctrict": "Tooele",
+      "class": "4A",
+      "icon": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_2/v1687981462/tooeleschoolsorg/oloxpmykkicjyq5zzkpi/thsbig.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/tooelehighband/"
+        ]
+      ]
+    },
+    "Uintah": {
+      "location": "Vernal",
+      "mascot": "Utes",
+      "disctrict": "Uintah",
+      "class": "4A",
+      "icon": "https://cdnsm5-ss12.sharpschool.com/UserFiles/Servers/Server_770522/Image/UHS-logo.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/uintahband/"
+        ]
+      ]
+    },
+    "Fremont": {
+      "location": "Ogden",
+      "mascot": "Silverwolves",
+      "disctrict": "Weber",
+      "class": "6A",
+      "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/294/2018/04/27164744/FREMONTmainLOGO-copy.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/fremont_bands/"
+        ]
+      ]
+    },
+    "Roy": {
+      "location": "Roy",
+      "mascot": "Royals",
+      "disctrict": "Weber",
+      "class": "5A",
+      "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1424/2017/07/12224324/126231.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/royhighband/"
+        ]
+      ]
+    },
+    "Delta": {
+      "location": "Delta",
+      "mascot": "Rabbits",
+      "disctrict": "Millard",
+      "class": "3A",
+      "icon": "https://www.millardk12.org/dhs/wp-content/uploads/sites/7/2020/09/DHS-Logo-1536x1536.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/deltahigh_band/"
+        ]
+      ]
+    },
+    "Canyon View": {
+      "location": "Cedar City",
+      "mascot": "Falcons",
+      "disctrict": "Iron",
+      "class": "3A",
+      "icon": "https://cmsv2-assets.apptegy.net/uploads/8960/logo/10923/canyon-high.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          ""
+        ]
+      ]
+    },
+    "Carbon": {
+      "location": "Price",
+      "mascot": "Dinos",
+      "disctrict": "Carbon",
+      "class": "3A",
+      "icon": "https://cmsv2-assets.apptegy.net/uploads/2876/file/784270/991e4d89-a5b6-4a76-b722-199bb0e1886c.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/carbonhighdinobands/"
+        ]
+      ]
+    },
+    "North Sanpete": {
+      "location": "Mt. Pleasant",
+      "mascot": "Hawks",
+      "disctrict": "North Sanpete",
+      "class": "3A",
+      "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/2957/2021/02/07205306/North_Sanpete_Logo1.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          ""
+        ]
+      ]
+    },
+    "Grand County": {
+      "location": "Moab",
+      "mascot": "Red Devils",
+      "disctrict": "Grand County",
+      "class": "2A",
+      "icon": "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/2552/2020/09/22153521/cropped-Grand_County_Logo_white_circle_black_flames_01__1_.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          ""
+        ]
+      ]
+    },
+    "Kearns": {
+      "location": "Kearns",
+      "mascot": "Cougars",
+      "disctrict": "Granite",
+      "class": "5A",
+      "icon": "https://schools.graniteschools.org/kearnshigh/wp-content/uploads/sites/106/2020/02/logo-kearns-high.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/kearnshighbands/?hl=en"
+        ]
+      ]
+    },
+    "Bear River": {
+      "location": "Garland",
+      "mascot": "Bears",
+      "disctrict": "Box Elder",
+      "class": "4A",
+      "icon": "https://cmsv2-assets.apptegy.net/uploads/7671/logo/9150/Bear_River_High.png",
+      "url": "",
+      "socials": [
+        [
+          "instagram",
+          "https://www.instagram.com/bandsbearriver/"
+        ]
+      ]
+    }
+  }
