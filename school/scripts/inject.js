@@ -11,15 +11,21 @@ function inject() {
     });
     let schoolN = params.school;
     $.getJSON('data/schools.json', function (json) {
-        schools=json["schools"]
+        schools=json
+        console.log(schoolN)
+        console.log(schools[0])
         school=schools[schoolN]
+        document.getElementById('name').innerHTML = schoolN
         for (id in school) {
             console.log(id)
-            if(id == "logo") {
-                console.log("--logo--")
+            valids = ['icon','location','mascot','class']
+            if (!valids.includes(id)) {
+                continue
+            }
+            console.log(id)
+            if(id == "icon") {
                 document.getElementById(id).src = school[id]
             } else {
-                console.log("txt")
                 document.getElementById(id).innerHTML = school[id]
             }
         }
