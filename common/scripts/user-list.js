@@ -1,17 +1,19 @@
-function loadUsers(path, id, disct='none' ,schoolpath=false, invertDisct = false) {
-    function getsocial(social, username) {
+function loadUsers(path, id, disct='none' ,schoolpath=false, invertDisct = false, rawUrls=false) {
+    function getsocial(social, username,rawUrls) {
         var url = ''
+        console.log(rawUrls)
         if (social == 'github') {
             url = 'https://github.com/' + username + '/'
-        } else if (social == 'twitch') {
+        } else if (social == 'twitch' ) {
             url = 'https://twitch.tv/' + username + '/'
-        } else if (social == 'twitter') {
+        } else if (social == 'twitter' ) {
             url = 'https://twitter.com/' + username + '/'
-        } else if (social == 'instagram') {
+        } else if (social == 'instagram' ) {
+            console.log('Insta')
             url = 'https://instagram.com/' + username + '/'
-        } else if (social == 'reddit') {
+        } else if (social == 'reddit' ) {
             url = 'https://www.reddit.com/user/' + username + '/'
-        } else if (social == 'facebook') {
+        } else if (social == 'facebook' ) {
             if (typeof username == 'string') {
                 page = username
             } else if (['u','user'].includes(username[0])) {
@@ -22,7 +24,7 @@ function loadUsers(path, id, disct='none' ,schoolpath=false, invertDisct = false
                 return ''
             }
             url = 'https://facebook.com/' + page + '/'
-        } else if (social == 'youtube') {
+        } else if (social == 'youtube' ) {
             if (typeof username == 'string') {
                 channel = 'channel/' + username
             } else if (['c','custom'].includes(username[0])) {
@@ -68,10 +70,10 @@ function loadUsers(path, id, disct='none' ,schoolpath=false, invertDisct = false
         // console.log(json);
         for (user in json) {
             if (!disct.includes(json[user]['disctrict']) && disct != 'none' && !invertDisct) {
-                console.log('skipping')
+                console.log('skipping white')
                 continue
             } else if (disct.includes(json[user]['disctrict']) && disct != 'none' && invertDisct) {
-                console.log('skipping')
+                console.log('skipping black')
                 continue
             }
             if (schoolpath) {
@@ -106,13 +108,19 @@ function loadUsers(path, id, disct='none' ,schoolpath=false, invertDisct = false
             
             for (social in socials) {
                 if (!socials[social][1] == '' && !(typeof socials[social][1] != 'string' && socials[social][1].includes(''))) {
-                    link = getsocial(socials[social][0], socials[social][1])
+                    if (rawUrls) {
+                        link = socials[social][1]
+                        console.log('Bypass')
+                    } else {
+                        link = getsocial(socials[social][0], socials[social][1])
+                        console.log('running')
+                    }
                     if (link == '') {
                         continue
                     }
                     var socialLink = document.createElement('a')
                     socialLink.setAttribute('target', '_blank')
-                    socialLink.setAttribute('href', getsocial(socials[social][0],socials[social][1]))
+                    socialLink.setAttribute('href', link)
 
                     if (!socialclasses.includes(socials[social][0])) {
                         socials[social][0] = 'site'
