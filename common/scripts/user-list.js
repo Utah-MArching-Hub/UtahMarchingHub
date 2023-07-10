@@ -1,4 +1,4 @@
-function loadUsers(path, id) {
+function loadUsers(path, id, disct='none', schoolpath=false) {
     function getsocial(social, username) {
         var url = ''
         if (social == 'github') {
@@ -67,7 +67,15 @@ function loadUsers(path, id) {
         
         // console.log(json);
         for (user in json) {
-            url = json[user]['url']
+            if (json[user]['disctrict'] != disct && disct != 'none') {
+                console.log('skipping')
+                continue
+            }
+            if (schoolpath) {
+                url = '/school/?school=' + user
+            } else {
+                url = json[user]['url']
+            }   
             icon = json[user]['icon']
             socials = json[user]['socials']
 
