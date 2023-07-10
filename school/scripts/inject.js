@@ -11,11 +11,25 @@ function inject() {
         get: (searchParams, prop) => searchParams.get(prop),
     });
     let schoolN = params.school;
-    let disctrict = params.disctrict;
-    console.log(disctrict)
-    $.getJSON('/schools/district/'+disctrict+'.json', function (json) {
-        school=json[schoolN]
-        console.log(school)
+    $.getJSON('data/schools.json', function (json) {
+        schools=json
+        console.log(schoolN)
+        console.log(schools[0])
+        school=schools[schoolN]
+        document.getElementById('name').innerHTML = schoolN
+        for (id in school) {
+            console.log(id)
+            valids = ['icon','location','mascot','class']
+            if (!valids.includes(id)) {
+                continue
+            }
+            console.log(id)
+            if(id == "icon") {
+                document.getElementById(id).src = school[id]
+            } else {
+                document.getElementById(id).innerHTML = school[id]
+            }
+        }
 
         document.getElementById("logo").src = school['icon']
         document.getElementById("location").innerHTML = school['location']
