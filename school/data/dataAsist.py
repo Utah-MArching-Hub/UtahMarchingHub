@@ -44,13 +44,18 @@ sdata = load_csv_to_dict('./school/data/schools.csv')
 # print(sdata)
 ndata = {}
 
+mainTypes = ['location','disctrict','class','mascot','icon','url']
+
 for n in sdata:
+    socials = False
     i = sdata[n]
     ndata[n] = {}
     for nn in i:
         ii = sdata[n][nn]
-        if nn == "socials":
-            ndata[n][nn]=[['instagram',ii]]
+        if not nn in mainTypes:
+            if not socials:
+                ndata[n][nn] =[]
+            ndata[n][nn].append(['instagram',ii])
         else:
             ndata[n][nn]=ii
 
