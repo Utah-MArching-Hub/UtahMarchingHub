@@ -1,4 +1,4 @@
-function loadUsers(path, id, disct='none', schoolpath=false) {
+function loadUsers(path, id, disct='none' ,schoolpath=false, invertDisct = false) {
     function getsocial(social, username) {
         var url = ''
         if (social == 'github') {
@@ -67,7 +67,10 @@ function loadUsers(path, id, disct='none', schoolpath=false) {
         
         // console.log(json);
         for (user in json) {
-            if (json[user]['disctrict'] != disct && disct != 'none') {
+            if (!disct.includes(json[user]['disctrict']) && disct != 'none' && !invertDisct) {
+                console.log('skipping')
+                continue
+            } else if (disct.includes(json[user]['disctrict']) && disct != 'none' && invertDisct) {
                 console.log('skipping')
                 continue
             }
