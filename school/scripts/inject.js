@@ -145,9 +145,20 @@ function trophies() {
         })
         console.log(check)
         casse = document.querySelector("#case")
-
+        year = 'unset'
         for (keys in check) {
             keys = check[keys]
+            if (year != keys[0] || year == 'unset') {
+                line = document.createElement('div')
+                line.classList.add('strike')
+                span = document.createElement('span')
+                span.innerHTML = keys[0]
+                casse = document.querySelector("#case")
+                $(line).append(span)
+                $(casse).append(line)
+            }
+            year = keys[0]
+            console.log(year)
             event = events[keys[0]][keys[1]][keys[2]]
             for (school in event) {
                 school=event[school]

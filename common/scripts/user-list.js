@@ -83,7 +83,9 @@ function loadUsers(path, id, disct='none' ,schoolpath=false, invertDisct = false
             }   
             icon = json[user]['icon']
             socials = json[user]['socials']
-
+            if (schoolpath) {
+                socials.push(['site',json[user]['url']])
+            }
             var userdiv = document.createElement('div');
             userdiv.classList.add('user');
             userdiv.setAttribute('ontouchstart', '');
