@@ -54,8 +54,9 @@ for n in sdata:
         ii = sdata[n][nn]
         if not nn in mainTypes:
             if not socials:
-                ndata[n][nn] =[]
-            ndata[n][nn].append(['instagram',ii])
+                ndata[n]['socials'] =[]
+                socials = True
+            ndata[n]['socials'].append([nn,ii])
         else:
             ndata[n][nn]=ii
 
