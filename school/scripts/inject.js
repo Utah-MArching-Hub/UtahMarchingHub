@@ -4,6 +4,14 @@ function load() {
     trophies()
 }
 
+var loadFile = function (filePath, done) {
+    var fr = new FileReader();
+    fr.onload = function () { return done(this.result); }
+    fr.readAsText(filePath);
+}
+
+
+
 function inject() {
     document = Document;
 
@@ -11,8 +19,15 @@ function inject() {
         get: (searchParams, prop) => searchParams.get(prop),
     });
     let schoolN = params.school;
-    $.getJSON('data/schools.json', function (json) {
-        schools=json
+    links = ''
+    schholsjsonP  = $.getJSON('data/schools.json')
+    eventsjsonP  = $.getJSON('/scores/data/events.json')
+    $.when(schholsjsonP, eventsjsonP)
+        .done(function(schholsjson, eventsjson) {
+        schools=schholsjson[0]
+        events=eventsjson[0]
+        console.log(schools)
+        console.log(events)
         console.log(schoolN)
         console.log(schools[0])
         school=schools[schoolN]
@@ -25,8 +40,10 @@ function inject() {
             }
             console.log(id)
             if(id == "icon") {
+                console.log('pass icon')
                 document.getElementById(id).src = school[id]
             } else {
+                console.log('pass other')
                 document.getElementById(id).innerHTML = school[id]
             }
         }
@@ -35,7 +52,12 @@ function inject() {
         document.getElementById("location").innerHTML = school['location']
         document.getElementById("mascot").innerHTML = school['mascot']
         document.getElementById("name").innerHTML = schoolN
+        links = document.getElementsByClassName('scores-link')
         table = document.getElementsByClassName('scores')[0]
+        console.log('links')
+        for (evnt in events) {
+            console.log(evnt)
+        }
     })
 }
 
