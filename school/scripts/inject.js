@@ -22,10 +22,12 @@ function inject() {
     links = ''
     schholsjsonP  = $.getJSON('data/schools.json')
     eventsjsonP  = $.getJSON('/scores/data/events.json')
-    $.when(schholsjsonP, eventsjsonP)
-        .done(function(schholsjson, eventsjson) {
+    scoresjsonP  = $.getJSON('/scores/data/scores.json')
+    $.when(schholsjsonP, eventsjsonP, scoresjsonP)
+        .done(function(schholsjson, eventsjson, scoresjson) {
         schools=schholsjson[0]
         events=eventsjson[0]
+        scoresdat=scoresjson[0]
         console.log(schools)
         console.log(events)
         console.log(schoolN)
@@ -48,16 +50,21 @@ function inject() {
             }
         }
 
-        document.getElementById("logo").src = school['icon']
-        document.getElementById("location").innerHTML = school['location']
-        document.getElementById("mascot").innerHTML = school['mascot']
-        document.getElementById("name").innerHTML = schoolN
-        links = document.getElementsByClassName('scores-link')
-        table = document.getElementsByClassName('scores')[0]
-        console.log('links')
-        for (evnt in events) {
-            console.log(evnt)
-        }
+        // document.getElementById("logo").src = school['icon']
+        // document.getElementById("location").innerHTML = school['location']
+        // document.getElementById("mascot").innerHTML = school['mascot']
+        // document.getElementById("name").innerHTML = schoolN
+        // clas = school['class']
+        // links = document.getElementsByClassName('scores-link')
+        // table = document.getElementsByClassName('scores')[0]
+        // console.log('links')
+        // for (evnt in events) {
+        //     evnt = events[evnt]
+        //     console.log(evnt)
+        //     if(evnt['classes'].includes(clas) || evnt['classes'].includes('all')) {
+        //         console.log('IS HERE')
+        //     }
+        // }
     })
 }
 
@@ -73,6 +80,7 @@ function scores() {
     $.getJSON('/scores/data/scores.json', function (json) {
         
         scores = json["Scores"] // Get the "Scores" array from the JSON data.
+        links = document.querySelector('.scores-link')
         
         // Loop through each item in the "Scores" array.
         for (score in scores) {
