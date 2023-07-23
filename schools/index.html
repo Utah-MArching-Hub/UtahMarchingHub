@@ -43,19 +43,27 @@
         
         <h2>Alpine School District</h2>
         <div class="users" id="alpine"></div>
-        <script>loadUsers('district/alpine.json', 'alpine')</script>
+        <script>loadUsers('/school/data/schools.json', 'alpine', "Alpine", true, false, true)</script>
         
-        <h2>Nebo School District</h2>
+        <h2>Nebo & Provo School Districts</h2>
         <div class="users" id="nebo"></div>
-        <script>loadUsers('district/nebo.json', 'nebo')</script>
+        <script>loadUsers('/school/data/schools.json', 'nebo', ["Nebo",'Provo City'], true, false, true)</script>
 
         <h2>Davis School District</h2>
         <div class="users" id="davis"></div>
-        <script>loadUsers('district/davis.json', 'davis')</script>
+        <script>loadUsers('/school/data/schools.json', 'davis', "Davis", true, false, true)</script>
 
         <h2>Jordan School District</h2>
         <div class="users" id="jordan"></div>
-        <script>loadUsers('district/jordan.json', 'jordan')</script>
+        <script>loadUsers('/school/data/schools.json', 'jordan', "Jordan", true, false, true)</script>
+
+        <h2>Cache School District</h2>
+        <div class="users" id="cache"></div>c
+        <script>loadUsers('/school/data/schools.json', 'cache', 'Cache', true, false, true)</script>
+
+        <h2>Other School Districts</h2>
+        <div class="users" id="other"></div>
+        <script>loadUsers('/school/data/schools.json', 'other', ['Alpine','Nebo','Davis','Jordan','Provo City','Cache'], true, true, true)</script>
         
         <div class="notice">
             <p class="missing-school">Is your school missing? <strong><a href="https://forms.gle/YieycSZbW6xWwfhV7" target="_blank">CLICK HERE</a></strong> to let us know!</p>

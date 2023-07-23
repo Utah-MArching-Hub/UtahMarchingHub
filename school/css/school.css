@@ -1,8 +1,58 @@
-#logo {
+#icon {
     float: left
 }
 
-/* Score sheet style */
+.medal{
+    width: 50px;
+    height: 50px;
+}
+  
 
+#case {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#case img {
+    margin: 0px;
+    max-width: 100%;
+    height: auto;
+}
+
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.strike > span {
+    position: relative;
+    display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: black;
+}
+
+.strike > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.strike > span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+  
+  
   
   
