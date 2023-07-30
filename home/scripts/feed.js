@@ -5,8 +5,31 @@ function isUpper(str) {
     } else {
         return false
     }
+    
 } 
-async function upfeed(loadN) {
+
+async function parseMarkdownContent(content) {
+    console.log(content)
+    return new Promise((resolve, reject) => {
+      marked.setOptions({
+        gfm: true, // Enable GitHub Flavored Markdown
+        breaks: true, // Enable automatic line breaks
+      });
+  
+      marked(content, (err, parsedContent) => {
+        if (err) {
+            reject(err);
+        } else {
+            console.log(parsedContent)
+            resolve(parsedContent);
+        }
+      });
+    });
+  }
+  
+
+
+  async function upfeed(loadN) {
     document = Document
 
     var scores = []
@@ -14,7 +37,7 @@ async function upfeed(loadN) {
     Promise.all([
         await $.getJSON("../home/data/feed.json"),
         await $.getJSON("../scores/data/scores.json")
-      ]).then(([feedJSON, scoresJSON]) => {
+      ]).then(async([feedJSON, scoresJSON]) => {
         feed=feedJSON["feed"]
         scores = scoresJSON["Scores"]
         console.log("got scores")
@@ -69,11 +92,14 @@ async function upfeed(loadN) {
                 postDiv.classList.add("post")
                 // var hr = document.createElement("hr")
                 // $(postDiv).append(hr)
-                for(item in post) {
+                for (const [iType, iContent] of Object.entries(post)) {
                     iContent = post[item]
                     iType = item.split("-")[0]
                     console.log("("+iContent+","+iType+")")
-                    if(iType == "img") {
+                    if (iType == 'md'){
+                        const parsedContent = await parseMarkdownContent(iContent);
+                        postDiv.innerHTML = parsedContent
+                     }else if(iType == "img") {
                         console.log("img")
                         var ele = document.createElement("img")
                         ele.setAttribute("src",iContent)
@@ -140,8 +166,7 @@ async function upfeed(loadN) {
                         var ele = document.createElement(iType)
                         ele.innerHTML = iContent
                     }
-                    $(postDiv).append(ele)
-
+                    if (iType != 'md') {$(postDiv).append(ele)}
                 }
 
             }
@@ -169,7 +194,7 @@ async function feed(loadN) {
     Promise.all([
         await $.getJSON("../home/data/feed.json"),
         await $.getJSON("../scores/data/scores.json")
-      ]).then(([feedJSON, scoresJSON]) => {
+      ]).then(async([feedJSON, scoresJSON]) => {
         feed=feedJSON["feed"]
         scores = scoresJSON["Scores"]
         console.log("got scores")
@@ -199,6 +224,7 @@ async function feed(loadN) {
         console.log(len-loadN)
         // var FeedLen = fDiv.querySelector('*').length
         // console.log(FeedLen)
+        
         for(let i = len-1; i > len-loadN-1; i--) {
             post = feed[i]
             if(post == undefined){
@@ -208,11 +234,36 @@ async function feed(loadN) {
                 postDiv.classList.add("post")
                 // var hr = document.createElement("hr")
                 // $(postDiv).append(hr)
-                for(item in post) {
-                    iContent = post[item]
-                    iType = item.split("-")[0]
+
+
+                Object.entries(post).forEach(async([iType, iContent]) => {
+                    // iContent = post[item]
+                    iType = iType.split("-")[0]
                     console.log("("+iContent+","+iType+")")
-                    if(iType == "img") {
+                    if (iType == 'md'){
+
+
+                        Promise.all([
+                            await parseMarkdownContent(iContent)
+                        ]).then(async([iContent]) => {
+                            console.log('finish!')
+                            console.log(iContent)
+                            postDiv.innerHTML = iContent
+                        })
+
+                        iContent = await parseMarkdownContent(iContent);
+
+                        console.log('finish!')
+                        console.log(iContent)
+                        // postDiv.innerHTML = iContent
+                        var ele = document.createElement('div')
+                        ele.innerHTML = iContent
+
+                        // parseMarkdownContent(iContent).then((parsedContent) => {
+                        //     var ele = document.createElement('div');
+                        //     ele.innerHTML = parsedContent;
+                        // })
+                     }else if(iType == "img") {
                         console.log("img")
                         var ele = document.createElement("img")
                         ele.setAttribute("src",iContent)
@@ -277,9 +328,10 @@ async function feed(loadN) {
                         var ele = document.createElement(iType)
                         ele.innerHTML = iContent
                     }
-                    $(postDiv).append(ele)
-
-                }
+                    if (iType != 'md') {$(postDiv).append(ele)}
+                    // console.log(ele)
+                    // $(postDiv).append(ele)
+                })
 
             }
             $(fDiv).append(postDiv)
