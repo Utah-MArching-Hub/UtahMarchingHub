@@ -3,3 +3,4 @@
 scores/data/last-scores.json
 *.venv*
 *__pycache__*
+last-scores.json
