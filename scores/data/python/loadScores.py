@@ -48,9 +48,6 @@ def loadScores(
             for clas in range(len(events[event]['performances']['classes'])):
                 data = events[event]['performances']['classes'][clas]
                 scores, eventjson = getscores.getBandScores(data['fullRecapUrl'], data['class'], name=events[event]['name'])
-
-                # put discord bot code here. You may need to check if the
-                # scores already exist, because I don't check for that.
                 
                 newScores = getscores.getNewScoresData(scores, filename=scoresFilename)
                 
@@ -67,6 +64,9 @@ def loadScores(
                 
                 if callable(existCallback):
                     existCallback(newScores)
+                
+                # You can either put the discord bot code here,
+                # or pass the function into the `existCallback` parameter (check `main.py`)
 
                 getscores.write_json(newScores, filename=scoresFilename)
                 getscores.addEvent(eventjson, filename=eventsFilename)
