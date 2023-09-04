@@ -2,23 +2,21 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 import requests
 
-import js2py as js
-# I use this because it's the easiest way to get the data.
-# Run 
-#
-#   `pip install js2py`
-# or 
-#   `pip3 install js2py`
-# or 
-#   `py -m pip install js2py`
-#
-# to use it
-
 import json
 
 import pprint
 
 pp = pprint.PrettyPrinter(indent=2)
+
+from py_mini_racer import MiniRacer
+jsContext = MiniRacer()
+
+def runJavascript(javascript : str):
+    while javascript.endswith(';'):
+        javascript = javascript[:-1]
+    
+    # print(f'javascript:\n{javascript}')
+    return jsContext.execute(javascript)
 
 # decided to use a class because it was getting messy in a function
 
@@ -49,19 +47,20 @@ class getComps():
 
         self.loadData()
 
-
-
-    def getSeasons(self):
+    def getSeasons(self, fullData = True):
         url = f'{self.domain}api/orgscores/GetSeasons/jsonp?organization={self.currentOrgGuid}&version={self.version}&callback=result='
         # print(url)
-        result = js.eval_js( requests.get(url).text )
+        result = runJavascript( requests.get(url).text )
         # print(result)
-        seasons = self.getSeasonList(result)
+        if fullData:
+            seasons = self.getSeasonList(result)
 
-        return seasons
+            return seasons
+        else:
+            return result
         
     def getSeasonList(self, data):
-        self.currentOrgInitials = data['organizationInitials']
+        self.currentOrgInitials = data[0]['organizationInitials']
 
         seasons = []
 
@@ -91,19 +90,16 @@ class getComps():
     def getEvents(self):
         if self.currentSeasonGuid:
             # print(f'{self.currentSeasonGuid = }')
-            url = self.domain + "api/orgscores/GetCompetitionsBySeason/jsonp?season=" + self.currentSeasonGuid + "&showTrainingEvents=" + str(self.settingTest) + "&version=" + self.version + "&callback=result="
-            result = js.eval_js( requests.get(url).text )
-            # print(result)
-            complist = self.getCompetitionList(result)
-            # print(complist)
-            return complist
+            url = f"{self.domain}api/orgscores/GetCompetitionsBySeason/jsonp?season={self.currentSeasonGuid}&showTrainingEvents={str(self.settingTest)}&version={self.version}&callback=result="
+            result = runJavascript( requests.get(url).text )
 
         else:
-            url = self.domain + "api/orgscores/GetCompetitionsByOrganization/jsonp?organization=" + self.currentOrgGuid + "&showTrainingEvents=" + str(self.settingTest) + "&version=" + self.version + "&callback=result="
-            result = js.eval_js( requests.get(url).text )
+            url = f"{self.domain}api/orgscores/GetCompetitionsByOrganization/jsonp?organization={self.currentOrgGuid}&showTrainingEvents={str(self.settingTest)}&version={self.version}&callback=result="
+            result = runJavascript( requests.get(url).text )
             # print(result)
-            complist = self.getCompetitionList(result)
-            return complist
+        
+        complist = self.getCompetitionList(result)
+        return complist
             
 
     def getCompetitionList(self, data):
@@ -129,14 +125,14 @@ class getComps():
     def getPerformances(self, competition=None):
         if competition:
             url = self.domain + "api/orgscores/GetCompetition/jsonp?competition=" + competition + "&version=" + self.version + "&callback=result="
-            result = js.eval_js( requests.get(url).text )
+            result = runJavascript( requests.get(url).text )
             # print(result)
             performances = self.getPerformanceList(result)
             return performances
 
         else:
             url = self.domain + "api/orgscores/GetLatestCompetition/jsonp?competition=" + self.currentOrgGuid + "&version=" + self.version + "&callback=result="
-            result = js.eval_js( requests.get(url).text )
+            result = runJavascript( requests.get(url).text )
             # print(result)
             events = self.getEvents()
             return events

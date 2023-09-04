@@ -1,6 +1,6 @@
+import typing
 import json
 # import sys
-import schedule
 
 # sys.path.insert(0, 'python/')
 import getscorelist as scorelist
@@ -10,7 +10,24 @@ import getscores
 scoresObj = scorelist.getComps(url='https://www-umea-us.filesusr.com/html/4a996b_94944928dddae9e892d2136a828f4bc9.html')
 # print(scoresObj)
 
-def loadScores(season=None):
+def loadScores(
+    season = None,
+    year = None,
+    scoresFilename = '../scores.json',
+    eventsFilename = '../events.json',
+    existCallback : typing.Callable[[list[dict]], typing.Any] = None,
+    noBackup = False,
+):
+    if season == None and year != None:
+        print(f'year: {year}')
+        seasons = scoresObj.getSeasons(fullData = False)
+        
+        for s in seasons:
+            if year in s['name']:
+                season = s['seasonGuid']
+                print(f'season: {season}')
+                break
+    
     events = scoresObj.loadSeason(season)
     try:
         with open('last-scores.json', 'r', encoding='utf-8') as file:
@@ -19,7 +36,7 @@ def loadScores(season=None):
         lastScores = None
 
     print(lastScores == events)
-    if lastScores == events:
+    if not noBackup and lastScores == events:
         print('already on current scores')
     else:
         with open('last-scores.json', 'w', encoding='utf-8') as file:
@@ -34,16 +51,27 @@ def loadScores(season=None):
 
                 # put discord bot code here. You may need to check if the
                 # scores already exist, because I don't check for that.
+                
+                newScores = getscores.getNewScoresData(scores, filename=scoresFilename)
+                
+                if len(newScores) == 0:
+                    print('scores already exist')
+                    # If there are no new scores
+                    # Otherwise all the new scores are in the newScores list (does not include already existing scores)
+                    continue
 
                 print(events[event]['name'], '\n')
-                print(scores)
+                print(newScores)
                 print("---")
                 print(eventjson)
+                
+                if callable(existCallback):
+                    existCallback(newScores)
 
-                getscores.write_json(scores, filename='../scores.json')
-                getscores.addEvent(eventjson, filename='../events.json')
+                getscores.write_json(newScores, filename=scoresFilename)
+                getscores.addEvent(eventjson, filename=eventsFilename)
 
-        print(events[0]['performances']['classes'][0]['fullRecapUrl'])
+        print(events)
 
 if __name__ == "__main__":
     import win32api
