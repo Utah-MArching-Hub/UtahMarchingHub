@@ -1,7 +1,7 @@
 import schedule
 from loadScores import *
 
-def main(season = None, year = None, scoresFilename = '../scores.json', eventsFilename = '../events.json'):
+def main(intervalInMinutes = 5, season = None, year = None, scoresFilename = '../scores.json', eventsFilename = '../events.json'):
     args = {
         'season': season,
         'year': year,
@@ -13,7 +13,7 @@ def main(season = None, year = None, scoresFilename = '../scores.json', eventsFi
 
     try:
 
-        schedule.every(5).minutes.do(loadScores, **args)
+        schedule.every(intervalInMinutes).minutes.do(loadScores, **args)
 
         print('press CTRL + C to stop')
 
@@ -37,6 +37,7 @@ Options:
 	--events, -ev	Events json path: default to '../events.json'
 	--year, -y		Season year. Will automatically find season id if this is specified.
 	--season, -s	Season id. If none specified, will use current season
+	--interval, -i	Interval in minutes for each check: Defaults to 5
 """
     helpargs = ['--help', '-h', '?', '/?', '/h', '/help']
     
@@ -44,7 +45,7 @@ Options:
     year = None
     scoresFilename = '../scores.json'
     eventsFilename = '../events.json'
-    
+    interval = 5
     
     if len(sys.argv) <= 1 or sys.argv[1] in helpargs:
         print(help)
@@ -70,5 +71,7 @@ Options:
                     year = args[a + 1]
                 elif arg in ['--season', '-s']:
                     season = args[a + 1]
+                elif arg in ['--interval', '-i']:
+                    interval = float(args[a + 1])
     
-    main(season = season, year = year, scoresFilename = scoresFilename, eventsFilename = eventsFilename)
+    main(intervalInMinutes = interval, season = season, year = year, scoresFilename = scoresFilename, eventsFilename = eventsFilename)

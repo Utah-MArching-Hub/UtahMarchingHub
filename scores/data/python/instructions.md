@@ -73,7 +73,7 @@ pip install -r requirements.txt
 ```
 
 ## Run script
-Now you can run `main.py` to automatically get the latest scores. This will just check for the scores every 5 minutes (maybe I should make that customizable...), and if it found new scores, it'll add them to the `scores.json` file, new events will go in `events.json` (well, by default it adds them to `../scores.json`, because the scores are in the parent directory).
+Now you can run `main.py` to automatically get the latest scores. This will just check for the scores every 5 minutes (can be changed with the `--interval` option), and if it found new scores, it'll add them to the `scores.json` file, new events will go in `events.json` (well, by default it adds them to `../scores.json`, because the scores are in the parent directory).
 
 ```cmd
 py main.py
@@ -96,6 +96,7 @@ Options:
 	--events, -ev	Events json path: default to '../events.json'
 	--year, -y		Season year. Will automatically find season id if this is specified.
 	--season, -s	Season id. If none specified, will use current season
+	--interval, -i	Interval in minutes for each check: Defaults to 5
 ```
 
 
