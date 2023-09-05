@@ -78,7 +78,7 @@ def check_bool(value):
 class CompetitionSuite():
     def __init__(self, org_guid = None, org_page = 'https://www-umea-us.filesusr.com/html/4a996b_94944928dddae9e892d2136a828f4bc9.html') -> None:
         self.old_api_domain = "bridge.competitionsuite.com/"
-        self.show_training_events = 'false'
+        self.include_practice = 'false'
         self.old_api_version = "1.1.5"
         self.cdn = f"https://cdn.competitionsuite.io/bridge/{self.old_api_version}"
         
@@ -113,12 +113,15 @@ class CompetitionSuite():
         
         return result
     
-    def get_competitions(self, year = None, include_practice = None):
+    def get_competitions(self, year = None, include_practice = None, fix_results = True):
+        include_practice = check_bool(include_practice)
+        if include_practice == None:
+            include_practice = self.include_practice
+        
         params = {
             'o': self.org_guid,
         }
         year = check_int(year)
-        include_practice = check_bool(include_practice)
         
         if year != None:
             params['year'] = year
@@ -128,12 +131,18 @@ class CompetitionSuite():
         
         result = self.request(url = 'competitions', params = params)
         if len(result) == 0:
-            result = self.get_season(year = year)
-            result = result['competitions'] if 'competitions' in result else []
+            season = self.get_season(year = year)
+            season_guid = season['seasonGuid']
+            result = season['competitions'] if 'competitions' in season else []
+            
+            if fix_results:
+                for comp in result:
+                    comp['seasonGuid'] = season_guid
+                    comp['recapUrl'] = f"https://recaps.competitionsuite.com/{comp['competitionGuid']}.htm"
             
         return result
     
-    def get_performances(self, competition_guid = None):
+    def get_performances(self, competition_guid):
         params = {
             'c': competition_guid
         }
@@ -154,7 +163,11 @@ class CompetitionSuite():
         result = run_javascript( requests.get(url).text )
         return result
     
-    def get_season(self, season = None, year = None):
+    def get_season(self, season = None, year = None, include_practice = None):
+        include_practice = check_bool(include_practice)
+        if include_practice == None:
+            include_practice = self.include_practice
+        
         year = check_int(year)
         if season == None and year != None:
             year = str(year)
@@ -167,7 +180,11 @@ class CompetitionSuite():
         print('getting season: ' + (str(season) if season else 'current'))
         return self.get_events(season_guid = season)
 
-    def get_events(self, season_guid = None):
+    def get_events(self, season_guid = None, include_practice = None):
+        include_practice = check_bool(include_practice)
+        if include_practice == None:
+            include_practice = self.include_practice
+        
         if season_guid:
             url = createUrl(
                 scheme = self.url_scheme,
@@ -175,7 +192,7 @@ class CompetitionSuite():
                 url = 'api/orgscores/GetCompetitionsBySeason/jsonp',
                 params = {
                     'season': season_guid,
-                    'showTrainingEvents': self.show_training_events,
+                    'showTrainingEvents': self.include_practice,
                     'version': self.old_api_version,
                     'callback': 'result=',
                 }
@@ -188,7 +205,7 @@ class CompetitionSuite():
                 url = 'api/orgscores/GetCompetitionsByOrganization/jsonp',
                 params = {
                     'organization': self.org_guid,
-                    'showTrainingEvents': self.show_training_events,
+                    'showTrainingEvents': self.include_practice,
                     'version': self.old_api_version,
                     'callback': 'result=',
                 }
@@ -210,4 +227,6 @@ class CompetitionSuite():
         self.org_guid = element['data-compsuite-org']
 
         if "data-compsuite-test" in element and element["data-compsuite-test"] == 'true':
-            self.show_training_events = 'true'
+            self.include_practice = 'true'
+
+CS = CompetitionSuite
