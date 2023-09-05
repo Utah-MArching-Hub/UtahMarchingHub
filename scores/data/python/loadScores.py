@@ -4,7 +4,7 @@ import json
 
 # sys.path.insert(0, 'python/')
 import getscorelist as scorelist
-import getscores
+import old_getscores
 # this is to load the modules in a different directory. Ignore what vscode says, they do load.
 
 scoresObj = scorelist.getComps(url='https://www-umea-us.filesusr.com/html/4a996b_94944928dddae9e892d2136a828f4bc9.html')
@@ -47,9 +47,9 @@ def loadScores(
         for event in range(len(events)):
             for clas in range(len(events[event]['performances']['classes'])):
                 data = events[event]['performances']['classes'][clas]
-                scores, eventjson = getscores.getBandScores(data['fullRecapUrl'], data['class'], name=events[event]['name'])
+                scores, eventjson = old_getscores.getBandScores(data['fullRecapUrl'], data['class'], name=events[event]['name'])
                 
-                newScores = getscores.getNewScoresData(scores, filename=scoresFilename)
+                newScores = old_getscores.getNewScoresData(scores, filename=scoresFilename)
                 
                 if len(newScores) == 0:
                     print('scores already exist')
@@ -68,8 +68,8 @@ def loadScores(
                 # You can either put the discord bot code here,
                 # or pass the function into the `existCallback` parameter (check `main.py`)
 
-                getscores.write_json(newScores, filename=scoresFilename)
-                getscores.addEvent(eventjson, filename=eventsFilename)
+                old_getscores.write_json(newScores, filename=scoresFilename)
+                old_getscores.addEvent(eventjson, filename=eventsFilename)
 
         print(events)
 
