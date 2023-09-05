@@ -20,11 +20,15 @@ def backup(path):
 
 def clasName(clas):
     classes = {
+        '4ao': '4A Open',
+        '4as': '4A Scholastic',
         '5ao': '5A Open',
         '5as': '5A Scholastic',
         '6ao': '6A Open',
         '6as': '6A Scholastic',
         
+        '4a open': '4A Open',
+        '4a scholastic': '4A Scholastic',
         '5a open': '5A Open',
         '5a scholastic': '5A Scholastic',
         '6a open': '6A Open',
@@ -38,6 +42,12 @@ def clasName(clas):
 
 def clasId(clas):
     classes = {
+        '4a open': '4ao',
+        '4ao': '4ao',
+        '4a': '4ao',
+        '4a scholastic': '4as',
+        '4as': '4as',
+        
         '5a open': '5ao',
         '5ao': '5ao',
         '5a': '5ao',
