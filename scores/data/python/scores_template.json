@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "org": "UMEA",
+  "org_guid": "8b9b1b2a-9d32-4399-9c4b-ed7409b700ba",
+  "seasons": [{
+    "season": "UMEA 2022",
+    "year": 2022,
+    "season_guid": "6d7e8a01-34fb-49c0-bfab-8b62c8f19930",
+    "competitions": [{
+      "name": "UMEA Red Rocks State Marching Band Championships",
+      "date": "2022-11-04T00:00:00",
+      "location": "Crimson Cliffs High School; Washington, UT",
+      "recap_url": "https://recaps.competitionsuite.com/4eb9848c-35b0-40de-a8a2-69c8f13e2489.htm",
+      "competition_guid": "4eb9848c-35b0-40de-a8a2-69c8f13e2489",
+      "performances": [{
+        "division_name": "6A",
+        "division_initials": "6A",
+        "round": "1",
+        "round_name": "Round 1",
+        "school": "American Fork",
+        "total_score": "91.125",
+        "rank": 1,
+        "subtotal_score": "91.125",
+        "subtotal_rank": 1,
+        "categories": [{
+          "name": "Music",
+          "score": "49.638",
+          "rank": 1,
+          "captions": [{
+            "judge_first_name": "Joel",
+            "judge_last_name": "Denton",
+            "judge": 1,
+            "name": "Musical Ensemble",
+            "initials": "ME",
+            "score": "24.888",
+            "rank": 1,
+            "subcaptions": [{
+              "name": "Musicianship",
+              "initials": "Musc",
+              "score": "12.513",
+              "rank": 1
+            }]
+          }]
+        }]
+      }]
+    }]
+  }]
+}
