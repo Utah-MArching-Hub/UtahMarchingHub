@@ -97,12 +97,26 @@ class Scores():
     def save_scores(self):
         with open(self.filename, 'w') as file:
             json.dump(self.scores, file, indent = 2)
-        
-    def get_scores(self, year = None):
+    
+    def get_season_data(
+        self,
+        season_guid: str | None = None,
+        year: int | None = None,
+        include_practice: bool | None = None,
+        fix_results: bool = True,
+    ):
+        return self.cs.get_season(
+            season_guid = season_guid,
+            year = year,
+            include_practice = include_practice,
+            fix_results = fix_results,
+        )
+    
+    def get_season_scores(self, year = None):
         if year == None:
             year = self.year
             
-        season_data = self.cs.get_season(year = year)
+        season_data = self.get_season_data(year = year)
         
         try:
             new_year = re.search(r'(\d+)', season_data['name']).group()
@@ -124,47 +138,33 @@ class Scores():
         }
         
         for comp in season_data['competitions']:            
-            competition_data = {
-                "name": comp['name'],
-                "date": comp['competitionDate'],
-                "location": comp['location'],
-                "recap_url": comp['recapUrl'],
-                "competition_guid": comp['competitionGuid'],
-                "classes": {},
-            }
-            
-            classes = self.get_performances(competition_data['competition_guid'])
-            
-            competition_data['classes'] = classes
-            
-            # for performance in performances:
-                
-            #     if performance['division_name'] in competition_data['classes']:
-            #         class_ = competition_data['classes'][performance['division_name']]
-            #     else:
-            #         class_ = {
-            #             'division_guid': class_data['divisionGuid'] if class_data != None else '',
-            #             'name': class_data['name'] if class_data != None else performance['division_name'],
-            #             'recap_url': class_data['fullRecapUrl'] if class_data != None else '',
-            #             'performances': {}
-            #         }
-                    
-            #         competition_data['classes'][class_['name']] = class_
-                
-            #     performance_info = find_performance(performance['school'], class_data)
-                
-            #     performance['performance_guid'] = performance_info['performanceGuid']
-                
-            #     class_['performances'][performance['performance_guid']] = performance
-
+            competition_data = self.get_competition(comp)
             season['competitions'][competition_data['competition_guid']] = competition_data
-        
         
         self.scores["seasons"][season['season_guid']] = season
         
         return season
+    
+    def get_competition(self, competition_data : dict):
+        """Get the competition scores from the data.
+
+        Args:
+            competition_data (dict): The competition data from `self.get_season_data()['competitions'][n]`.
+        """
+        competition = {
+            "name": competition_data['name'],
+            "date": competition_data['competitionDate'],
+            "location": competition_data['location'],
+            "recap_url": competition_data['recapUrl'],
+            "competition_guid": competition_data['competitionGuid'],
+            "classes": {},
+        }
+        
+        classes = self.get_competition_scores(competition['competition_guid'])
+        
+        competition['classes'] = classes
             
-    def get_performances(self, competition_guid : str):
+    def get_competition_scores(self, competition_guid : str):
         def find_class(class_, competition_info):
             for round in competition_info['rounds']:
                 if round['name'] == class_:
@@ -259,3 +259,36 @@ class Scores():
             # classes[performance_data['division_name']] = performance_data
         
         return classes
+
+    def get_new_competitions(
+        self,
+        season_guid: str | None = None,
+        year: int | None = None,
+        include_practice: bool | None = None,
+        fix_results: bool = True,
+    ):
+        season_data = self.get_season_data(
+            season_guid = season_guid,
+            year = year,
+            include_practice = include_practice,
+            fix_results = fix_results,
+        )
+        
+        new_competitions = []
+        
+        print(season_data)
+        season_guid = season_data['seasonGuid']
+        
+        season_scores = self.scores['seasons'][season_guid]['competitions']
+        for competition in season_data['competitions']:
+            if competition['competitionGuid'] in season_scores:
+                print(f"competition {competition['name']} ({competition['competitionGuid']}) already exists")
+                continue
+            
+            print(f"getting competition: {competition['name']} ({competition['competitionGuid']})")
+            
+            new_competitions.append(competition['competitionGuid'])
+            
+            season_scores[competition['competitionGuid']] = self.get_competition(competition)
+            
+        return new_competitions
