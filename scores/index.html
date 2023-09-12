@@ -38,69 +38,67 @@ crossorigin="anonymous">
 	<!--[if lt IE 7]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-	
+
 	<!-- PUT BODY HERE -->
 	<div id="content">
 		<!-- <select id="year" name="year">
 		<option value=2021 selected>2021</option>
 	</select> -->
-	<div class="options-section">
-		<div id="selections">
-			<div class="select-wrapper">
-				<div class="select" id="year">
-					<div class="select__trigger" tabindex="2">
-						<span value="2021" onchange="updateurl('year', this.value);" ontouchstart>2021</span>
-						<div class="arrow"></div>
-					</div>
-					<div class="custom-options">
-						<span class="custom-option selected" value="2021" ontouchstart>2021</span>
-						<span class="custom-option" value="2022" ontouchstart>2022</span>
-					</div>
+	<div id="selections">
+		<div class="select-wrapper">
+			<div class="select" id="year">
+				<div class="select__trigger">
+					<span id="year" value="2022" onchange="updateurl('year', this.value);" ontouchstart>2022</span>
+					<div class="arrow"></div>
 				</div>
-			</div>
-			<!-- <select id="event" name="event">
-				<option value='NA' selected disabled hidden>select event</option>
-				<option value='nebo'>nebo invintational</option>
-				<option value='oquirrh'>Oquirrh Mountain</option>
-				<option value="wasatch">Wasatch Front</option>
-				<option value="bridgerland">Bridgerland</option>
-				<option value='davis'>Davis Cup</option>
-				<option value='timp'>Mnt Timpanogos</option>
-				<option value='state'>Redrock State</option>
-			</select> -->
-			<div class="select-wrapper"> 
-				<div class="select" id="event">
-					<div class="select__trigger" tabindex="3">
-						<span value="NA" onchange="updateurl('event', this.value);" ontouchstart>select event</span>
-						<div class="arrow"></div>
-					</div>
-					<div class="custom-options">
-						<span class="custom-option selected hidden" value="NA">Select event</span>
-					</div>
-				</div>
-			</div>
-			<!-- <select id="clas" name="clas">
-				<option value='NA' selected disabled hidden>select class</option>
-				<option value='3a'>3A</option>
-				<option value='4a'>4A</option>
-				<option value='5ao'>5A open</option>
-				<option value='5as'>5A schoolastic</option>
-				<option value='6ao'>6A open</option>
-				<option value='6as'>6A schoolastic</option>
-			</select> -->
-			<div class="select-wrapper"> 
-				<div class="select" id="clas">
-					<div class="select__trigger" tabindex="4">
-						<span value="NA" onchange="updateurl('clas', this.value);" ontouchstart>select class</span>
-						<div class="arrow"></div>
-					</div>
-					<div class="custom-options">
-						<span class="custom-option selected hidden" value="NA">Select class</span>
-					</div>
+				<div class="custom-options">
+					<span class="custom-option" value="2021" ontouchstart>2021</span>
+					<span class="custom-option selected" value="2022" ontouchstart>2022</span>
 				</div>
 			</div>
 		</div>
-		<a href="" target="_blank" class="score-url" id="score-url">Score sheet</a> 
+		<!-- <select id="event" name="event">
+			<option value='NA' selected disabled hidden>select event</option>
+			<option value='nebo'>nebo invintational</option>
+			<option value='oquirrh'>Oquirrh Mountain</option>
+			<option value="wasatch">Wasatch Front</option>
+			<option value="bridgerland">Bridgerland</option>
+			<option value='davis'>Davis Cup</option>
+			<option value='timp'>Mnt Timpanogos</option>
+			<option value='state'>Redrock State</option>
+		</select> -->
+		<div class="select-wrapper">
+			<div class="select" id="event">
+				<div class="select__trigger">
+					<span value="NA" onchange="updateurl('event', this.value);" ontouchstart>select event</span>
+					<div class="arrow"></div>
+				</div>
+				<div class="custom-options">
+					<span class="custom-option selected hidden" value="NA">Select event</span>
+				</div>
+			</div>
+		</div>
+		<!-- <select id="clas" name="clas">
+			<option value='NA' selected disabled hidden>select class</option>
+			<option value='3a'>3A</option>
+			<option value='4a'>4A</option>
+			<option value='5ao'>5A open</option>
+			<option value='5as'>5A schoolastic</option>
+			<option value='6ao'>6A open</option>
+			<option value='6as'>6A schoolastic</option>
+		</select> -->
+		<div class="select-wrapper">
+			<div class="select" id="clas">
+				<div class="select__trigger">
+					<span value="NA" onchange="updateurl('clas', this.value);" ontouchstart>select class</span>
+					<div class="arrow"></div>
+				</div>
+				<div class="custom-options">
+					<span class="custom-option selected hidden" value="NA">Select class</span>
+				</div>
+			</div>
+		</div>
+		<a href="" target="_blank" class="score-url" id="score-url">Score sheet</a>
 	</div>
 	<!-- <button class="button" onclick="window.location.reload()">get</button> -->
 
@@ -126,7 +124,7 @@ crossorigin="anonymous">
 
 <!-- END BODY  -->
 </body>
-	
+
 <div id="footer"></div>
 
 

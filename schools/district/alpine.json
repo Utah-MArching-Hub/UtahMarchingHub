@@ -20,15 +20,19 @@
             ["twitter","AFBands"],
             ["instagram","american_fork_band"],
             ["facebook","AmericanForkBandFans"]
-        ]
+        ],
+        "location":"American Fork",
+        "mascot":"Cavemen"
     },
-    "Cedar Vally" : {
+    "Cedar Valley" : {
         "icon" : "https://upload.wikimedia.org/wikipedia/en/b/b9/Cedar_Valley_High_School_logo.png",
         "url" : "https://www.cedarvalleybands.com/",
         "socials" : [
             ["instagram","cedarvalleybands"],
             ["facebook","cedarvalleybands"]
-        ]
+        ],
+        "location":"Eagle Mountain",
+        "mascot":"Aviators"
     },
     "Lehi" : {
         "icon" : "https://www.lehibands.com/uploads/2/6/7/7/26770994/published/13938839372.png",
@@ -37,7 +41,9 @@
             ["youtube",["id", "UCvsj1W7WWTdkFf1J2j6hwow"]],
             ["instagram","lehi_bands"],
             ["facebook",["g", "308318619211160"]]
-        ]
+        ],
+        "location":"Lehi",
+        "mascot":"IDK honestly"
     },
     "Skyridge" : {
         "icon" : "https://s3-us-west-2.amazonaws.com/sportshub2-uploads-prod/files/sites/1356/2018/03/12194726/skyridge-logo21.png",

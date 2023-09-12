@@ -64,21 +64,23 @@ table, th, td {
 }
 
 .tableStyle th::before {
+  font-family: 'Courier New', Courier, monospace;
   display: block;
   position: absolute;
   content: "▲";
   right: 4px;
-  bottom: 50%;
+  bottom: 48%;
   opacity: 0.5;
   font-size: .8em;
 }
 
 .tableStyle th::after {
+  font-family: 'Courier New', Courier, monospace;
   display: block;
   position: absolute;
   content: "▼";
   right: 4px;
-  top: 50%;
+  top: 48%;
   opacity: 0.5;
   font-size: .8em;
   color: var(--header-text-color);
