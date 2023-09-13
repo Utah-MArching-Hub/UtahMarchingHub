@@ -1,7 +1,7 @@
 
 function load() {
     get();
-    getScores("score21",2021);
+    getScores("score22",2022);
 }
 
 function updateurl(key, value) {

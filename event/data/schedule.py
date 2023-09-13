@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
 import requests
+import json
 
-link = "https://schedules.competitionsuite.com/3b149010-9c3e-4ec0-b31b-6a12ac51a839_standard.htm"
+link = input()
 
 webpage_response = requests.get(link)
 webpage = webpage_response.content
@@ -39,5 +40,5 @@ for item in list:
 				custom+=1
 		print(dictA)
 		print("-")
-		print(dict)
+		print(json.dumps(dict))
 		print("---")
