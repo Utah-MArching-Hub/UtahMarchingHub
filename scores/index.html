@@ -38,20 +38,28 @@ crossorigin="anonymous">
 	<!--[if lt IE 7]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-	
+
 	<!-- PUT BODY HERE -->
 	<div id="content">
 		<!-- <select id="year" name="year">
 		<option value=2021 selected>2021</option>
 	</select> -->
 	<div id="selections">
+		<!-- <div class="select" id="editor-tempo-end-note">
+			<button class="trigger" aria-controls="editor-tempo-end-note-menu" aria-expanded="false" value="q"></button>
+			<menu class="options" id="editor-tempo-end-note-menu">
+				<button class="option note hidden" value="dw"></button>
+			</menu>
+		</div> -->
 		<div class="select" id="year">
-			<button class="trigger" value="2022" onchange="updateurl('year', this.getAttribute('value'));" ontouchstart>
+			<button class="trigger" value="2022" aria-controls="year-options"
+				aria-expanded="false" value="2022"
+				onchange="updateurl('year', this.getAttribute('value'));">
 				2022
 			</button>
-			<menu class="options">
-				<button class="option" value="2021" ontouchstart>2021</button>
-				<button class="option selected" value="2022" ontouchstart>2022</button>
+			<menu class="options" id="year-options">
+				<button class="option" value="2021">2021</button>
+				<button class="option selected" value="2022">2022</button>
 			</menu>
 		</div>
 		<!-- <select id="event" name="event">
@@ -64,7 +72,7 @@ crossorigin="anonymous">
 			<option value='timp'>Mnt Timpanogos</option>
 			<option value='state'>Redrock State</option>
 		</select> -->
-		<div class="select" id="event"> 
+		<div class="select" id="event">
 			<button class="trigger" value="NA" onchange="updateurl('event', this.getAttribute('value'));" ontouchstart>
 				select event
 			</button>
@@ -112,7 +120,7 @@ crossorigin="anonymous">
 
 <!-- END BODY  -->
 </body>
-	
+
 <div id="footer"></div>
 
 

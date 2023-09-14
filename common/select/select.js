@@ -6,16 +6,57 @@ function triggerOnchange (element) {
     }
     else
         element.fireEvent("onchange");
+
+    let event = new CustomEvent("onchange", {
+        bubbles: true,
+        detail: { text: 'onchange'},
+    });
+
+    element.dispatchEvent(event)
+}
+
+function findOverflowParents(element, initEl) {
+
+    function notVisible(el) {
+        let overflow = getComputedStyle(el).overflow;
+        return overflow !== 'visible';
+    }
+
+    let thisEl = element;
+
+    if (thisEl == document.querySelector('html')) {
+        return thisEl;
+    }
+
+    // if (!initEl) console.log('** Overflow check commence!', thisEl);
+    let origEl = initEl || thisEl;
+    // if (notVisible(thisEl)) console.warn("Overflow found on:", thisEl.tagName, { issue: "OVERFLOW IS NOT VISIBLE", tagName: thisEl.tagName, id: thisEl.id, class: thisEl.className, element: thisEl });
+    if (thisEl != origEl && notVisible(thisEl)) {
+        return thisEl;
+    } else {
+        return findOverflowParents(thisEl.parentElement, origEl);
+    }
 }
 
 function initMenu(element, options) {
     element.trigger = element.querySelector('.trigger')
     element._options = element.querySelector('.options')
-    element.getval = function() {
+
+    element.getVal = function() {
         return this.trigger.value || this.trigger.getAttribute('value')
     }
 
-    element.setval = function(value) {
+    Object.defineProperty(element, "value", {
+        get() {
+            return this.getVal()
+        },
+
+        set(value) {
+            this.setVal(value)
+        }
+    });
+
+    element.setVal = function(value) {
         this.trigger.setAttribute('value', value)
 
         let prev = this._options.querySelector('.selected')
@@ -28,6 +69,11 @@ function initMenu(element, options) {
             newval.classList.add('selected')
             this.trigger.innerHTML = newval.innerHTML
         }
+        this.trigger.setAttribute('aria-expanded', 'false')
+
+        // let onchange = element.trigger.getAttribute('onchange') ? element.trigger : element
+        // console.log('onchange', onchange)
+        // triggerOnchange(onchange)
     }
 
     element.getMenu = function () {
@@ -79,19 +125,74 @@ function initMenu(element, options) {
         });
 
         newOption.addEventListener('click', () => {
-            element.setval(newOption.getAttribute('value'))
+            element.setVal(newOption.getAttribute('value'))
             triggerOnchange(element.trigger)
         })
 
         this._options.append(newOption)
     }
+
+    element.fixHeight = function () {
+        let parent = findOverflowParents(this._options)
+
+        console.log('overflow', getComputedStyle(parent).overflow)
+        let overflow = getComputedStyle(parent).overflow
+
+        parent.style.overflow = 'hidden'
+
+        let parentSize = parent.getBoundingClientRect()
+        let size = this._options.getBoundingClientRect()
+
+        console.log('parent', parent)
+
+        console.log('parentSize', parentSize)
+        console.log('size', size)
+
+        let maxHeight = (parentSize.top - size.top) + parentSize.height
+
+        let border = getComputedStyle(parent).borderBottomWidth
+
+        this._options.style.setProperty('--max-height', `calc(${(maxHeight) + 'px'} - ${border})`)
+
+        parent.style.overflow = overflow
+    }
+
+    let optionElements = element._options.querySelectorAll('.option')
+
+    for (const option of optionElements) {
+        option.addEventListener('click', () => {
+            element.setVal(option.getAttribute('value'))
+        })
+    }
+
+    element.trigger.addEventListener('click', function (e) {
+        let expanded = this.getAttribute('aria-expanded') == 'true'
+
+        console.log('expanded?', expanded)
+
+        this.setAttribute('aria-expanded', String(!expanded))
+
+        element.fixHeight()
+    })
+
+    element.fixHeight()
 }
 
-let menus = document.querySelectorAll('.select');
-for (const key in menus) {
-    if (Object.hasOwnProperty.call(menus, key)) {
-        const element = menus[key]
-        initMenu(element)
-        continue
-    }
+const menus = document.querySelectorAll('.select');
+
+for (const menu of menus) {
+    initMenu(menu)
 }
+
+document.addEventListener('click', (e) => {
+    let target = e.target
+
+    const menuTriggers = document.querySelectorAll('.select .trigger')
+
+    for (const trigger of menuTriggers) {
+        if (trigger == target) {
+            continue
+        }
+        trigger.setAttribute('aria-expanded', 'false')
+    }
+})
