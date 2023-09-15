@@ -61,7 +61,7 @@ API.raw_scores = async function () {
     return await this.request('scores')
 }
 
-API.season_scores = async function (year = null, seasonGuid = null, raw = false) {
+API.season = async function (year = null, seasonGuid = null, raw = false) {
     console.log('raw:', raw)
     let path = '/scores/season/' + (raw ? 'raw' : '')
     console.log(path)
@@ -77,7 +77,7 @@ API.seasons_list = async function () {
     return await this.request(path)
 }
 
-API.competitions_list = async function () {
+API.competitions_list = async function (year, comp) {
     return await this.request('/scores/competitions/')
 }
 
