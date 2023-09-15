@@ -3,6 +3,9 @@ import typing
 import schedule
 from loadScores import *
 
+def callback(scores, events):
+    pass
+
 def main(
     intervalInMinutes = 5,
     season = None,
@@ -84,4 +87,11 @@ Options:
                 elif arg in ['--interval', '-i']:
                     interval = float(args[a + 1])
 
-    main(intervalInMinutes = interval, season = season, year = year, scoresFilename = scoresFilename, eventsFilename = eventsFilename)
+    main(
+        intervalInMinutes = interval,
+        season = season,
+        year = year,
+        scoresFilename = scoresFilename,
+        eventsFilename = eventsFilename,
+        callback = callback
+    )
