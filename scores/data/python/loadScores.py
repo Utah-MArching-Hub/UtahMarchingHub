@@ -15,7 +15,6 @@ def loadScores(
     year = None,
     scoresFilename = '../scores.json',
     eventsFilename = '../events.json',
-    existCallback : typing.Callable[[list[dict]], typing.Any] = None,
     noBackup = False,
     callback = None,
 ):
@@ -65,9 +64,6 @@ def loadScores(
                 # print(newScores)
                 # print("---")
                 # print(eventjson)
-
-                if callable(existCallback):
-                    existCallback(newScores)
 
                 # You can either put the discord bot code here,
                 # or pass the function into the `existCallback` parameter (check `main.py`)
