@@ -77,8 +77,11 @@ API.seasons_list = async function () {
     return await this.request(path)
 }
 
-API.competitions_list = async function (year, comp) {
-    return await this.request('/scores/competitions/')
+API.competitions_list = async function (year, seasonGuid) {
+    return await this.request('/scores/competitions/', params = {
+        'year': year,
+        'seasonGuid': seasonGuid,
+    })
 }
 
 API.competition = async function (year = null, seasonGuid = null, competitionGuid = null, raw = false) {
