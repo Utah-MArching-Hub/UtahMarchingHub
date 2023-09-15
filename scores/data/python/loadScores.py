@@ -17,17 +17,18 @@ def loadScores(
     eventsFilename = '../events.json',
     existCallback : typing.Callable[[list[dict]], typing.Any] = None,
     noBackup = False,
+    callback = None,
 ):
     if season == None and year != None:
         print(f'year: {year}')
         seasons = scoresObj.getSeasons(fullData = False)
-        
+
         for s in seasons:
             if year in s['name']:
                 season = s['seasonGuid']
                 print(f'season: {season}')
                 break
-    
+
     events = scoresObj.loadSeason(season)
     try:
         with open('last-scores.json', 'r', encoding='utf-8') as file:
@@ -48,23 +49,26 @@ def loadScores(
             for clas in range(len(events[event]['performances']['classes'])):
                 data = events[event]['performances']['classes'][clas]
                 scores, eventjson = old_getscores.getBandScores(data['fullRecapUrl'], data['class'], name=events[event]['name'])
-                
+
                 newScores = old_getscores.getNewScoresData(scores, filename=scoresFilename)
-                
+
                 if len(newScores) == 0:
                     print('scores already exist')
                     # If there are no new scores
                     # Otherwise all the new scores are in the newScores list (does not include already existing scores)
                     continue
 
+                if callable(callback):
+                    callback(newScores, eventjson)
+
                 print(events[event]['name'], '\n')
-                print(newScores)
-                print("---")
-                print(eventjson)
-                
+                # print(newScores)
+                # print("---")
+                # print(eventjson)
+
                 if callable(existCallback):
                     existCallback(newScores)
-                
+
                 # You can either put the discord bot code here,
                 # or pass the function into the `existCallback` parameter (check `main.py`)
 
@@ -76,24 +80,24 @@ def loadScores(
 if __name__ == "__main__":
     import win32api
     from flask import Flask, render_template
-    
+
     app = Flask(__name__)
-    
-    
+
+
     #Using the below, the popup message appears on the page load of index.html
     #0x00001000 - This makes the popup appear over the browser window
     @app.route('/')
     def index():
         win32api.MessageBox(0, 'You have just run a python script on the page load!', 'Running a Python Script via Javascript', 0x00001000)
         return render_template('index.html')
-    
+
     #Using the below, the popup message appears when the button is clicked on the webpage.
     #0x00001000 - This makes the popup appear over the browser window
     @app.route('/test')
     def test():
         win32api.MessageBox(0, 'You have just run a python script on the button press!', 'Running a Python Script via Javascript', 0x00001000)
         return render_template('index.html')
-    
+
     if __name__ == "__main__":
         app.run(debug=True)
 

@@ -1,14 +1,24 @@
+import typing
+
 import schedule
 from loadScores import *
 
-def main(intervalInMinutes = 5, season = None, year = None, scoresFilename = '../scores.json', eventsFilename = '../events.json'):
+def main(
+    intervalInMinutes = 5,
+    season = None,
+    year = None,
+    scoresFilename = '../scores.json',
+    eventsFilename = '../events.json',
+    callback : typing.Callable = None
+):
     args = {
         'season': season,
         'year': year,
         'scoresFilename': scoresFilename,
         'eventsFilename': eventsFilename,
+        'callback': callback
     }
-    
+
     loadScores(**args)
 
     try:
@@ -40,16 +50,16 @@ Options:
 	--interval, -i	Interval in minutes for each check: Defaults to 5
 """
     helpargs = ['--help', '-h', '?', '/?', '/h', '/help']
-    
+
     season = None
     year = None
     scoresFilename = '../scores.json'
     eventsFilename = '../events.json'
     interval = 5
-    
+
     if len(sys.argv) <= 1 or sys.argv[1] in helpargs:
         print(help)
-        
+
         if len(sys.argv) <= 1:
             print('running')
         else:
@@ -62,7 +72,7 @@ Options:
                 arg = args[a]
                 if not arg.startswith('-'):
                     continue
-                
+
                 if arg in ['--scores', '-sc']:
                     scoresFilename = args[a + 1]
                 elif arg in ['--events', '-ev']:
@@ -73,5 +83,5 @@ Options:
                     season = args[a + 1]
                 elif arg in ['--interval', '-i']:
                     interval = float(args[a + 1])
-    
+
     main(intervalInMinutes = interval, season = season, year = year, scoresFilename = scoresFilename, eventsFilename = eventsFilename)
