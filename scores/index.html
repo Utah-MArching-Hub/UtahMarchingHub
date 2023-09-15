@@ -31,31 +31,36 @@ crossorigin="anonymous">
 <div id="header"></div>
 <script src="scripts/scripts.js" async defer></script>
 <script src="scripts/scoreJson.js" language="javascript" type="text/javascript" async defer></script>
-<script src="/common/select/select.js" async defer></script>
+<script src="/common/select/select.js" defer></script>
 <script src="/common/scripts/sort.js" async defer></script>
 
 <body onload="updateDrops()">
 	<!--[if lt IE 7]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-	
+
 	<!-- PUT BODY HERE -->
 	<div id="content">
 		<!-- <select id="year" name="year">
 		<option value=2021 selected>2021</option>
 	</select> -->
 	<div id="selections">
-		<div class="select-wrapper">
-			<div class="select" id="year">
-				<div class="select__trigger">
-					<span id="year" value="2022" onchange="updateurl('year', this.value);" ontouchstart>2022</span>
-					<div class="arrow"></div>
-				</div>
-				<div class="custom-options">
-					<span class="custom-option" value="2021" ontouchstart>2021</span>
-					<span class="custom-option selected" value="2022" ontouchstart>2022</span>
-				</div>
-			</div>
+		<!-- <div class="select" id="editor-tempo-end-note">
+			<button class="trigger" aria-controls="editor-tempo-end-note-menu" aria-expanded="false" value="q"></button>
+			<menu class="options" id="editor-tempo-end-note-menu">
+				<button class="option note hidden" value="dw"></button>
+			</menu>
+		</div> -->
+		<div class="select" id="year">
+			<button class="trigger" value="2022" aria-controls="year-options"
+				aria-expanded="false" value="2022"
+				onchange="updateurl('year', this.getAttribute('value'));">
+				2022
+			</button>
+			<menu class="options" id="year-options">
+				<button class="option" value="2021">2021</button>
+				<button class="option selected" value="2022">2022</button>
+			</menu>
 		</div>
 		<!-- <select id="event" name="event">
 			<option value='NA' selected disabled hidden>select event</option>
@@ -67,16 +72,13 @@ crossorigin="anonymous">
 			<option value='timp'>Mnt Timpanogos</option>
 			<option value='state'>Redrock State</option>
 		</select> -->
-		<div class="select-wrapper"> 
-			<div class="select" id="event">
-				<div class="select__trigger">
-					<span value="NA" onchange="updateurl('event', this.value);" ontouchstart>select event</span>
-					<div class="arrow"></div>
-				</div>
-				<div class="custom-options">
-					<span class="custom-option selected hidden" value="NA">Select event</span>
-				</div>
-			</div>
+		<div class="select" id="event">
+			<button class="trigger" value="NA" onchange="updateurl('event', this.getAttribute('value'));" ontouchstart>
+				select event
+			</button>
+			<menu class="options">
+				<button class="option selected hidden" value="NA">Select event</button>
+			</menu>
 		</div>
 		<!-- <select id="clas" name="clas">
 			<option value='NA' selected disabled hidden>select class</option>
@@ -87,21 +89,18 @@ crossorigin="anonymous">
 			<option value='6ao'>6A open</option>
 			<option value='6as'>6A schoolastic</option>
 		</select> -->
-		<div class="select-wrapper"> 
-			<div class="select" id="clas">
-				<div class="select__trigger">
-					<span value="NA" onchange="updateurl('clas', this.value);" ontouchstart>select class</span>
-					<div class="arrow"></div>
-				</div>
-				<div class="custom-options">
-					<span class="custom-option selected hidden" value="NA">Select class</span>
-				</div>
-			</div>
+		<div class="select" id="clas">
+			<button class="trigger" value="NA" onchange="updateurl('clas', this.getAttribute('value'));" ontouchstart>
+				select class
+			</button>
+			<menu class="options">
+				<button class="option selected hidden" value="NA">Select class</button>
+			</menu>
 		</div>
 	</div>
 	<!-- <button class="button" onclick="window.location.reload()">get</button> -->
 	<div class="table-container">
-		<table id="scores" class="scores sortable tableStyle">
+		<table id="scores" class="scores sortable tableStyle" tabindex="5">
 			<thead class="tbl-header">
 				<th onclick="sortTable(this)" value="school">Band</th>
 				<th onclick="sortTable(this)" value="score">Total</th>
@@ -121,7 +120,7 @@ crossorigin="anonymous">
 
 <!-- END BODY  -->
 </body>
-	
+
 <div id="footer"></div>
 
 

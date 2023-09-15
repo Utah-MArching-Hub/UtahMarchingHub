@@ -162,3 +162,5 @@ cython_debug/
 
 .DS_Store
 *.bak
+*__pycache__*
+*.venv*

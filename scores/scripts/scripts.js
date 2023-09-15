@@ -2,17 +2,17 @@ function updateMenus() {
     $.getJSON('data/events.json', function (json) {
         let year_menu = document.getElementById('year')
         console.log(year_menu)
-        let year = year_menu.getval()
+        let year = year_menu.value
         console.log(year)
 
         let event_menu = document.getElementById('event')
         console.log(event_menu)
-        let event_value = event_menu.getval()
+        let event_value = event_menu.value
         console.log(event_value)
 
         let class_menu = document.getElementById('clas')
         console.log(class_menu)
-        let Class = class_menu.getval()
+        let Class = class_menu.value
         console.log(Class)
 
         let menu = {"year": [], "event": [{'value': 'NA', 'text': 'select event', 'classes': ['hidden', 'default']}], "class": [{'value': 'NA', 'text': 'select class', 'classes': ['hidden', 'default']}]}
@@ -91,12 +91,12 @@ function updateMenus() {
         document.getElementById('event').setMenu(menu['event'])
         document.getElementById('clas').setMenu(menu['class'])
 
-        document.getElementById('year').setval(year)
-        document.getElementById('event').setval(event_value)
+        document.getElementById('year').value = year
+        document.getElementById('event').value = event_value
         if (!menu['class'].some(o => o['value'] == Class)) {
             Class = Class.replace('s', 'o')
         }
-        document.getElementById('clas').setval(Class)
+        document.getElementById('clas').value = Class
 
         return menu
     });
