@@ -65,9 +65,16 @@ function initMenu(element, options) {
         }
 
         let newval = this._options.querySelector(`.option[value="${value}"]`)
+        console.log('new val:', newval)
         if (newval) {
             newval.classList.add('selected')
             this.trigger.innerHTML = newval.innerHTML
+        } else {
+            let newval = this._options.querySelector(`.option.default`)
+            if (newval) {
+                newval.classList.add('selected')
+                this.trigger.innerHTML = newval.innerHTML
+            }
         }
         this.trigger.setAttribute('aria-expanded', 'false')
 
@@ -84,9 +91,9 @@ function initMenu(element, options) {
         children.forEach(child => {
             let classes = Array.from(child.classList)
                     options.push({
-                        "value" : child.getAttribute('value'),
-                        "text" : child.innerHTML,
-                        "classes" : classes
+                        value : child.getAttribute('value'),
+                        text : child.innerHTML,
+                        classes : classes
                     })
         });
 

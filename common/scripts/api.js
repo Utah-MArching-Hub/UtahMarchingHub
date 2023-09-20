@@ -94,3 +94,14 @@ API.competition = async function (year = null, seasonGuid = null, competitionGui
         'competitionGuid': competitionGuid,
     })
 }
+
+API.division = async function (year = null, seasonGuid = null, competitionGuid = null, division = null) {
+    let path = '/scores/division/'
+    console.log(path)
+    return await this.request(path, params = {
+        'year': year,
+        'seasonGuid': seasonGuid,
+        'competitionGuid': competitionGuid,
+        'division': division,
+    })
+}

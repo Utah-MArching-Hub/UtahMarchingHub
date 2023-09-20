@@ -20,11 +20,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous">
     </script>
-    <script src="/common/select/select.js" async defer></script>
+    <script src="/common/select/select.js" defer></script>
 
     <script src="/common/scripts/api.js"></script>
-    <script src="scripts/scripts.js" async defer></script>
-    <script src="scripts/scoreJson.js" language="javascript" type="text/javascript" async defer></script>
+    <script src="scripts/scripts.js" defer></script>
     <script src="/common/scripts/sort.js" async defer></script>
 </head>
 
@@ -36,12 +35,8 @@
 </script>
 
 <div id="header"></div>
-<script src="scripts/scripts.js" async defer></script>
-<script src="scripts/scoreJson.js" language="javascript" type="text/javascript" async defer></script>
-<script src="/common/select/select.js" defer></script>
-<script src="/common/scripts/sort.js" async defer></script>
 
-<body onload="updateDrops()">
+<body onload="">
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -59,10 +54,10 @@
             </menu>
         </div> -->
         <div class="select" id="year">
-            <button class="trigger" value="2022" aria-controls="year-options"
-                aria-expanded="false" value="2022"
-                onchange="updateurl('year', this.getAttribute('value'));">
-                2022
+            <button class="trigger" value="2023" aria-controls="year-options"
+                aria-expanded="false" value="2023"
+                onchange="update_url('year', this.getAttribute('value'));">
+                2023
             </button>
             <menu class="options" id="year-options">
                 <button class="option" value="2021">2021</button>
@@ -80,11 +75,11 @@
             <option value='state'>Redrock State</option>
         </select> -->
         <div class="select" id="event">
-            <button class="trigger" value="NA" onchange="updateurl('event', this.getAttribute('value'));" ontouchstart>
+            <button class="trigger" value="" onchange="update_url('event', this.getAttribute('value'));" ontouchstart>
                 select event
             </button>
             <menu class="options">
-                <button class="option selected hidden" value="NA">Select event</button>
+                <button class="option selected hidden default" value="">Select event</button>
             </menu>
         </div>
         <!-- <select id="clas" name="clas">
@@ -96,12 +91,12 @@
             <option value='6ao'>6A open</option>
             <option value='6as'>6A schoolastic</option>
         </select> -->
-        <div class="select" id="clas">
-            <button class="trigger" value="NA" onchange="updateurl('clas', this.getAttribute('value'));" ontouchstart>
+        <div class="select" id="class">
+            <button class="trigger" value="" onchange="update_url('class', this.getAttribute('value'));" ontouchstart>
                 select class
             </button>
             <menu class="options">
-                <button class="option selected hidden" value="NA">Select class</button>
+                <button class="option selected hidden default" value="">Select class</button>
             </menu>
         </div>
     </div>
@@ -110,15 +105,15 @@
         <table id="scores" class="scores sortable tableStyle" tabindex="5">
             <thead class="tbl-header">
                 <th onclick="sortTable(this)" value="school">Band</th>
-                <th onclick="sortTable(this)" value="score">Total</th>
-                <th onclick="sortTable(this)" value="MEnsemble">Music Ensemble</th>
-                <th onclick="sortTable(this)" value="MEffect">Music Effect</th>
-                <th onclick="sortTable(this)" value="MScore">Music</th>
-                <th onclick="sortTable(this)" value="VEnsemble">Visual Ensemble</th>
-                <th onclick="sortTable(this)" value="VEffect">Visual Effect</th>
-                <th onclick="sortTable(this)" value="VScore">Visual</th>
+                <th onclick="sortTable(this)" value="total_score">Total</th>
+                <th onclick="sortTable(this)" value="ME">Music Ensemble</th>
+                <th onclick="sortTable(this)" value="MGE">Music Effect</th>
+                <th onclick="sortTable(this)" value="Music">Music</th>
+                <th onclick="sortTable(this)" value="VE">Visual Ensemble</th>
+                <th onclick="sortTable(this)" value="VGE">Visual Effect</th>
+                <th onclick="sortTable(this)" value="Visual">Visual</th>
                 <th onclick="sortTable(this)" value="Percussion">Percussion</th>
-                <th onclick="sortTable(this)" value="Guard">Guard</th>
+                <th onclick="sortTable(this)" value="Color Guard">Color Guard</th>
             </thead>
         </table>
     </div>

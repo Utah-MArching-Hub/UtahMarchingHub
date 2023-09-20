@@ -15,8 +15,7 @@ function urlkey() {
     alert('year:' + year + ',event:' + event)
 }
 
-function updateurl(key, value) {
-    
+function update_url(key, value) {
     var queryParams = new URLSearchParams(window.location.search);
     queryParams.set(key, value);
     history.replaceState(null, null, "?" + queryParams.toString());
@@ -24,12 +23,12 @@ function updateurl(key, value) {
 }
 
 function updateScores() {
-    updateMenus()
-    resetScores()
+    update_menus()
+    reset_scores()
     getScores()
 }
 
-function resetScores() {
+function reset_scores() {
     $('.sort-asc').removeClass('sort-asc');
     $('.sort-desc').removeClass('sort-desc');
     // let table = document.getElementById('scores')
@@ -37,38 +36,38 @@ function resetScores() {
 }
 
 function updateDrops() {
-    updateMenus()
+    update_menus()
     const params = new Proxy(new URLSearchParams(window.location.search), {
         get: (searchParams, prop) => searchParams.get(prop),
     });
 
     let year = params.year;
     if(year == null){
-        year = "2022" //default value
-        updateurl('year', year) 
+        year = "2023" //default value
+        update_url('year', year)
     }
     yearDrop = document.getElementById("year")
     console.log(year)
-    yearDrop.setval(year)
-    
+    yearDrop.value = year
+
 
     let event = params.event;
     if(event == null){
-        event = "NA" //default value 
-        updateurl('event', event)
+        event = "NA" //default value
+        update_url('event', event)
     }
     eventDrop = document.getElementById("event")
-    console.log(event)
-    eventDrop.setval(event)
+    console.log('event', event)
+    eventDrop.value = event
 
-    let clas = params.clas;
-    if(clas == null){
-        clas = "NA" //default value 
-        updateurl('clas', clas)
+    let class_ = params.class;
+    if(class_ == null){
+        class_ = "NA" //default value
+        update_url('class', class_)
     }
-    clasDrop = document.getElementById("clas")
-    console.log(clas)
-    clasDrop.setval(clas)
+    let classDrop = document.getElementById("class")
+    console.log(class_)
+    classDrop.value = class_
 
     getScores();
 }
@@ -92,7 +91,7 @@ function getScores() {
             order.push(el.getAttribute('value'))
         }
     }
-    
+
     // order.splice(order.indexOf('school'), 1)
     console.log(order)
 
