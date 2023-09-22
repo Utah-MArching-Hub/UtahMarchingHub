@@ -2,7 +2,6 @@ function update_url(key, value) {
     var queryParams = new URLSearchParams(window.location.search);
     queryParams.set(key, value);
     history.replaceState(null, null, "?" + queryParams.toString());
-    updateScores()
 }
 
 function updateScores() {
@@ -35,9 +34,12 @@ function update_scores() {
 
     reset_scores()
 
-    let year = document.querySelector('#year').value
-    let event = document.querySelector('#event').value
-    let class_ = document.querySelector('#class').value
+    let year_menu = document.querySelector('#year')
+    let year = year_menu.value
+    let event_menu = document.querySelector('#event')
+    let event = event_menu.value
+    let class_menu = document.querySelector('#class')
+    let class_ = class_menu.value
 
     let order = []
     let header = document.querySelector('.tbl-header').children[0].children
@@ -55,8 +57,20 @@ function update_scores() {
     if (year && event && class_) {
         console.log('update scores')
 
-        API.division(year, null, event, class_).then((division) => {
+        API.division(year, null, null, event, class_).then((division) => {
             console.log('division:', division)
+            console.log('division_name', division.name)
+            if (event != division.competition_name) {
+                // event_menu.value = division.competition_name
+                update_url('event', division.competition_name)
+                update_menus(true)
+            }
+            if (class_ != division.name) {
+                // class_menu.value = division.name
+                update_url('class', division.name)
+                update_menus(true)
+            }
+            
             console.log(division.performances)
             Object.entries(division.performances).forEach(([performance_guid, performance]) => {
                 let row = document.createElement('tr')
@@ -70,7 +84,7 @@ function update_scores() {
                     } else if (column == 'total_score') {
                         cell.innerHTML = performance.total_score
                     } else {
-                        console.log('performance:', performance)
+                        // console.log('performance:', performance)
                         let category_info = get_category(performance.categories, column)
                         if (category_info) {
                             console.log('score:', category_info)
@@ -143,9 +157,9 @@ function update_menus(from_url = false) {
                     })
 
                     let option = {
-                        value: competition.competition_guid,
+                        value: competition.name,
                         text: competition.name,
-                        classes: competition.competition_guid == current_event ? ['selected'] : [],
+                        classes: competition.name == current_event ? ['selected'] : [],
                     }
                     menus.events.push(option)
 
@@ -156,15 +170,17 @@ function update_menus(from_url = false) {
                         classes: ['hidden', 'default']
                     })
 
-                    if (competition.competition_guid == current_event) {
-
+                    if (competition.name == current_event) {
                         Object.entries(competition.classes).forEach(([class_name, class_data]) => {
                             class_option = {
                                 value: class_data.name,
                                 text: class_data.name,
-                                classes: [],
+                                classes: class_name == current_class ? ['selected'] : [],
                             }
                             menus.classes.push(class_option)
+                            if (class_name == current_class) {
+                                console.log('current_class:', current_class)
+                            }
                         })
                         menus.classes.sort((a, b) => {
                             if (a.value == null) {

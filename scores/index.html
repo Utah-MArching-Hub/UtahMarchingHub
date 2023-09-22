@@ -56,7 +56,7 @@
         <div class="select" id="year">
             <button class="trigger" value="2023" aria-controls="year-options"
                 aria-expanded="false" value="2023"
-                onchange="update_url('year', this.getAttribute('value'));">
+                onchange="update_url('year', this.getAttribute('value'));update_scores();update_menus(true);">
                 2023
             </button>
             <menu class="options" id="year-options">
@@ -75,7 +75,9 @@
             <option value='state'>Redrock State</option>
         </select> -->
         <div class="select" id="event">
-            <button class="trigger" value="" onchange="update_url('event', this.getAttribute('value'));" ontouchstart>
+            <button class="trigger" value=""
+                onchange="update_url('event', this.getAttribute('value'));update_scores();update_menus(true);"
+                ontouchstart>
                 select event
             </button>
             <menu class="options">
@@ -92,7 +94,9 @@
             <option value='6as'>6A schoolastic</option>
         </select> -->
         <div class="select" id="class">
-            <button class="trigger" value="" onchange="update_url('class', this.getAttribute('value'));" ontouchstart>
+            <button class="trigger" value=""
+                onchange="update_url('class', this.getAttribute('value'));update_scores();update_menus(true);"
+                ontouchstart>
                 select class
             </button>
             <menu class="options">
