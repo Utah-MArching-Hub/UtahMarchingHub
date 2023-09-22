@@ -32,6 +32,7 @@
 
     font-family: var(--select-font);
     font-size: var(--select-font-size);
+    color: var(--select-text-color);
 }
 
 .select *:focus {
@@ -40,6 +41,7 @@
 
 .select .trigger {
     font-size: var(--select-font-size);
+    color: var(--select-text-color);
     position: relative;
     display: flex;
     align-items: center;
@@ -122,6 +124,7 @@
 
 .select .option {
     font-size: var(--select-option-font-size);
+    color: var(--select-text-color);
     padding: var(--select-option-padding);
 
     border: 0;
