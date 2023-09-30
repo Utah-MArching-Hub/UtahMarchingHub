@@ -120,7 +120,8 @@ table, th, td {
   background-color: var(--row-color-odd);
 }
 
-.tableStyle .tble-row:hover {
+.tableStyle .tble-row:hover,
+.tableStyle .tble-row:focus-within {
   background-color: var(--row-color-hover);
 }
 

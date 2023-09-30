@@ -1,131 +1,156 @@
-:root {
+.select {
+    --select-font: Arial;
+
+    --select-padding: 0.1em 0.5em;
+
     --select-background: white;
     --select-hover-background: skyblue;
     --select-selected-background: lightblue;
-    --select-active-background: lightblue;
-    --select-border: darkgrey;
-    --select-txt-color: black;
-    --select-option-border-width: 0;
-    --select-border-width: 1px;
-    --select-font-size: 15px;
+    --select-text-color: black;
+    --select-hover-text-color: var(--select-text-color);
+    --select-selected-text-color: var(--select-text-color);
+
+    --select-border-color: darkgrey;
+    --select-border-width: 0.1em;
+    --select-border-radius: 3px;
+    --select-font-size: 1rem;
+
+    --select-option-font-size: 0.9em;
+    --select-option-gap: 0;
+    --select-option-padding: var(--select-padding);
+    --select-options-border-width: 0.1em;
+
+    --select-options-border-radius: 0.4em;
+
+    --select-options-animation-duration: 40ms;
 }
 
-.select-wrapper {
+.select {
     position: relative;
     width: fit-content;
     display: inline-block;
-}
-.select {
-    position: relative;
-    border-color: var(--select-border);
+
+    font-family: var(--select-font);
+    font-size: var(--select-font-size);
+    color: var(--select-text-color);
 }
 
-.select__trigger:hover {
-    background-color: var(--select-hover-background);
+.select *:focus {
+    outline: none;
 }
 
-.select__trigger:active {
-    background-color: var(--select-active-background);
-}
-
-.select__trigger {
-    /* width: fit-content; */
+.select .trigger {
+    font-size: var(--select-font-size);
+    color: var(--select-text-color);
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    color: var(--select-txt-color);
-    background: var(--select-background);
-    cursor: pointer;
-    border-width: var(--select-border-width);
-    border-style: solid;
-    border-color: var(--select-border);
-    border-radius: 1.5px;
-    height: 16px;
-    padding: 0 4px 0 4px;
-    font-size: var(--select-font-size);
-    width: initial;
 
-    user-select: none; /* supported by Chrome and Opera */
-   -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-   -moz-user-select: none; /* Firefox */
-   -ms-user-select: none; /* Internet Explorer/Edge */
+    height: 100%;
+
+    user-select: none;
+
+    background: var(--select-background);
+    border: var(--select-border-color) solid var(--select-border-width);
+    border-radius: var(--select-border-radius);
+
+    padding: var(--select-padding);
 }
-.custom-options {
+
+.select .trigger:hover {
+    background: var(--select-hover-background);
+    color: var(--select-hover-text-color);
+}
+
+.select .trigger::after {
+    content: "";
+    --triangle-size: 4px;
+    height: var(--triangle-size);
+    margin-left: 0.3em;
+
+    border-top: var(--triangle-size) solid var(--select-text-color);
+    border-left: var(--triangle-size) solid transparent;
+    border-bottom: 0 solid transparent;
+    border-right: var(--triangle-size) solid transparent;
+}
+
+/* .select .trigger[aria-expanded=true]::after {
+
+}
+
+@keyframes triangle-transform {
+    0% {
+
+    }
+} */
+
+.select .options {
+    display: none;
     position: absolute;
-    top: 100%;
-    visibility: hidden;
-    pointer-events: none;
-    z-index: 2;
-    font-size: var(--select-font-size);
+    z-index: 999;
+
+    min-width: 100%;
+    max-height: var(--max-height, calc(50vh - 200%));
+    /* min-height: 6rem; */
+
     width: max-content;
-    
-    user-select: none; /* supported by Chrome and Opera */
-   -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-   -moz-user-select: none; /* Firefox */
-   -ms-user-select: none; /* Internet Explorer/Edge */
+    top: 100%;
+    left: 0;
+
+    margin: 0;
+    padding: 0;
+
+    flex-direction: column;
+
+    border: var(--select-border-color) solid var(--select-border-width);
+    border-radius: 0 0 var(--select-border-radius) var(--select-border-radius);
+
+    background-color: var(--select-border-color);
+    gap: var(--select-option-gap);
+    overflow: auto;
 }
-.select.open .custom-options {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-    border-color: var(--select-border);
+
+.select .trigger[aria-expanded=true] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    background: var(--select-selected-background);
+    color: var(--select-selected-text-color);
 }
-.custom-option {
-    position: relative;
-    display: block;
-    padding: 0 4px 0 4px;
-    color: var(--select-txt-color);
-    border-color: var(--select-border);
+
+.select .trigger[aria-expanded=true] + .options {
+    display: flex;
+}
+
+.select .option {
+    font-size: var(--select-option-font-size);
+    color: var(--select-text-color);
+    padding: var(--select-option-padding);
+
+    border: 0;
+
+    border-color: var(--select-border-color);
     border-style: solid;
-    border-width: var(--select-option-border-width);
-    background-color: var(--select-background);
-    border-radius: 0;
+
+    text-align: left;
 }
-.custom-option:last-child {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-}
-.custom-option:hover {
-    background-color: var(--select-hover-background);
-    cursor: pointer;
-}
-.custom-option.selected {
-    background-color: var(--select-selected-background);
-}
-.custom-option.hidden {
+
+/* .select .options .option:nth-last-child(1 of :not(.hidden)) {
+    border-bottom-left-radius: var(--select-options-border-radius);
+    border-bottom-right-radius: var(--select-options-border-radius);
+} */
+
+.select .option.hidden {
     display: none;
 }
 
-.custom-option.selected:hover {
+.select .option.selected {
+    background-color: var(--select-selected-background);
+    color: var(--select-selected-text-color);
+}
+
+.select .option:hover,
+.select .option:focus {
     background-color: var(--select-hover-background);
+    color: var(--select-hover-text-color);
 }
-
-/* arrow */
-.arrow {
-    position: relative;
-    height: 5px;
-    width: 20px;
-    left: 10px;
-}
-.arrow::before, .arrow::after {
-    content: "";
-    position: absolute;
-    bottom: 0px;
-    width: 1px;
-    height: 100%;
-    transition: all 0.5s;
-}
-.arrow::before {
-    left: -2px;
-    transform: rotate(-45deg);
-    background-color: var(--select-txt-color);
-}
-.arrow::after {
-    left: 2px;
-    transform: rotate(45deg);
-    background-color: var(--select-txt-color);
-}
-
